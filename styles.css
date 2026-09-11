@@ -32,12 +32,10 @@ button, .button {
     border-radius: 32px;
     font-size: 32px;
     text-align: center;
-    padding: 24px;
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding: 8px 24px;
     background-color: #9948b1;
     color: white;
-    font-family: Cyrenia;
+    font-family: Cyrenia, sans-serif;
     transition: all 0.3s;
     font-weight: bold;
     align-content: center;
@@ -64,37 +62,44 @@ button:active, .button:active {
 }
 
 .container {
+    --card-width: 500px;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--card-width)), 1fr));
+    justify-content: center;
+    gap: 16px;
+    grid-auto-rows: 10px;
+
+    width: fit-content;
     box-sizing: border-box;
     background: transparent;
-    margin: auto;
-    top: 280px;
-    padding: 0%;
+    margin: 280px auto auto;
+    padding: 5vw;
     max-width: 100%;
     transition: all 0.3s;
-}
 
-.container::after {
-    content: '';
-    display: block;
-    clear: both;
+    @media (max-width: 1200px) {
+        --card-width: 400px;
+        padding: 1vw;
+    }
+
+    @media (max-width: 850px) {
+        width: 700px;
+    }
 }
 
 .card {
+    align-self: center;
     box-sizing: border-box;
-    width: 500px;
     height: fit-content;
     background-color: var(--card-color);
     border-radius: 32px;
-    padding: 26px;
-    padding-top: 0px;
-    padding-right: 32px;
+    padding: 24px;
     margin-bottom: 24px;
     transform-origin: center;
-    /* height: 300px; */
     object-fit: contain;
     opacity: 0;
     animation-fill-mode: forwards;
-    /* animation-name: slideUp; */
     animation-duration: 0.5s;
     transition: all 0.3s;
     animation-timing-function: cubic-bezier(0.175, 0.485, 0.32, 1.2);
@@ -243,16 +248,15 @@ button:active, .button:active {
 .social-links {
     list-style-type: none;
     padding: 0;
-    margin: 0;
     /* overflow: hidden; */
     white-space: nowrap;
-    top: 0px;
+    top: 0;
     display: flex;
     position: fixed;
     right: 24px;
     background-color: #252327;
     border-radius: 48px;
-    margin-top: 12px;
+    margin: 12px 0 0;
     z-index: 4;
     width: fit-content;
     /* opacity: 0; */
@@ -327,13 +331,12 @@ button:active, .button:active {
     animation: close-drop 0.2s ease forwards;
     z-index: -9999;
     background-color: #3d2e43;
-    padding: 8px;
     border-radius: 42px;
     position: fixed;
     /* top: 18px; */
-    opacity: 0%;
+    opacity: 0;
     width: fit-content;
-    padding-top: 80px;
+    padding: 80px 8px 8px;
     overflow: hidden;
     transition: all 0.3s;
     max-height: calc(100vh - 150px);
@@ -386,22 +389,21 @@ button:active, .button:active {
 
     to {
         height: 32px;
-        opacity: 0%;
+        opacity: 0;
     }
 }
 
 .dropdown-slink {
     width: fit-content;
-    font-family: Cyrenia;
+    font-family: Cyrenia, sans-serif;
     height: 58px;
-    padding-top: 0px;
+    padding-top: 0;
     padding-left: 18px;
     padding-right: 18px;
     margin: 4px;
 }
 
 #post-expanded {
-    height: 620px;
     background-color: #C2BDC7;
     position: fixed;
     top: 3vh;
@@ -413,9 +415,7 @@ button:active, .button:active {
     padding: 12px;
     border-radius: 32px;
     display: none;
-    outline-color: rgba(0, 0, 0, 0.8);
-    outline-width: 500px;
-    outline-style: solid;
+    outline: rgba(0, 0, 0, 0.8) solid 500px;
     contain: strict;
 }
 
@@ -453,8 +453,8 @@ button:active, .button:active {
     background-position-x: center;
     background-size: auto 300px;
     width: 100%;
-    left: 0px;
-    top: 0px;
+    left: 0;
+    top: 0;
     overflow: hidden;
     transition: all 0.5s;
 
@@ -462,27 +462,18 @@ button:active, .button:active {
 
 .project-thumbnail {
     width: 200px;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-    border-top-left-radius: 24px;
-    border-top-right-radius: 24px;
+    border-radius: 24px 24px 8px 8px;
 }
 
 .project-action:hover {
     scale: 105%;
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
+    border-radius: 12px;
 }
 
 .project-action {
     transition: all 0.3s;
     width: 200px;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    border-bottom-left-radius: 24px;
-    border-bottom-right-radius: 24px;
+    border-radius: 8px 8px 24px 24px;
 }
 
 .frontpage-game {
@@ -495,7 +486,7 @@ button:active, .button:active {
 .game-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2);
+    /*grid-template-rows: repeat(2);*/
     grid-gap: 4px;
     margin-top: 12px;
 }
@@ -550,7 +541,6 @@ button:active, .button:active {
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2);
     grid-gap: 4px;
     margin-top: 12px;
 }
@@ -581,10 +571,9 @@ button:active, .button:active {
 }
 
 .gallery-button {
-    margin: 24px;
     padding-left: 48px;
     padding-right: 52px;
-    margin-bottom: 0;
+    margin: 24px 24px 0;
 }
 
 .gallery-year {
@@ -643,10 +632,7 @@ button:active, .button:active {
     background-color: white;
     color: #403b37;
     margin: 6px;
-    padding: 12px;
-    padding-top: 8px;
-    padding-bottom: 6px;
-    padding-right: 18px;
+    padding: 8px 18px 6px 12px;
     font-size: 28px;
     vertical-align: middle;
 }
@@ -691,7 +677,7 @@ button:active, .button:active {
     left: 0;
     top: -20px;
     animation-name: loadFromHeader;
-    animation-timing-function: cubic-bezier();
+    animation-timing-function: cubic-bezier(.31,.38,.51,1);
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
 }
@@ -770,7 +756,7 @@ button:active, .button:active {
 }
 
 .curved {
-    border-radius: 35px 35px 0px 0px;
+    border-radius: 35px 35px 0 0;
     position: relative;
     width: 100%;
     height: 36px;
@@ -784,16 +770,14 @@ button:active, .button:active {
 }
 
 .MJ-button {
-    margin: 0px;
     padding-left: 48px;
     padding-right: 52px;
-    margin-top: 18px;
+    margin: 18px 0 0;
     background-color: #ea9f75;
 }
 
 .MJ-sect-list {
     z-index: 5;
-    margin-left: 24px;
     margin-top: 24px;
     margin-right: 28px;
     margin-left: 324px;
@@ -809,13 +793,8 @@ button:active, .button:active {
 
 .MJ-sect-button {
     background-color: #2b2b2b;
-    outline-color: white;
-    outline-width: 6px;
-    padding-bottom: 4px;
-	padding-top: 8px;
-    padding-left: 18px;
-    padding-right: 18px;
-    outline-style: solid;
+    padding: 8px 18px 4px;
+    outline: white solid 6px;
     color: white;
     font-size: 24px;
     margin: 8px;
@@ -890,9 +869,8 @@ button:active, .button:active {
     height: 64px;
     display: inline;
     position: fixed;
-    display: inline;
     top: -5px;
-    left: 0px;
+    left: 0;
     background-image: url(media/Rai/cursor.avif);
     background-repeat: no-repeat;
     padding-left: 42px;
@@ -965,7 +943,7 @@ button:active, .button:active {
 }
 
 .topnav {
-    background-color: none;
+    /*background-color: none;*/
     position: fixed;
     z-index: 4;
     min-height: 64px;
@@ -997,7 +975,7 @@ button:active, .button:active {
     position: fixed;
     object-fit: scale-down;
     top: -18px;
-    transition: all 0.3;
+    transition: all 0.3s;
     width: 200px;
 }
 
@@ -1031,8 +1009,9 @@ button:active, .button:active {
     top: 300px;
     z-index: 1;
     background-color: #4b4254;
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding: 24px 8px;
+    overflow: hidden;
+    transition: all 0.3s;
 }
 
 .comm-container {
@@ -1043,7 +1022,7 @@ button:active, .button:active {
     /* flex-wrap: wrap; */
     margin: 24px;
     height: max-content;
-    transition: all 0.3;
+    transition: all 0.3s;
 }
 
 .comm-section {
@@ -1052,8 +1031,7 @@ button:active, .button:active {
 
 .comm-panel {
     background-color: var(--card-color);
-    padding: 24px;
-    padding-top: 8px;
+    padding: 8px 24px 24px;
     border-radius: 32px;
     max-width: 600px;
     min-width: 280px;
@@ -1071,11 +1049,8 @@ button:active, .button:active {
 .terms button {
     color: #3D2D43;
     background-color: #cabcd4;
-    margin: auto;
-    margin-bottom: 14px;
-    padding: 8px;
-    padding-right: 12px;
-    padding-left: 12px;
+    margin: auto auto 14px;
+    padding: 8px 12px;
     border-radius: 32px;
     text-align: center;
     font-size: 24px;
@@ -1113,7 +1088,6 @@ button:active, .button:active {
     padding: 24px;
     border-radius: 32px;
     width: 80%;
-    margin: auto;
     max-width: 1000px;
     top: 150px;
     position: relative;
@@ -1122,7 +1096,7 @@ button:active, .button:active {
     border-width: 8px;
     border-style: dotted;
     border-color: #3D2D43;
-    margin-bottom: 30px;
+    margin: auto auto 30px;
 }
 
 .terms li {
@@ -1140,8 +1114,7 @@ button:active, .button:active {
     color: white;
     font-size: 20px;
     padding: 14px;
-    margin: auto;
-    margin-top: 12px;
+    margin: 12px auto auto;
     width: 90%;
     border-width: 8px;
     border-color: white;
@@ -1164,8 +1137,7 @@ button:active, .button:active {
 
 .profile-name {
     font-size: 48px;
-    margin: 0;
-    margin-left: 12px;
+    margin: 0 0 0 12px;
     vertical-align: middle;
 }
 
@@ -1188,8 +1160,7 @@ button:active, .button:active {
 .profile-btn {
     background-color: white;
     color: #252327;
-    margin: auto;
-    margin-top: 24px;
+    margin: 24px auto auto;
 }
 
 .oc-profile {
@@ -1200,12 +1171,10 @@ button:active, .button:active {
     text-decoration: none;
     color: white;
     background-color: #3b333d;
-    margin: 12px;
     padding: 24px;
     border-radius: 32px;
     max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 12px auto;
     transition: all 0.3s;
 }
 
@@ -1226,8 +1195,7 @@ button:active, .button:active {
     width: calc(100vw - 64px);
     height: 54px;
     background-color: #252327;
-    padding: 32px;
-    padding-top: 18px;
+    padding: 18px 32px 32px;
     left: 0;
     border-top-left-radius: 32px;
     border-top-right-radius: 32px;
@@ -1301,7 +1269,6 @@ button:active, .button:active {
 
 #comic-nav-text-center {
     display: inline;
-    text-align: center;
     margin-right: 1%;
     margin-left: 1%;
     text-overflow: ellipsis;
@@ -1323,9 +1290,7 @@ button:active, .button:active {
     border-radius: 12px;
     cursor: pointer;
     transition: all 0.2s !important;
-    outline-width: 0px;
-    outline-style: solid;
-    outline-color: #ccc;
+    outline: #ccc solid 0;
     /* background-color: #ccc; */
     -webkit-tap-highlight-color: transparent;
 
@@ -1344,7 +1309,7 @@ button:active, .button:active {
     /* Stay in place */
     z-index: 6;
     /* Sit on top */
-    padding-top: 0px;
+    padding-top: 0;
     /* Location of the box */
     left: 0;
     top: 0;
@@ -1363,7 +1328,7 @@ button:active, .button:active {
     /* overflow: hidden; */
     backdrop-filter: blur(24px);
     transition: all 0.3s;
-    opacity: 0%;
+    opacity: 0;
     scrollbar-width: none;
 }
 
@@ -1408,9 +1373,7 @@ button:active, .button:active {
 
 .caption-tags {
     font-size: 24px;
-    padding: 12px;
-    padding-bottom: 4px;
-    padding-top: 4px;
+    padding: 4px 12px;
     margin-right: 8px;
     background-color: white;
     color: black;
@@ -1473,7 +1436,7 @@ button:active, .button:active {
 	color: black;
 	z-index: 10;
 	padding: 10px;
-	box-shadow: 0px 0px 24px black;
+	box-shadow: 0 0 24px black;
 	list-style: none;
 	button {
 		font-size: 24px;
@@ -1489,21 +1452,6 @@ button:active, .button:active {
     text-decoration: none;
     cursor: pointer;
 }
-
-/* 100% Image Width on Smaller Screens */
-/* @media only screen and (max-width: 700px) {
-    .modal-content {
-        width: 100%;
-    }
-} */
-
-
-/* @media (max-width: 1020px) {
-    .container {
-        scale: 120%;
-        top: 500px;
-    }
-} */
 
 @media (min-width: 1420px) {
     .home-background {
@@ -1532,7 +1480,7 @@ button:active, .button:active {
 
     .MJ-sect-list {
         width: 90%;
-        left: 0px;
+        left: 0;
         margin-left: 24px;
         margin-bottom: 24px;
         float: left;
@@ -1591,7 +1539,7 @@ button:active, .button:active {
 
     .comm-container {
         display: block;
-        margin: 0px;
+        margin: 0;
     }
 
     .comm-previews {
@@ -1617,15 +1565,6 @@ button:active, .button:active {
 }
 
 @media (max-width: 525px) {
-    .card {
-        scale: 100%;
-    }
-
-    .container {
-        top: 400px;
-        max-width: 100vw;
-    }
-
     .section-text {
         display: none;
     }
@@ -1641,7 +1580,7 @@ button:active, .button:active {
 
     .dropdown-panel {
         margin: auto;
-        top: 0px;
+        top: 0;
     }
 
     .gallery-container {
@@ -1658,10 +1597,7 @@ button:active, .button:active {
     .tag-expand-button {
         font-size: 24px;
         left: 10px;
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-bottom: 12px;
-        padding-top: 12px;
+        padding: 12px 10px;
         top: 128px;
     }
 
@@ -1695,9 +1631,6 @@ button:active, .button:active {
 }
 
 @media (max-width: 450px) {
-    .container {
-        width: 100%;
-    }
 
     .gallery-img-wide {
         width: 98%;

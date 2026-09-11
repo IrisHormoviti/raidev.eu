@@ -11,7 +11,6 @@
 	<meta name="author" content="Iris Hormoviti">
 	<link rel="stylesheet" href="/styles.css">
 	<link href="/lib/fontawesome/css/all.min.css" rel="stylesheet">
-	<script src="/lib/masonry.pkgd.min.js"></script>
 	<script src="/lib/include-html.js"></script>
 	<script src="/lib/jquery-3.7.1.min.js"></script>
 	<link rel="icon" type="image/x-icon" href="/media/Rai/favicon.png">
@@ -21,8 +20,8 @@
 </head>
 <script>
 	function link(pageUrl) {
-		for (var i = 0; i < document.getElementsByClassName("card").length; i++) {
-			var card = document.getElementsByClassName("card")[i];
+		for (let i = 0; i < document.getElementsByClassName("card").length; i++) {
+			const card = document.getElementsByClassName("card")[i];
 			card.classList.add('fade-down-class');
 		}
 		// if (window.innerWidth <= 525) {
@@ -35,8 +34,8 @@
 		}, 300);
 	};
 
-	var container;
-	var msnry;
+	let container;
+	let msnry;
 
 </script>
 
@@ -51,13 +50,9 @@
 
 	<nav include-html="/social-links.html"></nav>
 	<div class="home-background faded"></div>
-	<h2 id="loader">Welcome to Iris' fancy website!<br><br>The site is still loading... If this takes too long, try to
-		refresh, or check if you are blocking Javascript in your browser.</h2>
+	<h2 id="loader">Welcome to Iris' fancy website!<br><br>The site is still loading... If this takes too long, try to refresh or check if you are blocking Javascript in your browser.</h2>
 
-	<main class="container" data-masonry='{
-	"itemSelector": ".card", "columnWidth": 500, "gutter":24,
-	"fitWidth": true, "initLayout": true, "stagger": 3
-  }'>
+	<main class="container">
 		<header class="card card--c1">
 			<img class="sitting-rai" , src="media/Rai/sitting.avif" alt="Rai sitting">
 			<h2 style="text-align: right; font-size: 28px; margin-bottom: 0px; color: #3d2e43;">about me</h2>
@@ -106,7 +101,7 @@
 		</section>
 
 		<section class="card card-hover" onclick="link('/comm');"
-			style="background-image: url(/media/Rai/comm\ bg.png); background-position: 700px -200px; background-blend-mode: soft-light;">
+			style="background-image: url(/media/Rai/comm-bg.png); background-position: 700px -200px; background-blend-mode: soft-light;">
 			<h1 style="text-align: center; font-size: 34px; color: #3d2e43;">
 				Commissions
 			</h1>
@@ -186,9 +181,8 @@
 		<section id="software-card" class="card" style="height: 600px; overflow: hidden;">
 			<h1 style="text-align: center; font-size: 34px; color: #3d2e43">
 				Software I use</h1>
-			<h4 style="text-align: center; margin: 0; color: #605863;">
 				<div
-					style="display: grid; grid-template-columns: 64px 350px; text-align: left; grid-gap: 24px; grid-row-gap: 24px;">
+					style="margin: 0; color: #605863; display: grid; grid-template-columns: 64px 350px; text-align: left; grid-gap: 24px; grid-row-gap: 24px;">
 					<img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Calligrakrita-base.svg" alt="Krita"
 						style="width: 64px;">
 					<div>
@@ -255,9 +249,9 @@
 							<p>
 								But who knows, my opinion might change in a week or two.
 							</p>
+						</span>
 					</div>
 				</div>
-			</h4>
 			<div id="software-card-expand"
 				style="position: sticky; bottom: -28px;
 	  background: linear-gradient(180deg,rgba(42, 123, 155, 0) 0%, rgba(87, 199, 133, 0) 29%, rgba(75, 70, 97, 1) 100%); width: 150%; margin-left: -50px; height: 150px;">
@@ -362,7 +356,7 @@
 					<li style="color: #3d2e43">PSN: <dev style="color: #605863">IrisHormo</dev>
 					</li>
 				</ul>
-
+			</h4>
 		</section>
 
 		<section class="card" style="padding: 8px; padding-left: 32px; line-height: 10px;">
@@ -415,9 +409,22 @@
 
 <script src="/lib/handle-slinks.js"></script>
 <script>
+	const rowGap = 16;
+	const rowHeight = 10;
+
+	const observer = new ResizeObserver((entries) => {
+		for (const entry of entries) {
+			const height = entry.borderBoxSize[0].blockSize;
+			const rowSpan = Math.ceil((height + rowGap) / (rowHeight + rowGap));
+			entry.target.style.gridRowEnd = `span ${rowSpan}`;
+		}
+	});
+
+	document.querySelectorAll('.card').forEach((card) => observer.observe(card));
+
 	function setWidth() {
-		var exited = false;
-		var mvp = document.getElementById('vp');
+		const exited = false;
+		const mvp = document.getElementById('vp');
 		if (window.innerWidth < 525) {
 			mvp.setAttribute('content', 'width=525px');
 			console.log("mobile mode");
@@ -428,7 +435,7 @@
 	};
 
 	function copyEmbed() {
-		var copyText = document.getElementById("embed-text");
+		const copyText = document.getElementById("embed-text");
 
 		copyText.select();
 		copyText.setSelectionRange(0, 99999); // For mobile devices
@@ -445,8 +452,8 @@
 				postviewerExpand(true);
 			}
 		});
-		for (var i = 0; i < document.getElementsByClassName("card").length; i++) {
-			var card = document.getElementsByClassName("card")[i];
+		for (let i = 0; i < document.getElementsByClassName("card").length; i++) {
+			const card = document.getElementsByClassName("card")[i];
 			card.style.animationName = "slideUp";
 		}
 		document.getElementById("loader").style.display = "none";
@@ -457,23 +464,14 @@
 				element.style.opacity = '1';
 			});
 		}, 3000);
-
-		container = document.querySelector('.container');
-		msnry = new Masonry(container, {
-			itemSelector: ".card", columnWidth: 500, gutter: 24,
-			fitWidth: true, initLayout: true, stagger: 3
-		});
 	});
 
-	for (var i = 0; i < document.getElementsByClassName("card").length; i++) {
-		var card = document.getElementsByClassName("card")[i];
+	for (let i = 0; i < document.getElementsByClassName("card").length; i++) {
+		let card = document.getElementsByClassName("card")[i];
 		card.style.setProperty('--animation-order', i);
-	};
-	// setTimeout(function(){
-	//   window.scrollTo(0,0);
-	// });
+	}
+
 	setTimeout(function () {
-		// window.scrollTo(0,0);
 		document.getElementsByClassName("home-background")[0].classList.remove("faded");
 	}, 300);
 
@@ -495,7 +493,7 @@
 	}
 
 	window.onscroll = function () {
-		var bg = document.getElementsByClassName("home-background")[0];
+		const bg = document.getElementsByClassName("home-background")[0];
 		bg.style.opacity = Math.max(remap(window.scrollY, 0, 300, 1, 0), 0);
 	}
 
@@ -505,14 +503,14 @@
 
 
 	window.addEventListener("pageshow", function (event) {
-		if (performance.navigation.type == 2 && exited == true) {
+		if (performance.navigation.type === 2 && exited === true) {
 			location.reload();
 		}
 	});
 
 	function add_oneko() {
-		var script = document.createElement("script");
-		script.src = src = "https://sleepie.uk/oneko.js";
+		const script = document.createElement("script");
+		script.src = "https://sleepie.uk/oneko.js";
 		script.setAttribute("async", "");
 		document.head.appendChild(script);
 		document.getElementById("oneko-button").style.display = "none";
