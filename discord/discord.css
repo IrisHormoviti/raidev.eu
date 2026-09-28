@@ -1,0 +1,20 @@
+.discord-link {
+	text-decoration: none;
+	color: white;
+	background-color: #3b333d;
+	padding: 24px;
+	border-radius: 32px;
+	max-width: 600px;
+	margin: 12px auto;
+	transition: all 0.3s;
+}
+
+.discord-link:hover {
+	scale: 110%;
+}
+
+.discord-img {
+	border-radius: 32px;
+	width: 150px;
+	margin: 24px;
+}

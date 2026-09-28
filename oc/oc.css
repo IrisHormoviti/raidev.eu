@@ -1,0 +1,51 @@
+#profile-popup {
+	position: relative;
+	top: 132px;
+}
+
+#profile-container {
+	background-color: #2b2b2b;
+	border-radius: 32px;
+	color: white;
+	font-size: 20px;
+	padding: 14px;
+	margin: 12px auto auto;
+	width: 90%;
+	border-width: 8px;
+	border-color: white;
+	border-style: solid;
+	max-width: 1000px;
+	text-align: left;
+}
+
+.profile-name {
+	font-size: 48px;
+	margin: 0 0 0 12px;
+	vertical-align: middle;
+}
+
+.profile-img {
+	object-fit: cover;
+	overflow: hidden;
+	padding: 0;
+	max-width: 40%;
+	max-height: 400px;
+	border-radius: 24px;
+	margin: 12px;
+}
+
+.profile-div {
+	display: flex;
+	width: 100%;
+	justify-content: left;
+}
+
+.profile-btn {
+	background-color: white;
+	color: #252327;
+	margin: 24px auto auto;
+}
+
+.oc-profile {
+	display: none;
+}

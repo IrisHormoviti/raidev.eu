@@ -1,0 +1,169 @@
+.gallery-container {
+	margin: auto;
+	top: 280px;
+	position: relative;
+	opacity: 0;
+	animation-name: slideUp;
+	animation-fill-mode: forwards;
+	animation-duration: 0.5s;
+	animation-delay: 1.5s;
+	display: grid;
+	grid-gap: 8px;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	grid-auto-rows: 10px;
+}
+
+.gallery-img {
+	object-fit: cover;
+	max-width: 100%;
+	text-align: center;
+	background-color: #5d565191;
+	color: #a69cad79;
+	display: inline-block;
+	grid-row-end: span 25;
+	margin: auto;
+	max-height: 550px;
+}
+
+.gallery-img-wide {
+	grid-column-end: span 2;
+	max-height: unset;
+}
+
+.gallery-year {
+	color: white;
+	font-size: 84px;
+	background-color: transparent;
+	height: 86px !important;
+	text-align: center;
+	vertical-align: middle;
+	grid-column-end: span 1;
+	grid-row-end: span 5;
+}
+
+.gallery-tag-title {
+	position: absolute;
+	top: 110px;
+	left: 210px;
+	color: white;
+	font-size: 48px;
+}
+
+.tag-expand-button {
+	position: relative;
+	top: 130px;
+	left: 24px;
+}
+
+.tag-icon {
+	object-fit: cover;
+	height: 48px;
+	vertical-align: middle;
+	padding-right: 6px;
+	transform: translateY(-4px);
+}
+
+.tag-button {
+	background-color: white;
+	color: #403b37;
+	margin: 6px;
+	padding: 8px 18px 6px 12px;
+	font-size: 28px;
+	vertical-align: middle;
+}
+
+.tag-button-front {
+	background-color: #2b2b2b;
+	color: white;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	border: 4px white solid;
+}
+
+.tag-button-selected,
+.tag-button:focus {
+	background-color: #9948b1;
+	color: white;
+	outline: 0;
+}
+
+#tag-container {
+	position: absolute;
+	top: 210px;
+	right: auto;
+	left: 0;
+	overflow-x: scroll;
+	white-space: nowrap;
+	max-width: 100vw;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	scrollbar-width: none;
+	z-index: 1;
+}
+
+.gallery-loader {
+	color: #a69cad;
+	position: fixed;
+	text-align: center;
+	width: 100%;
+	top: 300px;
+	z-index: 1;
+	background-color: #4b4254;
+	padding: 24px 8px;
+	overflow: hidden;
+	transition: all 0.3s;
+}
+
+@media (max-width: 908px) {
+	.gallery-img-wide {
+		grid-column-end: span 2;
+	}
+}
+
+@media (max-width: 650px) {
+	.masonry {
+		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	}
+}
+
+@media (max-width: 525px) {
+	.gallery-container {
+		top: 264px;
+	}
+
+	.gallery-tag-title {
+		font-size: 32px;
+		top: 125px;
+		right: 32px;
+		text-align: right;
+	}
+
+	.tag-expand-button {
+		font-size: 24px;
+		left: 10px;
+		padding: 12px 10px;
+		top: 128px;
+	}
+
+	.tag-button {
+		font-size: 24px;
+		height: 64px;
+	}
+
+	.tag-icon {
+		height: 42px;
+	}
+}
+
+@media (max-width: 450px) {
+	.gallery-img-wide {
+		width: 98%;
+	}
+}
+
+@media (max-width: 350px) {
+	.gallery-img {
+		width: 100%;
+		max-width: 100%;
+	}
+}

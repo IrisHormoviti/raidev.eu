@@ -1,0 +1,104 @@
+.comm-container {
+	display: flex;
+	justify-content: center;
+	top: 132px;
+	position: absolute;
+	margin: 24px;
+	height: max-content;
+	transition: all 0.3s;
+}
+
+.comm-section {
+	text-align: left;
+}
+
+.comm-panel {
+	background-color: var(--card-color);
+	padding: 8px 24px 24px;
+	border-radius: 32px;
+	max-width: 600px;
+	min-width: 280px;
+	width: 50%;
+	height: fit-content;
+	font-size: 24px;
+	color: #3D2D43;
+	text-align: center;
+	line-height: 28px;
+	flex-shrink: 0;
+	margin-right: 24px;
+}
+
+.comm-panel button,
+.terms button {
+	color: #3D2D43;
+	background-color: #cabcd4;
+	margin: auto auto 14px;
+	padding: 8px 12px;
+	border-radius: 32px;
+	text-align: center;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.comm-panel .checked {
+	background-color: #3D2D43;
+	color: var(--card-color);
+}
+
+.comm-previews {
+	display: inline;
+	max-width: 400px;
+	width: 45%;
+	overflow: hidden;
+	line-height: 24px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.comm-img {
+	width: inherit;
+	position: relative;
+	object-fit: scale-down;
+	max-width: 50%;
+	vertical-align: middle;
+	margin: 2px;
+	background-color: #252327;
+}
+
+.terms {
+	display: none;
+	background-color: #252327;
+	padding: 24px;
+	border-radius: 32px;
+	width: 80%;
+	max-width: 1000px;
+	top: 150px;
+	position: relative;
+	color: white;
+	font-size: 24px;
+	border-width: 8px;
+	border-style: dotted;
+	border-color: #3D2D43;
+	margin: auto auto 30px;
+}
+
+.terms li {
+	margin: 12px;
+}
+
+@media (max-width: 777px) {
+	.comm-panel {
+		width: 88%;
+		max-width: unset;
+	}
+
+	.comm-container {
+		display: block;
+		margin: 0;
+	}
+
+	.comm-previews {
+		display: contents;
+		width: 48%;
+	}
+}

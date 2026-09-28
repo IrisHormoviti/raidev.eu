@@ -1,0 +1,159 @@
+.MJ-sect-list {
+	z-index: 5;
+	margin-top: 24px;
+	margin-right: 28px;
+	margin-left: 324px;
+	max-width: 800px;
+	float: right;
+	opacity: 0;
+	animation-name: SlideLeft;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+	animation-delay: 0.8s;
+}
+
+.MJ-sect-button {
+	background-color: #2b2b2b;
+	padding: 8px 18px 4px;
+	outline: white solid 6px;
+	color: white;
+	font-size: 24px;
+	margin: 8px;
+	font-weight: bold;
+	outline-offset: -1px;
+}
+
+.MJ-sect-button:hover,
+.MJ-active-tab {
+	background-color: white;
+	color: black;
+	scale: 100%;
+	opacity: 1;
+}
+
+.MJ-active-tab,
+.MJ-active-tab:hover {
+	color: #ea9f75;
+}
+
+.MJ-tab-container {
+	width: 90%;
+	left: 5%;
+	top: 100px;
+	position: absolute;
+	color: rgb(214, 210, 208);
+	font-size: 24px;
+	max-width: 1000px;
+	margin: auto;
+}
+
+.mj-background {
+	width: 100vw;
+	position: fixed;
+	top: 120px;
+	left: 0;
+	object-fit: cover;
+	object-position: 80% 20%;
+	z-index: -1;
+	background-color: #150401;
+	height: 90vh;
+	filter: brightness(80%);
+}
+
+.mj-behind-background {
+	position: fixed;
+	z-index: -2;
+	background-repeat: repeat;
+	top: 0;
+	left: 0;
+	filter: blur(20px) brightness(50%);
+	height: 100vh;
+	width: 100%;
+}
+
+.mj-main-logo {
+	height: 300px;
+	position: fixed;
+	top: 200px;
+}
+
+.mj-screenshot {
+	max-height: 200px;
+	max-width: 48%;
+	object-fit: contain;
+}
+
+.MJ-logo-header {
+	height: 100px;
+	margin-left: 92px;
+	position: fixed;
+	object-fit: scale-down;
+	top: -18px;
+	transition: all 0.3s;
+	width: 200px;
+}
+
+.MJ-tab:not(:target) {
+	display: none;
+}
+
+.MJ-tab:target {
+	display: block;
+}
+
+.MJ-nav {
+	position: relative;
+	top: 100px;
+}
+
+.topnav #myLinks {
+	display: none;
+	position: fixed;
+	top: 95px;
+	right: -20px;
+	background-color: #403939;
+	border-radius: 32px;
+	width: 100vw;
+}
+
+@media (max-width: 1420px) {
+	.mj-background {
+		max-height: 100%;
+	}
+}
+
+@media (max-width: 908px) {
+	.MJ-sect-list {
+		width: 90%;
+		left: 0;
+		margin-left: 24px;
+		margin-bottom: 24px;
+		float: left;
+		animation-delay: 0s;
+	}
+
+	.MJ-sect-button {
+		float: left;
+	}
+
+	.mj-main-logo {
+		height: 200px;
+	}
+}
+
+@media (max-width: 525px) {
+	.MJ-tab-container {
+		width: 98%;
+		left: 1%;
+	}
+}
+
+@media (max-width: 450px) {
+	.mj-background {
+		object-position: right -50px;
+	}
+
+	.mj-main-logo {
+		display: none;
+	}
+}
