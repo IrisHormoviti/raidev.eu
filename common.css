@@ -61,7 +61,7 @@ button:active,
 	border-radius: 20px;
 }
 
-@keyframes slideUp {
+@keyframes slide-up {
 	0% {
 		transform: translateY(0);
 		opacity: 0;
@@ -78,7 +78,7 @@ button:active,
 	}
 }
 
-@keyframes slideDown {
+@keyframes slide-down {
 	100% {
 		transform: translateY(0px);
 		opacity: 1;
@@ -107,7 +107,7 @@ button:active,
 	}
 }
 
-@keyframes SlideLeft {
+@keyframes slide-left {
 	from {
 		opacity: 0;
 		transform: translateX(100px);
@@ -230,7 +230,7 @@ button:active,
 	font-size: 28px;
 	transition: all 0.3s;
 	opacity: 0;
-	animation-name: SlideLeft;
+	animation-name: slide-left;
 	animation-duration: 0.5s;
 	animation-fill-mode: forwards;
 }
@@ -314,7 +314,7 @@ button:active,
 	transition: all 0.3s;
 	display: none;
 	opacity: 0;
-	animation-name: SlideLeft;
+	animation-name: slide-left;
 	animation-duration: 0.5s;
 	animation-fill-mode: forwards;
 	animation-delay: 0.5s;

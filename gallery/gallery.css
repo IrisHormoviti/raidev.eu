@@ -3,7 +3,7 @@
 	top: 280px;
 	position: relative;
 	opacity: 0;
-	animation-name: slideUp;
+	animation-name: slide-up;
 	animation-fill-mode: forwards;
 	animation-duration: 0.5s;
 	animation-delay: 1.5s;
