@@ -1,222 +1,220 @@
 @font-face {
-  font-family: 'Cyrenia';
-  src: url('https://cdn.jsdelivr.net/gh/RaiHormo/raihormo.github.io@ba7236b/lib/cyrenia-regular.ttf') format('truetype');
+	font-family: 'Cyrenia';
+	src: url('https://cdn.jsdelivr.net/gh/RaiHormo/raihormo.github.io@ba7236b/lib/cyrenia-regular.ttf') format('truetype');
 }
 
 ::-webkit-scrollbar {
-  visibility:collapse !important;
+	visibility: collapse !important;
 }
 
 :root {
-  --main: #d8d5db;
-  --semi: #8b828e;
-  --text: #44354A;
-  --card: #b3a4bb;
-  --field: #edebf0;
-  --accent: #9948b1;
-  --reply: #edebf09c;
+	--main: #d8d5db;
+	--semi: #8b828e;
+	--text: #44354A;
+	--card: #b3a4bb;
+	--field: #edebf0;
+	--accent: #9948b1;
+	--reply: #edebf09c;
 }
 
 body {
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  font-family: Cyrenia, sans-serif !important;
-  font-size: 14px;
-  color: var(--text);
-  margin: 0;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	font-family: Cyrenia, sans-serif !important;
+	font-size: 14px;
+	color: var(--text);
+	margin: 0;
 }
 
 textarea {
-  font-family: Cyrenia !important;
+	font-family: Cyrenia !important;
 }
 
 a {
-  color: var(--accent);
-  text-decoration: none;
-  transition: all 0.3s;
+	color: var(--accent);
+	text-decoration: none;
+	transition: all 0.3s;
 }
 
 a:hover {
-  text-decoration: underline;
+	text-decoration: underline;
 }
 
 .container {
-  background: var(--main);
-  padding: 24px;
-  max-width: 100%;
-  margin: auto !important;
-  ;
-  border-radius: 32px;
-  max-width: 600px;
+	background: var(--main);
+	padding: 24px;
+	max-width: 100%;
+	margin: auto !important;
+	;
+	border-radius: 32px;
+	max-width: 600px;
+
+	@media (max-width: 640px) {
+		margin-top: 15px;
+		margin-bottom: 15px;
+		padding: 15px;
+		box-sizing: border-box;
+	}
 }
 
 h1 {
-  text-align: center;
+	text-align: center;
 }
 
 #guestbooks___guestbook-form {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  column-gap: 6px;
-  row-gap: 6px
+	display: grid;
+	grid-template-columns: 1fr auto;
+	column-gap: 6px;
+	row-gap: 6px
 }
 
 .guestbooks___input-container:nth-child(5) {
-  grid-column: span 2;
-  margin-bottom: 8px;
+	grid-column: span 2;
+	margin-bottom: 8px;
 }
 
 #text {
-  min-block-size: 104px;
-  border-radius: 8px 8px 32px 32px !important;
+	min-block-size: 104px;
+	border-radius: 8px 8px 32px 32px !important;
 }
 
 #name {
-  border-radius: 32px 8px 8px 8px !important;
-  font-size: 22px;
-  font-family: Cyrenia, sans-serif;
+	border-radius: 32px 8px 8px 8px !important;
+	font-size: 22px;
+	font-family: Cyrenia, sans-serif;
 }
 
 #website {
-  border-radius: 8px 32px 8px 8px !important;
-  font-size: 22px;
-  font-family: Cyrenia, sans-serif;
+	border-radius: 8px 32px 8px 8px !important;
+	font-size: 22px;
+	font-family: Cyrenia, sans-serif;
 }
 
 input[type="text"],
 input[type="url"],
 textarea {
-  width: 100%;
-  padding: 24px;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  font-size: 24px;
-  box-sizing: border-box;
-  resize: vertical;
-  border-style: none;
-  border-radius: 32px;
-  color: var(--text);
-  background: var(--field);
+	width: 100%;
+	padding: 24px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	font-size: 24px;
+	box-sizing: border-box;
+	resize: vertical;
+	border-style: none;
+	border-radius: 32px;
+	color: var(--text);
+	background: var(--field);
 }
 
 #text:focus {
-  border-color: var(--text);
-  border-width: : 12px;
+	border-color: var(--text);
+	border-width: 12px;
 }
 
 input[type="submit"] {
-  background: var(--text);
-  color: white;
-  font-weight: bold;
-  font-size: 24px;
-  border: none;
-  border-radius: 32px;
-  padding: 0.5em 1em;
-  cursor: pointer;
-  transition: all 0.3s;
-  font-family: Cyrenia, sans-serif;
-  margin-left: 50%;
+	background: var(--text);
+	color: white;
+	font-weight: bold;
+	font-size: 24px;
+	border: none;
+	border-radius: 32px;
+	padding: 0.5em 1em;
+	cursor: pointer;
+	transition: all 0.3s;
+	font-family: Cyrenia, sans-serif;
+	margin-left: 50%;
 }
 
 input[type="submit"]:hover {
-  scale: 95%;
-  border-radius: 18px;
+	scale: 95%;
+	border-radius: 18px;
 }
 
 #guestbooks___guestbook-made-with {
-  text-align: right;
-  font-size: 18px;
-  color: var(--semi);
+	text-align: right;
+	font-size: 18px;
+	color: var(--semi);
 }
 
 #guestbooks___guestbook-messages-header {
-  margin: 0;
-  font-size: 24px;
-  text-align: center;
+	margin: 0;
+	font-size: 24px;
+	text-align: center;
 }
 
 #guestbooks___guestbook-messages-container {
-  font-size: 24px;
+	font-size: 24px;
 }
 
 #guestbooks___guestbook-messages-container a {
-  font-size: 32px;
+	font-size: 32px;
 }
 
 #guestbooks___guestbook-messages-container p {
-  margin: 2px;
-  /*! margin-top: 1px;
+	margin: 2px;
+	/*! margin-top: 1px;
   */
 }
 
 #guestbooks___guestbook-form br {
-  display: none
+	display: none
 }
 
 #guestbooks___challenge-answer-container {
-  display: none;
+	display: none;
 }
 
 #guestbooks___guestbook-messages-container blockquote {
-  background-color: var(--field);
-  padding: 12px;
-  padding-left: 24px;
-  padding-right: 24px;
-  border-radius: 8px 32px 32px 32px;
-  font-size: 24px;
-  margin: 0;
-  margin-left: 12px;
-  margin-bottom: 16px;
-  width: fit-content;
+	background-color: var(--field);
+	padding: 12px;
+	padding-left: 24px;
+	padding-right: 24px;
+	border-radius: 8px 32px 32px 32px;
+	font-size: 24px;
+	margin: 0;
+	margin-left: 12px;
+	margin-bottom: 16px;
+	width: fit-content;
 }
 
 #guestbooks___guestbook-messages-container a:hover {
-  background-color: var(--text);
-  border-radius: 32px;
-  padding: 12px;
-  color: white;
+	background-color: var(--text);
+	border-radius: 32px;
+	padding: 12px;
+	color: white;
 }
 
 #title {
-  display: none !important;
+	display: none !important;
 }
 
 hr {
-  border: 0;
-  border-top: 2px dashed;
-  margin: 3em 0;
-  color: var(--semi);
-}
-
-@media (max-width: 640px) {
-  .container {
-  margin-top: 15px;
-  margin-bottom: 15px;
-  padding: 15px;
-  box-sizing: border-box;
-}
-
+	border: 0;
+	border-top: 2px dashed;
+	margin: 3em 0;
+	color: var(--semi);
 }
 
 .guestbook-message-reply {
-  display: flex;
-  justify-content: right;
-  p {
-  text-align: right;
-}
+	display: flex;
+	justify-content: right;
 
-blockquote {
-  background-color: var(--reply) !important;
-  border-radius: 32px 8px 32px 32px !important;
-}
+	p {
+		text-align: right;
+	}
 
-b {
-  color: var(--accent);
-}
+	blockquote {
+		background-color: var(--reply) !important;
+		border-radius: 32px 8px 32px 32px !important;
+	}
+
+	b {
+		color: var(--accent);
+	}
 
 }
 
 #guestbooks___pow-status {
-  width: 100%
+	width: 100%
 }

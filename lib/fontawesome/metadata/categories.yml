@@ -7,6 +7,7 @@ accessibility:
     - circle-info
     - circle-question
     - closed-captioning
+    - closed-captioning-slash
     - ear-deaf
     - ear-listen
     - eye
@@ -26,6 +27,7 @@ accessibility:
   label: Accessibility
 alert:
   icons:
+    - alarm-clock
     - bell
     - bell-slash
     - circle-exclamation
@@ -220,18 +222,31 @@ arrows:
   label: Arrows
 astronomy:
   icons:
+    - aquarius
+    - aries
     - binoculars
+    - cancer
+    - capricorn
+    - gemini
     - globe
+    - leo
+    - libra
     - meteor
     - moon
+    - pisces
+    - sagittarius
     - satellite
     - satellite-dish
+    - scorpio
     - shuttle-space
+    - taurus
     - user-astronaut
+    - virgo
   label: Astronomy
 automotive:
   icons:
     - bus
+    - bus-side
     - bus-simple
     - car
     - car-battery
@@ -364,6 +379,7 @@ business:
     - chart-simple
     - city
     - clipboard
+    - clipboard-check
     - clipboard-question
     - compass
     - copy
@@ -492,7 +508,6 @@ charity:
     - hands-holding-circle
     - handshake
     - handshake-angle
-    - handshake-simple
     - heart
     - leaf
     - parachute-box
@@ -633,6 +648,7 @@ communication:
     - comment-slash
     - comment-sms
     - comments
+    - ear-deaf
     - ear-listen
     - envelope
     - envelope-circle-check
@@ -655,6 +671,7 @@ communication:
     - mobile-retro
     - mobile-screen
     - mobile-screen-button
+    - mobile-vibrate
     - paper-plane
     - phone
     - phone-flip
@@ -663,6 +680,8 @@ communication:
     - poo
     - quote-left
     - quote-right
+    - single-quote-left
+    - single-quote-right
     - square-envelope
     - square-phone
     - square-phone-flip
@@ -771,12 +790,12 @@ design:
     - ruler-horizontal
     - ruler-vertical
     - scissors
+    - spiral
     - splotch
     - spray-can
     - stamp
     - stapler
     - swatchbook
-    - vector-square
     - wand-magic
     - wand-magic-sparkles
     - web-awesome
@@ -811,6 +830,7 @@ devices-hardware:
     - mobile-retro
     - mobile-screen
     - mobile-screen-button
+    - mobile-vibrate
     - plug
     - power-off
     - print
@@ -1209,6 +1229,7 @@ gender:
     - mars-stroke-up
     - mercury
     - neuter
+    - non-binary
     - person-half-dress
     - transgender
     - venus
@@ -1263,8 +1284,6 @@ hands:
     - hands-praying
     - handshake
     - handshake-angle
-    - handshake-simple
-    - handshake-simple-slash
     - handshake-slash
     - thumbs-down
     - thumbs-up
@@ -1397,6 +1416,7 @@ humanitarian:
     - building-wheat
     - burst
     - bus
+    - bus-side
     - car
     - car-on
     - car-tunnel
@@ -1449,7 +1469,7 @@ humanitarian:
     - hands-bubbles
     - hands-holding-child
     - hands-holding-circle
-    - handshake-simple
+    - handshake
     - headset
     - heart-circle-bolt
     - heart-circle-check
@@ -1690,6 +1710,7 @@ logistics:
     - bridge-lock
     - bridge-water
     - bus
+    - bus-side
     - bus-simple
     - car
     - car-tunnel
@@ -1698,6 +1719,7 @@ logistics:
     - clipboard-check
     - clipboard-list
     - clipboard-question
+    - clipboard-user
     - dolly
     - ferry
     - gas-pump
@@ -1968,6 +1990,7 @@ media-playback:
     - music
     - pause
     - phone-volume
+    - picture-in-picture
     - play
     - plus-minus
     - repeat
@@ -1979,6 +2002,7 @@ media-playback:
     - sliders
     - stop
     - up-right-and-down-left-from-center
+    - volume
     - volume-high
     - volume-low
     - volume-off
@@ -2204,7 +2228,6 @@ music-audio:
     - file-audio
     - guitar
     - headphones
-    - headphones-simple
     - microphone
     - microphone-lines
     - microphone-lines-slash
@@ -2216,6 +2239,7 @@ music-audio:
     - sliders
     - soundcloud
     - spotify
+    - volume
     - volume-high
     - volume-low
     - volume-off
@@ -2290,6 +2314,7 @@ photos-images:
     - minimize
     - panorama
     - photo-film
+    - picture-in-picture
     - sliders
     - unsplash
   label: Photos + Images
@@ -2318,38 +2343,57 @@ political:
   label: Political
 punctuation-symbols:
   icons:
+    - aquarius
+    - aries
     - asterisk
     - at
+    - cancer
+    - capricorn
     - check
     - check-double
     - circle-exclamation
     - circle-question
     - equals
     - exclamation
+    - gemini
     - greater-than
     - hashtag
+    - leo
     - less-than
+    - libra
     - minus
     - percent
+    - pisces
     - plus
     - question
     - quote-left
     - quote-right
+    - sagittarius
+    - scorpio
     - section
+    - single-quote-left
+    - single-quote-right
+    - taurus
+    - virgo
   label: Punctuation + Symbols
 religion:
   icons:
     - ankh
+    - aquarius
+    - aries
     - atom
     - bahai
     - book-bible
     - book-journal-whills
     - book-quran
     - book-tanakh
+    - cancer
+    - capricorn
     - church
     - cross
     - dharmachakra
     - dove
+    - gemini
     - gopuram
     - hamsa
     - hands-praying
@@ -2357,19 +2401,26 @@ religion:
     - jedi
     - kaaba
     - khanda
+    - leo
+    - libra
     - menorah
     - mosque
     - om
     - peace
     - person-praying
+    - pisces
     - place-of-worship
+    - sagittarius
+    - scorpio
     - scroll-torah
     - spaghetti-monster-flying
     - star-and-crescent
     - star-of-david
     - synagogue
+    - taurus
     - torii-gate
     - vihara
+    - virgo
     - yin-yang
   label: Religion
 science:
@@ -2506,11 +2557,16 @@ shapes:
     - folder
     - heart
     - heart-crack
+    - hexagon
     - lines-leaning
     - location-pin
+    - octagon
+    - pentagon
     - play
+    - septagon
     - shapes
     - shield
+    - spiral
     - square
     - square-binary
     - star
@@ -2562,6 +2618,7 @@ shopping:
     - nfc-symbol
     - paypal
     - person-booth
+    - qrcode
     - receipt
     - shirt
     - shop
@@ -2733,6 +2790,7 @@ text-formatting:
   label: Text Formatting
 time:
   icons:
+    - alarm-clock
     - bell
     - bell-slash
     - calendar
@@ -2762,6 +2820,7 @@ toggle:
     - microphone-slash
     - plane-up
     - signal
+    - sliders
     - star
     - star-half
     - star-half-stroke
@@ -2775,6 +2834,7 @@ transportation:
     - baby-carriage
     - bicycle
     - bus
+    - bus-side
     - bus-simple
     - cable-car
     - car
@@ -2792,6 +2852,7 @@ transportation:
     - mound
     - paper-plane
     - plane
+    - plane-arrival
     - plane-slash
     - plane-up
     - road
@@ -2824,6 +2885,7 @@ transportation:
   label: Transportation
 travel-hotel:
   icons:
+    - alarm-clock
     - archway
     - baby-carriage
     - ban-smoking
@@ -2833,6 +2895,7 @@ travel-hotel:
     - book-atlas
     - briefcase
     - bus
+    - bus-side
     - bus-simple
     - cable-car
     - car
@@ -2997,8 +3060,6 @@ users-people:
     - user-graduate
     - user-group
     - user-injured
-    - user-large
-    - user-large-slash
     - user-lock
     - user-minus
     - user-ninja
@@ -3090,6 +3151,8 @@ writing:
     - quote-left
     - quote-right
     - signature
+    - single-quote-left
+    - single-quote-right
     - square-pen
     - thumbtack
     - thumbtack-slash

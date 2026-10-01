@@ -6,6 +6,11 @@
 	margin: 24px;
 	height: max-content;
 	transition: all 0.3s;
+
+	@media (max-width: 777px) {
+		display: block;
+		margin: 0;
+	}
 }
 
 .comm-section {
@@ -26,6 +31,11 @@
 	line-height: 28px;
 	flex-shrink: 0;
 	margin-right: 24px;
+
+	@media (max-width: 777px) {
+		width: 88%;
+		max-width: unset;
+	}
 }
 
 .comm-panel button,
@@ -53,6 +63,11 @@
 	line-height: 24px;
 	text-align: center;
 	vertical-align: middle;
+
+	@media (max-width: 777px) {
+		display: contents;
+		width: 48%;
+	}
 }
 
 .comm-img {
@@ -84,21 +99,4 @@
 
 .terms li {
 	margin: 12px;
-}
-
-@media (max-width: 777px) {
-	.comm-panel {
-		width: 88%;
-		max-width: unset;
-	}
-
-	.comm-container {
-		display: block;
-		margin: 0;
-	}
-
-	.comm-previews {
-		display: contents;
-		width: 48%;
-	}
 }

@@ -1,0 +1,141 @@
+#social-links {
+	list-style-type: none;
+	padding: 0;
+	white-space: nowrap;
+	display: flex;
+	background-color: #252327;
+	border-radius: 42px;
+	width: fit-content;
+	transition: all 0.3s;
+	text-decoration: none;
+	margin-bottom: 0;
+
+	animation: slideDown 0.5s ease forwards;
+
+	li {
+		z-index: 2;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	i {
+		vertical-align: middle;
+	}
+}
+
+#social-links.open {
+	background-color: #3d2e43;
+	border-radius: 42px 42px 0 0;
+}
+
+.slink {
+	display: block;
+	text-align: center;
+	background-color: var(--card-color);
+	border-radius: 34px;
+	text-decoration: none;
+	color: #3d2e43;
+	height: 64px;
+	width: 64px;
+	margin: 8px;
+	border: none;
+	padding: 0;
+}
+
+.slink-pressed {
+	background-color: #3d2e43;
+	color: var(--card-color);
+}
+
+.slink::before {
+	font-size: 38px;
+}
+
+.links-text {
+	color: var(--card-color);
+	font-size: 24px;
+	vertical-align: middle;
+	height: 84px;
+	line-height: 84px;
+	padding-left: 24px;
+	padding-right: 8px;
+}
+
+#slink-dropdown-panel::before {
+	right: 24px;
+}
+
+#slink-dropdown-panel {
+	animation: close-drop 0.2s ease forwards;
+	z-index: 1;
+	background-color: #3d2e43;
+	border-radius: 42px;
+
+	width: 420px;
+
+	opacity: 0;
+	padding: 8px 8px 8px;
+	overflow: hidden;
+	transition: all 0.3s;
+	max-height: calc(100vh - 150px);
+	display: flex;
+	flex-wrap: wrap;
+	align-content: baseline;
+}
+
+#slink-dropdown-panel.open {
+	border-radius: 0 0 42px 42px;
+	animation: open-drop 0.3s forwards cubic-bezier(0.175, 0.885, 0.32, 1.1);
+	height: fit-content;
+	overflow: scroll;
+	scrollbar-width: none;
+}
+
+@keyframes open-drop {
+	from {
+		height: 32px;
+		opacity: 25%;
+	}
+
+	to {
+		height: var(--slink-height);
+		opacity: 100%;
+	}
+}
+
+@keyframes close-drop {
+	from {
+		height: var(--slink-height);
+	}
+
+	to {
+		height: 32px;
+		opacity: 0;
+
+		@keyframes loadFromHeader {
+			from {
+				transform: scaleY(50);
+			}
+
+			to {
+				transform: scaleY(1);
+			}
+		}
+
+	}
+}
+
+.dropdown-slink {
+	width: fit-content;
+	font-family: Cyrenia, sans-serif;
+	height: 58px;
+	padding-top: 0;
+	padding-left: 12px;
+	padding-right: 12px;
+	margin: 4px;
+}

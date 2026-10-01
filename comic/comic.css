@@ -11,6 +11,14 @@
 	border-top-right-radius: 32px;
 	overflow: hidden;
 	white-space: nowrap;
+
+	@media (max-width: 777px) {
+		height: 100px;
+	}
+
+	@media (max-width: 525px) {
+		text-align: center;
+	}
 }
 
 #comic-nav-list {
@@ -69,6 +77,10 @@
 	width: 100%;
 	object-fit: contain;
 	object-position: center;
+
+	@media (max-width: 777px) {
+		height: calc(100% - 150px);
+	}
 }
 
 .comic-nav-text {
@@ -82,37 +94,23 @@
 	margin-left: 1%;
 	text-overflow: ellipsis;
 	text-align: right;
+
+	@media (max-width: 777px) {
+		display: none;
+	}
 }
 
 #comic-nav-text-top {
 	display: none;
 	margin-bottom: 12px;
-}
 
-@media (max-width: 777px) {
-	#comic-nav-text-center {
-		display: none;
-	}
-
-	#comic-nav-text-top {
+	@media (max-width: 777px) {
 		display: block;
 	}
-
-	#comic-nav {
-		height: 100px;
-	}
-
-	#comic-page {
-		height: calc(100% - 150px);
-	}
 }
 
-@media (max-width: 525px) {
-	.comic-nav-stamp {
+.comic-nav-stamp {
+	@media (max-width: 525px) {
 		display: none;
-	}
-
-	#comic-nav {
-		text-align: center;
 	}
 }

@@ -12,6 +12,7 @@
 	<meta content="Iris Hormoviti" name="author">
 	<link href="/common.css" rel="stylesheet">
 	<link href="/index.css" rel="stylesheet">
+	<link href="/social-links.css" rel="stylesheet">
 	<link href="/lib/fontawesome/css/all.min.css" rel="stylesheet">
 	<script src="/lib/include-html.js"></script>
 	<script src="/lib/jquery-3.7.1.min.js"></script>
@@ -27,22 +28,18 @@
 			const card = document.getElementsByClassName("card")[i];
 
 			if (card === element) {
-				card.classList.add('card-fill-screen'); 
+				card.classList.add('card-fill-screen');
 			} else {
 				card.classList.add('fade-down-class');
 			}
 		}
-		document.getElementsByClassName("social-links")[0].classList.add("faded");
-		document.getElementsByClassName("home-background")[0].classList.add("faded");
+		document.getElementById("social-links").classList.add("faded");
+		document.getElementById("home-background").classList.add("faded");
 		exited = true;
 		setTimeout(function () {
 			window.location.href = pageUrl;
 		}, 300);
 	}
-
-	let container;
-	let msnry;
-
 </script>
 
 <body>
@@ -55,7 +52,7 @@
 	</div>
 
 	<nav include-html="/social-links.html"></nav>
-	<div class="home-background faded"></div>
+	<div id="home-background" class="faded"></div>
 
 	<div id="loader">
 		<h2>Welcome to Iris' fancy website!</h2>
@@ -339,7 +336,7 @@
 					<span style="color: #3D2D43; font-size: 32px;">rat-box</span><br>
 					<span>Desktop PC</span>
 
-					<ul>
+					<ul style="margin: 0">
 						<li>Case / Motherboard: ASRock DeskMeet x600</li>
 						<li>CPU: AMD Ryzen 5 9600X</li>
 						<li>GPU: AMD Radeon RX 9060XT</li>
@@ -364,7 +361,7 @@
 				<div>
 					<span style="color: #3D2D43; font-size: 32px;">Iris-Yoga-7</span><br>
 					<span>2-in-1 Laptop</span>
-					<ul>
+					<ul style="margin: 0">
 						<li>Model: Lenovo Yoga 7 14ARP8 (2022)</li>
 						<li>CPU: AMD Ryzen 7 7735U</li>
 						<li>GPU: AMD Radeon 680M [Integrated]</li>
@@ -592,7 +589,8 @@
 <script>
 	const rowGap = 16;
 	const rowHeight = 10;
-	const cards = document.getElementsByClassName("card");
+	const cards = document.querySelectorAll(".card");
+	const container = document.querySelector(".container");
 
 	const observer = new ResizeObserver((entries) => {
 		for (const entry of entries) {
@@ -602,7 +600,7 @@
 		}
 	});
 
-	document.querySelectorAll('.card').forEach((card) => observer.observe(card));
+	cards.forEach((card) => observer.observe(card));
 
 	function setWidth() {
 		const exited = false;
@@ -631,13 +629,11 @@
 	window.addEventListener("load", function () {
 		setTimeout(function () {
 			if (window.location.hash === "#postviewer") {
-			postviewerExpand(true);
+				postviewerExpand(true);
 			}
 		}, 100);
 
-		for (let i = 0; i < cards.length; i++) {
-			cards[i].style.animationName = "slideUp";
-		}
+		container.classList.add("cards-entering");
 
 		document.getElementById("loader").style.display = "none";
 
@@ -646,20 +642,14 @@
 			profile_text.innerHTML = profile_text.innerHTML.replace("{{AGE}}", new Date().getFullYear() - 2005);
 		}
 
-		setTimeout(function () {
-			for (let i = 0; i < cards.length; i++) {
-			cards[i].classList.add("card-intro-complete");
-			}
-		}, 1000);
 	});
 
-	for (let i = 0; i < document.getElementsByClassName("card").length; i++) {
-		let card = document.getElementsByClassName("card")[i];
-		card.style.setProperty('--animation-order', i);
-	}
+	cards.forEach((card, index) => {
+		card.style.setProperty('--card-animation-order', index);
+	});
 
 	setTimeout(function () {
-		document.getElementsByClassName("home-background")[0].classList.remove("faded");
+		document.getElementById("home-background").classList.remove("faded");
 	}, 300);
 
 	function postviewerExpand(yes = true) {
@@ -684,7 +674,7 @@
 	}
 
 	window.onscroll = function () {
-		const bg = document.getElementsByClassName("home-background")[0];
+		const bg = document.getElementById("home-background");
 		bg.style.opacity = Math.max(remap(window.scrollY, 0, 300, 1, 0), 0);
 	}
 

@@ -10,6 +10,47 @@
 	animation-duration: 0.5s;
 	animation-fill-mode: forwards;
 	animation-delay: 0.8s;
+
+	@media (max-width: 908px) {
+		width: 90%;
+		left: 0;
+		margin-left: 24px;
+		margin-bottom: 24px;
+		float: left;
+		animation-delay: 0s;
+	}
+}
+
+@keyframes loadFromHeaderMJ {
+	from {
+		transform: scaleY(50);
+	}
+
+	to {
+		transform: scaleY(1);
+		background-color: #403939;
+	}
+}
+
+@keyframes headerUnloadMJ {
+	0% {
+		transform: scaleY(1);
+		background-color: #403939;
+	}
+
+	10% {
+		transform: scaleY(50);
+		background-color: #252327;
+	}
+
+	95% {
+		transform: scaleY(50);
+		background-color: #252327;
+	}
+
+	100% {
+		transform: scaleY(1);
+	}
 }
 
 .MJ-sect-button {
@@ -21,6 +62,10 @@
 	margin: 8px;
 	font-weight: bold;
 	outline-offset: -1px;
+
+	@media (max-width: 908px) {
+		float: left;
+	}
 }
 
 .MJ-sect-button:hover,
@@ -45,6 +90,11 @@
 	font-size: 24px;
 	max-width: 1000px;
 	margin: auto;
+
+	@media (max-width: 525px) {
+		width: 98%;
+		left: 1%;
+	}
 }
 
 .mj-background {
@@ -58,6 +108,14 @@
 	background-color: #150401;
 	height: 90vh;
 	filter: brightness(80%);
+
+	@media (max-width: 1420px) {
+		max-height: 100%;
+	}
+
+	@media (max-width: 450px) {
+		object-position: right -50px;
+	}
 }
 
 .mj-behind-background {
@@ -75,6 +133,14 @@
 	height: 300px;
 	position: fixed;
 	top: 200px;
+
+	@media (max-width: 908px) {
+		height: 200px;
+	}
+
+	@media (max-width: 450px) {
+		display: none;
+	}
 }
 
 .mj-screenshot {
@@ -114,46 +180,4 @@
 	background-color: #403939;
 	border-radius: 32px;
 	width: 100vw;
-}
-
-@media (max-width: 1420px) {
-	.mj-background {
-		max-height: 100%;
-	}
-}
-
-@media (max-width: 908px) {
-	.MJ-sect-list {
-		width: 90%;
-		left: 0;
-		margin-left: 24px;
-		margin-bottom: 24px;
-		float: left;
-		animation-delay: 0s;
-	}
-
-	.MJ-sect-button {
-		float: left;
-	}
-
-	.mj-main-logo {
-		height: 200px;
-	}
-}
-
-@media (max-width: 525px) {
-	.MJ-tab-container {
-		width: 98%;
-		left: 1%;
-	}
-}
-
-@media (max-width: 450px) {
-	.mj-background {
-		object-position: right -50px;
-	}
-
-	.mj-main-logo {
-		display: none;
-	}
 }
