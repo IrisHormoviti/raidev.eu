@@ -28,18 +28,21 @@
 
 	<!-- <div include-html="/social-links.html" class="hide-mobile"></div> -->
 
-	<div class="header-cont">
-		<button class="home-button" onclick="homeButton();">
-		</button>
-		<h1 style="display: inline; margin-left: 82px ;">Art Gallery</h1>
+	<nav class="header">
+		<div class="header-cont">
+			<a href="/" class="home-button" onclick="homeButton(); return false;">
+				<img src="/media/Stamps/stamp.png" alt="Home button">
+			</a>
+			<h1>Art Gallery</h1>
+		</div>
+	</nav>
+
+	<div style="display: flex; margin: 24px; align-items: center;">
+		<button class=" tag-expand-button" onclick="tag_expand();"><i class="fa-solid fa-chevron-down"></i>
+			Tags</a></button>
+		<h1 class="gallery-tag-title">All artwork</h1>
 	</div>
 
-	<div class="header">
-		<div class="header-corner"></div>
-	</div>
-
-	<button class="tag-expand-button" onclick="tag_expand();"><i class="fa-solid fa-chevron-down"></i> Tags</a></button>
-	<h1 class="gallery-tag-title">All artwork</h1>
 	<div id="tag-container">
 		<!-- &emsp; &emsp; &emsp; -->
 		<button onclick="window.location.href='/gallery/#'" class="tag-button"><img class='tag-icon'>Finished

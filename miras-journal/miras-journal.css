@@ -21,6 +21,11 @@
 	}
 }
 
+.header-mj {
+	--header-corner-color: #403939;
+	animation-name: loadFromHeaderMJ;
+}
+
 @keyframes loadFromHeaderMJ {
 	from {
 		transform: scaleY(50);
