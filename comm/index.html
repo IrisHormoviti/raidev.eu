@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" style="height: 100%;">
+<html lang="en">
 
 <head>
 	<meta charset="UTF-8">
@@ -8,7 +8,6 @@
 	<link rel="stylesheet" href="/common.css">
 	<link rel="stylesheet" href="comm.css">
 	<link href="/lib/fontawesome/css/all.min.css" rel="stylesheet">
-	<script onclick="show_image(this);" src="/lib/jquery-3.7.1.min.js"></script>
 	<script onclick="show_image(this);" src="/lib/include-html.js"></script>
 	<script onclick="show_image(this);" src="/lib/imagesloaded.pkgd.min.js"></script>
 	<meta id="vp" name="viewport">
@@ -16,23 +15,16 @@
 	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 </head>
 
-<body style="
-height: 100vh;
-background-color: #493842; background-attachment: fixed;
-background-image: url(/media/Rai/comm\ bg.png);
-background-repeat: no-repeat; background-size: cover;">
+<body>
 
-	<div include-html="/social-links.html" class="only-wide"></div>
-
-	<div class="header-cont">
-		<button class="home-button"
-			onclick="if (window.location.hash == '#terms') window.location.hash = ''; else homeButton();">
-		</button>
-		<h1 style="display: inline; margin-left: 82px ;">Commissions</h1>
-	</div>
-
-	<div class="header">
-	</div>
+	<nav id="header">
+		<div id="header-cont">
+			<a href="/" class="home-button" onclick="homeButton(); return false;">
+				<img src="/media/Stamps/stamp.png" alt="Home button">
+			</a>
+			<h1>Commissions</h1>
+		</div>
+	</nav>
 
 	<div class="comm-container">
 		<div class="comm-panel">
@@ -201,6 +193,7 @@ background-repeat: no-repeat; background-size: cover;">
 		});
 		document.getElementById(string).style = "block";
 		document.getElementById(string + "PV").style = "block";
+		window.scrollTo(0, 0);
 	}
 
 	let prev_category = "Illustration";
@@ -209,16 +202,16 @@ background-repeat: no-repeat; background-size: cover;">
 		if (close) {
 			category(prev_category);
 			terms_open = false;
-			$(".comm-container").css({ 'opacity': '100' });
-			$(".terms").css({ 'display': 'none' });
+			document.querySelector(".comm-container").style.display = "flex";
+			document.querySelector(".terms").style.display = "none";
 			window.scrollTo(0, 0);
 		} else {
 			if (window.location.hash != "#terms") {
 				prev_category = window.location.hash;
 			}
 			terms_open = true;
-			$(".comm-container").css({ 'opacity': '0' });
-			$(".terms").css({ 'display': 'block' });
+			document.querySelector(".comm-container").style.display = "none";
+			document.querySelector(".terms").style.display = "block";
 			window.location.hash = "terms";
 			window.scrollTo(0, 0);
 		}
@@ -226,10 +219,8 @@ background-repeat: no-repeat; background-size: cover;">
 </script>
 <script>
 	function homeButton() {
-		document.getElementsByClassName("header-cont")[0].classList.add("fade-down-class");
-		document.getElementsByClassName("header")[0].style.transform = "unset";
-		document.getElementsByClassName("header")[0].style.animation = "headerUnload ease-in 3s";
-		document.getElementsByClassName("social-links")[0].classList.add("faded");
+		document.body.classList.add("page-dismiss");
+
 		setTimeout(function () {
 			window.location.href = '/';
 		}, 200);

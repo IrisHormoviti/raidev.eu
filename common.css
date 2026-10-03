@@ -17,6 +17,37 @@ html {
 	navigation: auto;
 }
 
+@keyframes page-slide-up {
+	from {
+		transform: translateY(100vh);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+@keyframes page-slide-down {
+	to {
+		transform: translateY(100vh);
+		opacity: 0;
+	}
+
+	from {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+.page-dismiss {
+	animation-name: page-slide-down;
+	animation-timing-function: ease;
+	animation-duration: 0.2s;
+	animation-fill-mode: forwards;
+}
+
 body {
 	margin: 0;
 	background: #252327;
@@ -134,7 +165,7 @@ button:active,
 .faded {
 	opacity: 0 !important;
 	transition: all 0.3s !important;
-	animation: none;
+	animation: none !important;
 }
 
 .disabled-btn {
@@ -162,7 +193,7 @@ button:active,
 	display: block;
 }
 
-.header {
+#header {
 	background-color: #252327;
 	--header-corner-color: #252327;
 	height: 140px;
@@ -178,6 +209,10 @@ button:active,
 	animation-fill-mode: forwards;
 
 	max-height: 20vh;
+
+	@media (max-width: 450px) {
+		height: 90px;
+	}
 }
 
 @keyframes loadFromHeader {
@@ -224,7 +259,7 @@ button:active,
 	background-color: #403b37;
 }
 
-.header-cont {
+#header-cont {
 	height: 100%;
 	width: fit-content;
 	color: #a69cad;
@@ -241,10 +276,19 @@ button:active,
 	h1 {
 		font-size: 64px;
 		margin: 0;
+		margin-right: 24px;
 		vertical-align: middle;
 
 		@media (max-width: 700px) {
 			font-size: 48px;
+		}
+
+		@media (max-width: 450px) {
+			font-size: 28px;
+		}
+
+		@media (max-height: 400px) {
+			font-size: 32px;
 		}
 	}
 }
@@ -276,8 +320,8 @@ button:active,
 	}
 }
 
-.header::before,
-.header::after {
+#header::before,
+#header::after {
 	content: "";
 	position: absolute;
 	top: calc(100% - 24px);
@@ -287,12 +331,12 @@ button:active,
 	z-index: -1;
 }
 
-.header::before {
+#header::before {
 	left: -24px;
 	background: radial-gradient(circle at 64px 64px, transparent 39px, var(--header-corner-color) 40px 63px, transparent 64px);
 }
 
-.header::after {
+#header::after {
 	right: -24px;
 	background: radial-gradient(circle at 0 64px, transparent 39px, var(--header-corner-color) 40px 63px, transparent 64px);
 }

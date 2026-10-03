@@ -1,8 +1,30 @@
+body {
+	display: flow-root;
+	background-color: #493842;
+	background-attachment: fixed;
+	background-image: url('/media/Rai/comm-bg.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position-y: min(130px, 20vh);
+
+	animation-name: fade-in;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
 .comm-container {
 	display: flex;
 	justify-content: center;
-	top: 132px;
-	position: absolute;
 	margin: 24px;
 	height: max-content;
 	transition: all 0.3s;
@@ -11,6 +33,10 @@
 		display: block;
 		margin: 0;
 	}
+
+	animation-name: page-slide-up;
+	animation-duration: 1s;
+	animation-timing-function: cubic-bezier(0.269, 0.918, 0.45, 0.975);
 }
 
 .comm-section {
@@ -35,6 +61,7 @@
 	@media (max-width: 777px) {
 		width: 88%;
 		max-width: unset;
+		margin: 24px auto 24px auto;
 	}
 }
 
@@ -87,14 +114,12 @@
 	border-radius: 32px;
 	width: 80%;
 	max-width: 1000px;
-	top: 150px;
-	position: relative;
 	color: white;
 	font-size: 24px;
 	border-width: 8px;
 	border-style: dotted;
 	border-color: #3D2D43;
-	margin: auto auto 30px;
+	margin: 150px auto 30px;
 }
 
 .terms li {

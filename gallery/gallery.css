@@ -1,3 +1,9 @@
+body {
+	animation-name: page-slide-up;
+	animation-duration: 1s;
+	animation-timing-function: cubic-bezier(0.269, 0.918, 0.45, 0.975);
+}
+
 .gallery-container {
 	margin: auto;
 	opacity: 0;

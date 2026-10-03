@@ -1,6 +1,11 @@
-#profile-popup {
-	position: relative;
-	top: 132px;
+body {
+	background-color: #403b37;
+	background-attachment: fixed;
+	filter: brightness(-30%);
+
+	animation-name: page-slide-up;
+	animation-duration: 1s;
+	animation-timing-function: cubic-bezier(0.269, 0.918, 0.45, 0.975);
 }
 
 #profile-container {

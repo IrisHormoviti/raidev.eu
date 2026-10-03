@@ -1,29 +1,119 @@
-.MJ-sect-list {
-	z-index: 5;
-	margin-top: 24px;
-	margin-right: 28px;
-	margin-left: 324px;
-	max-width: 800px;
-	float: right;
-	opacity: 0;
-	animation-name: SlideLeft;
-	animation-duration: 0.5s;
-	animation-fill-mode: forwards;
-	animation-delay: 0.8s;
-
-	@media (max-width: 908px) {
-		width: 90%;
-		left: 0;
-		margin-left: 24px;
-		margin-bottom: 24px;
-		float: left;
-		animation-delay: 0s;
-	}
+body {
+	min-height: 100vh;
+	background-color: #2c2929;
 }
 
-.header-mj {
-	--header-corner-color: #403939;
-	animation-name: loadFromHeaderMJ;
+#header-cont {
+	width: 100%;
+
+	.MJ-logo-header {
+		object-fit: scale-down;
+		transition: all 0.3s;
+		width: 200px;
+	}
+
+	@media (max-width: 1000px) {
+		height: auto;
+		min-height: 90px;
+		flex-wrap: wrap;
+		align-content: flex-start;
+		justify-content: space-between;
+
+		>.home-button {
+			flex: 0 0 112px;
+			height: auto;
+			max-width: none;
+			margin: 8px 16px;
+
+			img {
+				width: 100%;
+				height: auto;
+				max-width: none;
+			}
+		}
+
+		>.MJ-logo-header {
+			flex: 0 1 auto;
+			width: min(150px, 38vw);
+		}
+
+	}
+
+	.section-button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 12px;
+		width: auto;
+		height: auto;
+		padding: 8px 18px 4px;
+		position: relative;
+		margin: 24px;
+
+		@media (min-width: 1000px) {
+			display: none;
+		}
+
+		i {
+			display: inline-flex;
+		}
+
+		.section-text {
+			display: inline;
+			white-space: nowrap;
+
+			@media (max-width: 600px) {
+				display: none;
+			}
+		}
+	}
+
+	.MJ-sect-list {
+		animation-name: slide-left;
+		animation-duration: 0.5s;
+		animation-fill-mode: forwards;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		flex: 1 1 0;
+		min-width: 0;
+		margin-left: auto;
+		margin-right: 24px;
+		text-align: right;
+		justify-content: flex-end;
+	}
+
+	&:not(.mobile-nav-open)>.MJ-sect-list {
+		@media (max-width: 1000px) {
+			display: none;
+		}
+	}
+
+	&.mobile-nav-open .MJ-sect-list {
+		@media (max-width: 1000px) {
+			display: flex;
+			flex: 0 0 100%;
+			flex-direction: column;
+			align-items: stretch;
+			justify-content: flex-start;
+			box-sizing: border-box;
+			width: 100%;
+			margin: 0;
+			padding: 8px 16px 16px;
+			text-align: left;
+			animation: none;
+			transform: none;
+			opacity: 1;
+		}
+	}
+
+	.MJ-sect-list .MJ-sect-button {
+		@media (max-width: 1000px) {
+			width: auto;
+			margin: 6px 0;
+			text-align: left;
+		}
+	}
 }
 
 @keyframes loadFromHeaderMJ {
@@ -68,7 +158,7 @@
 	font-weight: bold;
 	outline-offset: -1px;
 
-	@media (max-width: 908px) {
+	@media (max-width: 1000px) {
 		float: left;
 	}
 }
@@ -88,38 +178,39 @@
 
 .MJ-tab-container {
 	width: 90%;
-	left: 5%;
-	top: 100px;
-	position: absolute;
 	color: rgb(214, 210, 208);
 	font-size: 24px;
-	max-width: 1000px;
 	margin: auto;
 
 	@media (max-width: 525px) {
 		width: 98%;
 		left: 1%;
 	}
+
+	section {
+		padding-top: 24px;
+		padding-bottom: 24px;
+	}
 }
 
-.mj-background {
-	width: 100vw;
-	position: fixed;
-	top: 120px;
-	left: 0;
-	object-fit: cover;
-	object-position: 80% 20%;
-	z-index: -1;
+#about {
+	background-image: url("/media/Artwork/mj keyart idea.avif");
+	background-size: cover;
+	background-position: 80% 20%;
 	background-color: #150401;
-	height: 90vh;
+	background-attachment: fixed;
+	height: 100%;
 	filter: brightness(80%);
+	margin-right: -5%;
+	margin-left: -5%;
+	padding: 5%;
 
 	@media (max-width: 1420px) {
 		max-height: 100%;
 	}
 
 	@media (max-width: 450px) {
-		object-position: right -50px;
+		background-position: right -50px;
 	}
 }
 
@@ -136,10 +227,8 @@
 
 .mj-main-logo {
 	height: 300px;
-	position: fixed;
-	top: 200px;
 
-	@media (max-width: 908px) {
+	@media (max-width: 1000px) {
 		height: 200px;
 	}
 
@@ -154,35 +243,28 @@
 	object-fit: contain;
 }
 
-.MJ-logo-header {
-	height: 100px;
-	margin-left: 92px;
-	position: fixed;
-	object-fit: scale-down;
-	top: -18px;
-	transition: all 0.3s;
-	width: 200px;
-}
-
-.MJ-tab:not(:target) {
+.MJ-tab:not(.MJ-tab-active) {
 	display: none;
 }
 
-.MJ-tab:target {
+.MJ-tab-active {
 	display: block;
 }
 
-.MJ-nav {
-	position: relative;
-	top: 100px;
+#header {
+	--header-corner-color: #403939;
+	animation-name: loadFromHeaderMJ;
+
+	@media (max-width: 1000px) {
+		height: auto;
+		min-height: 90px;
+		max-height: none;
+	}
 }
 
-.topnav #myLinks {
-	display: none;
-	position: fixed;
-	top: 95px;
-	right: -20px;
-	background-color: #403939;
-	border-radius: 32px;
-	width: 100vw;
+.footer-button {
+	width: 100%;
+	background-color: #293231;
+	color: aquamarine;
+	border-radius: 0;
 }

@@ -28,8 +28,8 @@
 
 	<!-- <div include-html="/social-links.html" class="hide-mobile"></div> -->
 
-	<nav class="header">
-		<div class="header-cont">
+	<nav id="header">
+		<div id="header-cont">
 			<a href="/" class="home-button" onclick="homeButton(); return false;">
 				<img src="/media/Stamps/stamp.png" alt="Home button">
 			</a>
@@ -57,15 +57,6 @@
 
 </html>
 <script>
-	function homeButton() {
-		document.getElementsByClassName("header-cont")[0].classList.add("fade-down-class");
-		document.getElementsByClassName("header")[0].style.transform = "unset";
-		document.getElementsByClassName("header")[0].style.animation = "headerUnload ease-in 3s";
-		setTimeout(function () {
-			window.location.href = '/';
-		}, 200);
-	}
-
 	function tag_expand() {
 		const container = document.getElementById("tag-container");
 		const gallery = document.getElementsByClassName("gallery-container")[0];
@@ -104,4 +95,13 @@
 	};
 
 	window.addEventListener("load", setWidth());
+</script>
+<script>
+	function homeButton() {
+		document.body.classList.add("page-dismiss");
+
+		setTimeout(function () {
+			window.location.href = '/';
+		}, 200);
+	}
 </script>

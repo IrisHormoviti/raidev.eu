@@ -22,19 +22,26 @@
 	<meta content="#fdaa7b" data-react-helmet="true" name="theme-color" />
 </head>
 
-<body style="background-color: #2c2929;">
+<body>
 
+	<nav id="header">
+		<div id="header-cont">
+			<a href="/" class="home-button" onclick="homeButton(); return false;">
+				<img src="/media/Stamps/stamp.png" alt="Home button">
+			</a>
 
-	<div class="header-cont">
-		<button class="home-button" style="background-color: #fdaa7b;" onclick="homeButton();">
-		</button>
-		<img src="/media/MJ/logo.png" class="MJ-logo-header">
-	</div>
+			<img src="/media/MJ/logo.png" class="MJ-logo-header">
 
+			<button type="button" class="icon MJ-sect-button section-button" aria-controls="MJ-sect-list"
+				aria-expanded="false" onclick="toggle_menu()">
+				<i class="fa fa-bars" aria-hidden="true"></i>
+				<span class="section-text">Sections</span>
+			</button>
+		</div>
+	</nav>
 
-
-	<div class="header header-mj">
-		<div class="MJ-sect-list hide-smaller">
+	<main class="MJ-tab-container">
+		<div class="MJ-sect-list" id="MJ-sect-list">
 			<button class="MJ-sect-button about" onclick="tab_press('#about');">
 				About</button>
 			<button class="MJ-sect-button screenshots" onclick="tab_press('#screenshots');">
@@ -43,63 +50,30 @@
 				Characters</button>
 			<button class="MJ-sect-button how-it-started" onclick="tab_press('#how-it-started');">
 				How it started</button>
-			<!-- <button class="MJ-sect-button how-its-going" onclick="tab_press('#how-its-going');">
-          How it's going</button> -->
 			<button class="MJ-sect-button playtest" onclick="tab_press('#playtest');">
 				Playtest</button>
 			<button class="MJ-sect-button FAQ" onclick="tab_press('#FAQ');">
 				FAQ</button>
 		</div>
-	</div>
-
-	<div class="topnav">
-		<a class="icon MJ-sect-button section-button" onclick="toggle_menu()">
-			<i class="fa fa-bars">
-				<h class="section-text">Sections</h>
-			</i>
-		</a>
-		<div id="myLinks">
-			<div class="MJ-sect-list">
-				<button class="MJ-sect-button about" onclick="tab_press('#about');">
-					About</button>
-				<button class="MJ-sect-button screenshots" onclick="tab_press('#screenshots');">
-					Screenshots</button>
-				<button class="MJ-sect-button characters" onclick="tab_press('#characters');">
-					Characters</button>
-				<button class="MJ-sect-button how-it-started" onclick="tab_press('#how-it-started');">
-					How it started</button>
-				<button class="MJ-sect-button playtest" onclick="tab_press('#playtest');">
-					Playtest</button>
-				<!-- <button class="MJ-sect-button how-its-going" onclick="tab_press('#how-its-going');">
-          How it's going</button> -->
-				<button class="MJ-sect-button FAQ" onclick="tab_press('#FAQ');">
-					FAQ</button>
-			</div>
-		</div>
-	</div>
-
-	<div class="MJ-tab-container">
-		<br><br>
-		<div id="about" class="MJ-tab">
-			<img src="/media/Artwork/mj keyart idea.avif" class="mj-background">
-			<!-- <img src="/media/Artwork/mj keyart idea.avif" class="mj-behind-background"> -->
+		<section id="about" class="MJ-tab">
 			<img src="/media/MJ/logo_solid.png" class="mj-main-logo">
-			<div style="column-gap: 24px; top: 500px; position: fixed;">
-				<a href="https://store.steampowered.com/app/4059970/Miras_Journal/"><button
-						style="font-size: 34px; height: 64px; color: white; background-color: #295381;"><i
-							class="fab fa-steam"></i> Wishlist on Steam</button></a>
-			</div>
-			<div style="column-gap: 24px; top: 574px; position: fixed;">
+
+			<div style="display: flex; gap: 12px; flex-flow: wrap; width: 50%; margin: 24px;">
+				<a href="https://store.steampowered.com/app/4059970/Miras_Journal/">
+					<button style="font-size: 34px; color: white; background-color: #295381;"><i
+							class="fab fa-steam"></i>
+						Wishlist on Steam
+					</button></a>
+
 				<button class="MJ-sect-button"
-					style="font-size: 38px; color: white; background-color: #fdaa7b; outline-color: #fdaa7b;"
+					style="font-size: 34px; color: white; background-color: #fdaa7b; outline-color: #fdaa7b;"
 					onclick="tab_press('#playtest');">Playtest</button>
-				<!--<a href="https://discord.gg/38j6uKXFu6" target="_blank"><button class="MJ-sect-button"
-						style="font-size: 38px;">Discord</button></a>-->
+
 				<a href="http://www.github.com/IrisHormoviti/Miras-Journal" target="_blank"><button
-						class="MJ-sect-button" style="font-size: 38px;">Github</button></a>
+						class="MJ-sect-button" style="font-size: 34px;">Github</button></a>
 			</div>
-			<div
-				style="background-color: #2b2b2b; color: white; padding: 24px; border-radius: 24px; border-color: #FEFEFE; border-width: 6px; border-style:solid;">
+
+			<div>
 				<h1>About this game</h1>
 				<p>
 					This is a game I've been working on as a side-project for a while.
@@ -134,15 +108,9 @@
 				<br>There's a build available to test above.
 				</p>
 				<br>
-				<a class="icon MJ-sect-button section-button" onclick="window.scrollTo(0,0); toggle_menu()"
-					style="position: relative;">
-					<i class="fa fa-bars">
-						<h class="section-text">Navigate to another section</h>
-					</i>
-				</a>
 			</div>
-		</div>
-		<div id="how-it-started" class="MJ-tab">
+		</section>
+		<section id="how-it-started" class="MJ-tab">
 			<h2>My history with game development</h2>
 			<p>
 				I first started making games as a kid with scratch. I never made anything major though, my most notable
@@ -259,8 +227,8 @@
 				RPG Maker, but it's honestly more fun this way.<br><br>
 				And that brings us to the present, thanks for reading!
 			</p>
-		</div>
-		<div id="characters" class="MJ-tab">
+		</section>
+		<section id="characters" class="MJ-tab">
 			<a href="/oc#mira" onclick="show_character('mira'); return false;" title="Mira Levenor">
 				<img class="profile-raicon clickable-profile-raicon" src="/media/Raicons/Mira.png"></a>
 			<a href="/oc#alcine" onclick="show_character('alcine'); return false;" title="Alcine">
@@ -274,8 +242,8 @@
 			<a href="/oc#erinn" onclick="show_character('erinn'); return false;" title="Erinn">
 				<img class="profile-raicon clickable-profile-raicon" src="/media/Raicons/Erinn.png"></a>
 			<p style="font-size: 24px; text-align: left; color: #aca6b1;">Click on a character to learn more!</p>
-		</div>
-		<div id="screenshots" class="MJ-tab">
+		</section>
+		<section id="screenshots" class="MJ-tab">
 			<img src="/media/MJ/AboutScreenshot1.png" alt="Party menu" class="clickable-image mj-screenshot"
 				onclick="show_image(this);">
 			<img src="/media/MJ/AboutScreenshot2.png" alt="Battle screen" class="clickable-image mj-screenshot"
@@ -309,16 +277,16 @@
 			<img src="/media/MJ/scr12.png" alt="Items menu in the overworld" class="clickable-image mj-screenshot"
 				onclick="show_image(this);">
 
-		</div>
-		<div id="playtest" class="MJ-tab">
+		</section>
+		<section id="playtest" class="MJ-tab">
 			<h2>Playtest</h2>
 			If you want to try the game in it's current unfinished state, you can <a style="color: #fdaa7b;"
 				href="https://github.com/IrisHormoviti/Miras-Journal/releases" target="_blank">download the latest build
 				from here</a> (under assets).<br><br>
 			If you play it, please provide feedback on <a style="color: #fdaa7b;" href="https://discord.raidev.eu"
 				target="_blank">my Discord server</a>.
-		</div>
-		<div id="FAQ" class="MJ-tab">
+		</section>
+		<section id="FAQ" class="MJ-tab">
 			<h2>When will this be released?</h2>
 			<p>I honestly have no idea. Game development is very complicated and I'm currently doing this myself
 				entirely as a hobby. It'll probably take years.<br>
@@ -351,47 +319,51 @@
 				I would definitely need someone to make music as I'm completly clueless in that area.<br>
 				However I want to have a playable demo first so be sure the concept of the game works as I see it.
 			</p>
-		</div>
-	</div>
+		</section>
+
+		<button class="footer-button" onclick="window.scrollTo(0,0); toggle_menu()">
+			Navigate to another section
+		</button>
+	</main>
 </body>
 <script>
+	history.scrollRestoration = "manual";
+
 	function toggle_menu(state = null) {
-		let x = document.getElementById("myLinks");
-		let btn = document.getElementsByClassName("section-button")[0];
-		if (state == null) state = x.style.display != "block";
-		if (state) {
-			x.style.display = "block";
-			btn.className = "icon MJ-sect-button section-button MJ-active-tab section-button-on";
-		} else {
-			x.style.display = "none";
-			btn.className = "icon MJ-sect-button section-button";
-		}
+		const header = document.getElementById("header-cont");
+		const button = document.querySelector(".section-button");
+		if (state == null) state = !header.classList.contains("mobile-nav-open");
+		header.classList.toggle("mobile-nav-open", state);
+		button.setAttribute("aria-expanded", String(state));
+		button.classList.toggle("MJ-active-tab", state);
+		button.classList.toggle("section-button-on", state);
 	}
 
 	function tab_press(section) {
 		toggle_menu(false);
-		window.location.href = section;
+		history.pushState(null, "", section);
 		select_tab();
 	}
 
-	window.onload = init();
+	init();
 
 	function init() {
-		console.log("boop");
 		if (window.location.hash.substring(1) == "") {
-			tab_press("#about");
+			history.replaceState(null, "", "#about");
 		}
-		document.getElementsByClassName("." + window.location.hash.substring(1)).disabled = true;
 		select_tab();
 	}
 
 	function select_tab() {
-		window.scrollTo(0, 0)
-		document.querySelectorAll('.MJ-sect-button').forEach(function (button) {
-			button.className = button.className.replace(" MJ-active-tab", "");
+		const activeTab = window.location.hash.substring(1) || "about";
+		document.querySelectorAll(".MJ-tab").forEach(function (tab) {
+			tab.classList.toggle("MJ-tab-active", tab.id === activeTab);
 		});
-		document.querySelectorAll('.' + window.location.hash.substring(1)).forEach(function (button) {
-			button.className += " MJ-active-tab";
+		document.querySelectorAll('.MJ-sect-button').forEach(function (button) {
+			button.classList.remove("MJ-active-tab");
+		});
+		document.querySelectorAll('.' + activeTab).forEach(function (button) {
+			button.classList.add("MJ-active-tab");
 		});
 
 		function setWidth() {
@@ -406,8 +378,13 @@
 			window.scrollTo(0, 0)
 		};
 
-		window.addEventListener("load", setWidth());
+		setWidth();
 	}
+
+	window.addEventListener("popstate", function () {
+		toggle_menu(false);
+		select_tab();
+	});
 </script>
 <script src="/lib/image-popup.js"></script>
 <script>
@@ -415,22 +392,15 @@
 		homeButton("/oc#" + str);
 	}
 
-	function homeButton(to = "/") {
-		document.getElementsByClassName("header-cont")[0].classList.add("fade-down-class");
-		document.getElementsByClassName("topnav")[0].classList.add("fade-down-class");
-		document.getElementsByClassName("MJ-sect-list")[0].classList.add("faded");
-		document.getElementsByClassName("header")[0].style.transform = "unset";
-		document.getElementsByClassName("header")[0].style.animation = "headerUnloadMJ ease-in 3s";
+</script>
+<script>
+	function homeButton() {
+		document.body.classList.add("page-dismiss");
+
 		setTimeout(function () {
-			window.location.href = to;
+			window.location.href = '/';
 		}, 200);
 	}
-
-	window.addEventListener("pageshow", function (event) {
-		if (performance.navigation.type == 2) {
-			location.reload();
-		}
-	});
 </script>
 
 </html>

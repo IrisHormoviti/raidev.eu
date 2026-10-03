@@ -9,8 +9,9 @@
 	transition: all 0.3s;
 	text-decoration: none;
 	margin-bottom: 0;
+	transition: all 0.3s;
 
-	animation: slideDown 0.5s ease forwards;
+	animation: slide-down 0.5s ease forwards;
 
 	li {
 		z-index: 2;
@@ -94,17 +95,16 @@
 	height: fit-content;
 	overflow: scroll;
 	scrollbar-width: none;
+	opacity: 1;
 }
 
 @keyframes open-drop {
 	from {
 		height: 32px;
-		opacity: 25%;
 	}
 
 	to {
 		height: var(--slink-height);
-		opacity: 100%;
 	}
 }
 
@@ -114,8 +114,7 @@
 	}
 
 	to {
-		height: 32px;
-		opacity: 0;
+		height: 0px;
 
 		@keyframes loadFromHeader {
 			from {
