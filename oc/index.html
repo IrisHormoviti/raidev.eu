@@ -8,9 +8,8 @@
 	<link rel="stylesheet" href="/common.css">
 	<link rel="stylesheet" href="oc.css">
 	<link href="/lib/fontawesome/css/all.min.css" rel="stylesheet">
-	<script onclick="show_image(this);" src="/lib/jquery-3.7.1.min.js"></script>
-	<script onclick="show_image(this);" src="/lib/include-html.js"></script>
-	<script onclick="show_image(this);" src="/lib/imagesloaded.pkgd.min.js"></script>
+	<script src="/lib/include-html.js"></script>
+	<script src="/lib/imagesloaded.pkgd.min.js"></script>
 	<meta id="vp" name="viewport">
 	<link rel="icon" type="image/x-icon" href="/media/Rai/favicon.png">
 	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
@@ -252,22 +251,11 @@
 </html>
 <script src="/lib/handle-slinks.js"></script>
 <script src="/lib/image-popup.js"></script>
+<script src="/lib/subpage-common.js"></script>
 <script>
 	let character = "";
 
-	function setWidth() {
-		let mvp = document.getElementById('vp');
-		if (screen.width < 472) {
-			mvp.setAttribute('content', 'width=472px');
-			console.log("mobile mode");
-		} else {
-			mvp.setAttribute('content', 'width=device-width');
-			console.log("swakrop mode");
-		}
-	};
-
 	window.addEventListener("load", function () {
-		setWidth();
 		show_character(window.location.hash.substring(1));
 	});
 
@@ -325,13 +313,4 @@
 			return hexColor;
 		}
 	};
-</script>
-<script>
-	function homeButton() {
-		document.body.classList.add("page-dismiss");
-
-		setTimeout(function () {
-			window.location.href = '/';
-		}, 200);
-	}
 </script>

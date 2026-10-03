@@ -8,8 +8,8 @@
 	<link rel="stylesheet" href="/common.css">
 	<link rel="stylesheet" href="comm.css">
 	<link href="/lib/fontawesome/css/all.min.css" rel="stylesheet">
-	<script onclick="show_image(this);" src="/lib/include-html.js"></script>
-	<script onclick="show_image(this);" src="/lib/imagesloaded.pkgd.min.js"></script>
+	<script src="/lib/include-html.js"></script>
+	<script src="/lib/imagesloaded.pkgd.min.js"></script>
 	<meta id="vp" name="viewport">
 	<link rel="icon" type="image/x-icon" href="/media/Rai/favicon.png">
 	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
@@ -144,20 +144,7 @@
 <script src="/lib/image-popup.js"></script>
 <script>
 	let terms_open = false;
-
-	function setWidth() {
-		const mvp = document.getElementById('vp');
-		if (screen.width < 472) {
-			mvp.setAttribute('content', 'width=472px');
-			console.log("mobile mode");
-		} else {
-			mvp.setAttribute('content', 'width=device-width');
-			console.log("swakrop mode");
-		}
-	};
-
 	window.addEventListener("load", function () {
-		setWidth();
 		hash_check(window.location.hash);
 	});
 
@@ -217,12 +204,4 @@
 		}
 	};
 </script>
-<script>
-	function homeButton() {
-		document.body.classList.add("page-dismiss");
-
-		setTimeout(function () {
-			window.location.href = '/';
-		}, 200);
-	}
-</script>
+<script type="text/javascript" src="/lib/subpage-common.js"></script>

@@ -42,10 +42,12 @@ html {
 }
 
 .page-dismiss {
-	animation-name: page-slide-down;
-	animation-timing-function: ease;
-	animation-duration: 0.2s;
-	animation-fill-mode: forwards;
+	opacity: 1;
+	animation-name: page-slide-down !important;
+	animation-timing-function: ease !important;
+	animation-duration: 0.2s !important;
+	animation-fill-mode: forwards !important;
+	animation-delay: 0s !important;
 }
 
 body {
@@ -197,16 +199,17 @@ button:active,
 	background-color: #252327;
 	--header-corner-color: #252327;
 	height: 140px;
-	/* transform: scaleY(100); */
+
 	position: sticky;
 	z-index: 3;
 	width: 100%;
 	left: 0;
 	top: 0;
-	/* animation-name: loadFromHeader; */
+
 	animation-timing-function: cubic-bezier(.31, .38, .51, 1);
 	animation-duration: 0.5s;
 	animation-fill-mode: forwards;
+	transition: height 0.3s;
 
 	max-height: 20vh;
 
@@ -243,22 +246,6 @@ button:active,
 	}
 }
 
-.curved-bg {
-	background-color: #252327;
-	position: absolute;
-	top: 140px;
-	width: 100%;
-	height: 35px;
-}
-
-.curved {
-	border-radius: 35px 35px 0 0;
-	position: relative;
-	width: 100%;
-	height: 36px;
-	background-color: #403b37;
-}
-
 #header-cont {
 	height: 100%;
 	width: fit-content;
@@ -273,23 +260,13 @@ button:active,
 	flex-direction: row;
 	align-items: center;
 
+
 	h1 {
+		transition: font-size 0.3s;
 		font-size: 64px;
 		margin: 0;
 		margin-right: 24px;
 		vertical-align: middle;
-
-		@media (max-width: 700px) {
-			font-size: 48px;
-		}
-
-		@media (max-width: 450px) {
-			font-size: 28px;
-		}
-
-		@media (max-height: 400px) {
-			font-size: 32px;
-		}
 	}
 }
 

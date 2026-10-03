@@ -5,7 +5,6 @@ body {
 	background-image: url('/media/Rai/comm-bg.png');
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position-y: min(130px, 20vh);
 
 	animation-name: fade-in;
 	animation-duration: 1s;

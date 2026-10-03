@@ -1,15 +1,86 @@
+:root {
+	--mj-logo-transition-distance: 300px;
+	--mj-header-corner-overlap: 24px;
+}
+
 body {
+	animation-name: fade-in;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-delay: 0.5s;
+	opacity: 0;
+	transition: all 0.5s;
+	padding-bottom: 25vh;
+
+
 	min-height: 100vh;
-	background-color: #2c2929;
+	background-color: #403939;
+
+	background-image: url("/media/Artwork/mj keyart idea.avif");
+	background-size: cover;
+	background-position: 80% 20%;
+	background-attachment: fixed;
+	filter: brightness(80%);
+
+	@media (max-width: 450px) {
+		background-position-x: right -100px;
+	}
+}
+
+@keyframes fade-in {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+#header {
+	--header-corner-color: #403939;
+	background-color: rgba(64, 57, 57, var(--mj-scroll-progress, 0));
+
+	@media (max-width: 1000px) {
+		height: auto;
+		min-height: 90px;
+		max-height: none;
+	}
+
+	&::before,
+	&::after {
+		opacity: var(--mj-scroll-progress, 0);
+		clip-path: inset(var(--mj-header-corner-overlap) 0 0);
+		transition: none;
+	}
 }
 
 #header-cont {
 	width: 100%;
+	justify-content: space-between;
+	flex-direction: row-reverse;
+	animation: none;
+	opacity: 1;
+
+	>.mj-logo-link {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex: 0 0 auto;
+		width: 200px;
+		line-height: 0;
+		text-decoration: none;
+		margin-left: 32px;
+	}
 
 	.MJ-logo-header {
+		display: block;
 		object-fit: scale-down;
-		transition: all 0.3s;
-		width: 200px;
+		transform-origin: top left;
+		width: 100%;
+		height: auto;
+		max-width: 100%;
+		visibility: hidden;
 	}
 
 	@media (max-width: 1000px) {
@@ -23,7 +94,8 @@ body {
 			flex: 0 0 112px;
 			height: auto;
 			max-width: none;
-			margin: 8px 16px;
+			margin: 0;
+			margin-right: 24px;
 
 			img {
 				width: 100%;
@@ -32,9 +104,10 @@ body {
 			}
 		}
 
-		>.MJ-logo-header {
+		>.mj-logo-link {
 			flex: 0 1 auto;
 			width: min(150px, 38vw);
+			margin: 0 24px;
 		}
 
 	}
@@ -67,85 +140,17 @@ body {
 			}
 		}
 	}
-
-	.MJ-sect-list {
-		animation-name: slide-left;
-		animation-duration: 0.5s;
-		animation-fill-mode: forwards;
-		display: flex;
-		flex-wrap: wrap;
-		align-items: center;
-		flex: 1 1 0;
-		min-width: 0;
-		margin-left: auto;
-		margin-right: 24px;
-		text-align: right;
-		justify-content: flex-end;
-	}
-
-	&:not(.mobile-nav-open)>.MJ-sect-list {
-		@media (max-width: 1000px) {
-			display: none;
-		}
-	}
-
-	&.mobile-nav-open .MJ-sect-list {
-		@media (max-width: 1000px) {
-			display: flex;
-			flex: 0 0 100%;
-			flex-direction: column;
-			align-items: stretch;
-			justify-content: flex-start;
-			box-sizing: border-box;
-			width: 100%;
-			margin: 0;
-			padding: 8px 16px 16px;
-			text-align: left;
-			animation: none;
-			transform: none;
-			opacity: 1;
-		}
-	}
-
-	.MJ-sect-list .MJ-sect-button {
-		@media (max-width: 1000px) {
-			width: auto;
-			margin: 6px 0;
-			text-align: left;
-		}
-	}
 }
 
-@keyframes loadFromHeaderMJ {
-	from {
-		transform: scaleY(50);
-	}
-
-	to {
-		transform: scaleY(1);
-		background-color: #403939;
-	}
-}
-
-@keyframes headerUnloadMJ {
-	0% {
-		transform: scaleY(1);
-		background-color: #403939;
-	}
-
-	10% {
-		transform: scaleY(50);
-		background-color: #252327;
-	}
-
-	95% {
-		transform: scaleY(50);
-		background-color: #252327;
-	}
-
-	100% {
-		transform: scaleY(1);
-	}
+.MJ-sect-list {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	flex: 1 1 0;
+	min-width: 0;
+	margin-left: auto;
+	margin-right: 24px;
+	text-align: center;
 }
 
 .MJ-sect-button {
@@ -157,10 +162,6 @@ body {
 	margin: 8px;
 	font-weight: bold;
 	outline-offset: -1px;
-
-	@media (max-width: 1000px) {
-		float: left;
-	}
 }
 
 .MJ-sect-button:hover,
@@ -176,15 +177,44 @@ body {
 	color: #ea9f75;
 }
 
+.action-buttons {
+	animation: slide-up 0.5s cubic-bezier(0.269, 0.918, 0.45, 0.975);
+	animation-delay: 1s;
+	animation-fill-mode: forwards;
+	opacity: 0;
+
+	display: flex;
+	gap: 12px;
+	flex-flow: wrap;
+	margin: 24px;
+	margin-top: 25vh;
+
+	@media (min-width: 1000px) {
+		justify-content: center;
+	}
+}
+
 .MJ-tab-container {
+	animation: slide-up 0.5s cubic-bezier(0.269, 0.918, 0.45, 0.975);
+	animation-delay: 1s;
+	animation-fill-mode: forwards;
+	opacity: 0;
+
+	background-color: #2b2b2b;
+	color: white;
+	padding: 24px;
+	border-radius: 24px;
+	border-color: #FEFEFE;
+	border-width: 6px;
+	border-style: solid;
+
 	width: 90%;
-	color: rgb(214, 210, 208);
+	max-width: 1000px;
 	font-size: 24px;
 	margin: auto;
 
 	@media (max-width: 525px) {
-		width: 98%;
-		left: 1%;
+		width: unset;
 	}
 
 	section {
@@ -193,47 +223,18 @@ body {
 	}
 }
 
-#about {
-	background-image: url("/media/Artwork/mj keyart idea.avif");
-	background-size: cover;
-	background-position: 80% 20%;
-	background-color: #150401;
-	background-attachment: fixed;
-	height: 100%;
-	filter: brightness(80%);
-	margin-right: -5%;
-	margin-left: -5%;
-	padding: 5%;
-
-	@media (max-width: 1420px) {
-		max-height: 100%;
-	}
-
-	@media (max-width: 450px) {
-		background-position: right -50px;
-	}
-}
-
-.mj-behind-background {
-	position: fixed;
-	z-index: -2;
-	background-repeat: repeat;
-	top: 0;
-	left: 0;
-	filter: blur(20px) brightness(50%);
-	height: 100vh;
-	width: 100%;
-}
-
-.mj-main-logo {
+.mj-logo-space {
 	height: 300px;
+	margin-left: 48px;
 
 	@media (max-width: 1000px) {
 		height: 200px;
+		margin-left: 24px;
 	}
 
 	@media (max-width: 450px) {
-		display: none;
+		height: 140px;
+		margin-left: 16px;
 	}
 }
 
@@ -249,17 +250,6 @@ body {
 
 .MJ-tab-active {
 	display: block;
-}
-
-#header {
-	--header-corner-color: #403939;
-	animation-name: loadFromHeaderMJ;
-
-	@media (max-width: 1000px) {
-		height: auto;
-		min-height: 90px;
-		max-height: none;
-	}
 }
 
 .footer-button {
