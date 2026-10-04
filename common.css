@@ -111,7 +111,7 @@ button:active,
 	}
 
 	100% {
-		transform: translateY(0);
+		transform: none;
 		opacity: 1;
 	}
 }
@@ -209,13 +209,7 @@ button:active,
 	animation-timing-function: cubic-bezier(.31, .38, .51, 1);
 	animation-duration: 0.5s;
 	animation-fill-mode: forwards;
-	transition: height 0.3s;
-
 	max-height: 20vh;
-
-	@media (max-width: 450px) {
-		height: 90px;
-	}
 }
 
 @keyframes loadFromHeader {
@@ -262,7 +256,7 @@ button:active,
 
 
 	h1 {
-		transition: font-size 0.3s;
+		transition: none;
 		font-size: 64px;
 		margin: 0;
 		margin-right: 24px;

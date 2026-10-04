@@ -16,11 +16,10 @@ body {
 	min-height: 100vh;
 	background-color: #403939;
 
-	background-image: url("/media/Artwork/mj keyart idea.avif");
+	background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("/media/Artwork/mj keyart idea.avif");
 	background-size: cover;
 	background-position: 80% 20%;
 	background-attachment: fixed;
-	filter: brightness(80%);
 
 	@media (max-width: 450px) {
 		background-position-x: right -100px;
@@ -40,12 +39,6 @@ body {
 #header {
 	--header-corner-color: #403939;
 	background-color: rgba(64, 57, 57, var(--mj-scroll-progress, 0));
-
-	@media (max-width: 1000px) {
-		height: auto;
-		min-height: 90px;
-		max-height: none;
-	}
 
 	&::before,
 	&::after {
@@ -67,10 +60,10 @@ body {
 		align-items: center;
 		justify-content: center;
 		flex: 0 0 auto;
-		width: 200px;
+		width: 140px;
 		line-height: 0;
 		text-decoration: none;
-		margin-left: 32px;
+		margin-left: 24px;
 	}
 
 	.MJ-logo-header {
@@ -81,64 +74,6 @@ body {
 		height: auto;
 		max-width: 100%;
 		visibility: hidden;
-	}
-
-	@media (max-width: 1000px) {
-		height: auto;
-		min-height: 90px;
-		flex-wrap: wrap;
-		align-content: flex-start;
-		justify-content: space-between;
-
-		>.home-button {
-			flex: 0 0 112px;
-			height: auto;
-			max-width: none;
-			margin: 0;
-			margin-right: 24px;
-
-			img {
-				width: 100%;
-				height: auto;
-				max-width: none;
-			}
-		}
-
-		>.mj-logo-link {
-			flex: 0 1 auto;
-			width: min(150px, 38vw);
-			margin: 0 24px;
-		}
-
-	}
-
-	.section-button {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: 12px;
-		width: auto;
-		height: auto;
-		padding: 8px 18px 4px;
-		position: relative;
-		margin: 24px;
-
-		@media (min-width: 1000px) {
-			display: none;
-		}
-
-		i {
-			display: inline-flex;
-		}
-
-		.section-text {
-			display: inline;
-			white-space: nowrap;
-
-			@media (max-width: 600px) {
-				display: none;
-			}
-		}
 	}
 }
 
@@ -151,6 +86,13 @@ body {
 	margin-left: auto;
 	margin-right: 24px;
 	text-align: center;
+	justify-content: center;
+
+	@media (min-width: 1200px) {
+		position: sticky;
+		z-index: 11;
+		top: 12px;
+	}
 }
 
 .MJ-sect-button {
@@ -197,8 +139,8 @@ body {
 .MJ-tab-container {
 	animation: slide-up 0.5s cubic-bezier(0.269, 0.918, 0.45, 0.975);
 	animation-delay: 1s;
-	animation-fill-mode: forwards;
-	opacity: 0;
+	animation-fill-mode: backwards;
+	opacity: 1;
 
 	background-color: #2b2b2b;
 	color: white;

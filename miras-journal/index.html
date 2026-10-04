@@ -356,12 +356,9 @@
 
 	const heroLogoSpace = document.querySelector(".mj-logo-space");
 	const headerLogo = document.querySelector(".MJ-logo-header");
-	let logoOffsetX = 0;
-	let logoOffsetY = 0;
-	let logoScale = 1;
 	const logoTransitionDistance = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--mj-logo-transition-distance"));
 
-	function positionLogo() {
+	function updateHeaderTint() {
 		const currentTransform = headerLogo.style.transform;
 		headerLogo.style.transform = "none";
 		const hero = heroLogoSpace.getBoundingClientRect();
@@ -370,24 +367,34 @@
 			headerLogo.style.transform = currentTransform;
 			return;
 		}
-		logoOffsetX = hero.left - header.left;
-		logoOffsetY = hero.top - header.top;
-		logoScale = hero.height / header.height;
-		headerLogo.style.visibility = "visible";
-		updateHeaderTint();
-	}
-
-	function updateHeaderTint() {
 		const progress = Math.min(window.scrollY / logoTransitionDistance, 1);
 		const remaining = 1 - progress;
+		const scale = 1 + (hero.height / header.height - 1) * remaining;
+		const offsetX = (hero.left - header.left) * remaining;
+		const offsetY = (hero.top - header.top) * remaining;
+		headerLogo.style.visibility = "visible";
 		document.documentElement.style.setProperty("--mj-scroll-progress", progress);
-		headerLogo.style.transform = `translate3d(${logoOffsetX * remaining}px, ${logoOffsetY * remaining}px, 0) scale(${1 + (logoScale - 1) * remaining})`;
+		headerLogo.style.transform = `translate3d(${offsetX}px, ${offsetY}px, 0) scale(${scale})`;
 	}
 
-	window.addEventListener("load", positionLogo, { once: true });
-	window.addEventListener("resize", positionLogo);
-	window.addEventListener("scroll", updateHeaderTint, { passive: true });
-	positionLogo();
+	let resizeTimer;
+	let scrollTimer;
+	function updateAfterResize() {
+		updateHeaderTint();
+		clearTimeout(resizeTimer);
+		resizeTimer = setTimeout(updateHeaderTint, 350);
+	}
+
+	function updateAfterScroll() {
+		updateHeaderTint();
+		clearTimeout(scrollTimer);
+		scrollTimer = setTimeout(updateHeaderTint, 100);
+	}
+
+	window.addEventListener("load", updateHeaderTint, { once: true });
+	window.addEventListener("resize", updateAfterResize);
+	window.addEventListener("scroll", updateAfterScroll, { passive: true });
+	updateHeaderTint();
 </script>
 <script src="/lib/image-popup.js"></script>
 <script src="/lib/subpage-common.js"></script>
