@@ -10,6 +10,8 @@
 	text-decoration: none;
 	margin-bottom: 0;
 	transition: all 0.3s;
+	padding: 4px;
+	max-width: 100vw;
 
 	animation: slide-down 0.5s ease forwards;
 
@@ -43,7 +45,7 @@
 	color: #3d2e43;
 	height: 64px;
 	width: 64px;
-	margin: 8px;
+	margin: 4px;
 	border: none;
 	padding: 0;
 }
@@ -78,6 +80,7 @@
 	border-radius: 42px;
 
 	width: 420px;
+	max-width: 100vw;
 
 	opacity: 0;
 	padding: 8px 8px 8px;

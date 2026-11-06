@@ -10,7 +10,6 @@ body {
 	animation-name: slide-up;
 	animation-fill-mode: forwards;
 	animation-duration: 0.5s;
-	animation-delay: 1.5s;
 	display: grid;
 	grid-gap: 8px;
 	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));

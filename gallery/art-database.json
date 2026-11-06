@@ -1,1150 +1,3532 @@
 {
 	"tags": [
-		{"name": "",
-			"title": "All artwork",
+		{
+			"name": "featured",
+			"title": "Featured",
 			"icon": "",
-			"sketchinclude": "no",
-			"exclusive": false
+			"kind": "featured",
+			"visible": false,
+			"exclusive": false,
+			"exclude": [
+				"sketch"
+			]
 		},
-		{"name": "sketch",
+		{
+			"name": "sketch",
 			"title": "Sketches",
 			"icon": "/media/Raicons/sketches.png",
-			"sketchinclude": "yes",
-			"exclusive": false
+			"kind": "category",
+			"visible": true,
+			"exclusive": false,
+			"exclude": []
 		},
-		{"name": "mj",
+		{
+			"name": "null",
+			"title": "Suggestive",
+			"icon": "",
+			"kind": "category",
+			"visible": false,
+			"exclusive": true,
+			"exclude": []
+		},
+		{
+			"name": "mj",
 			"title": "Mira's Journal",
 			"icon": "/media/MJ/icon.png",
-			"sketchinclude": "yes",
-			"exclusive": false
+			"kind": "universe",
+			"visible": true,
+			"exclusive": false,
+			"exclude": []
 		},
-		{"name": "fanart",
+		{
+			"name": "fanart",
 			"title": "Fanart",
 			"icon": "/media/Raicons/fanart.png",
-			"sketchinclude": "yes",
-			"exclusive": false
+			"kind": "category",
+			"visible": true,
+			"exclusive": false,
+			"exclude": []
 		},
-		{"name": "giftart",
+		{
+			"name": "giftart",
 			"title": "Art for others",
 			"icon": "/media/Raicons/giftart.png",
-			"sketchinclude": "yes",
-			"exclusive": false
+			"kind": "category",
+			"visible": true,
+			"exclusive": false,
+			"exclude": []
 		},
-		{"name": "comm",
+		{
+			"name": "comm",
 			"title": "Commissions",
 			"icon": "/media/Raicons/comm.png",
-			"sketchinclude": "yes",
-			"exclusive": false
+			"kind": "category",
+			"visible": true,
+			"exclusive": false,
+			"exclude": []
 		},
-		{"name": "rai",
+		{
+			"name": "rai",
 			"title": "Rai (Pokesona)",
 			"icon": "/media/Rai/favicon.png",
-			"sketchinclude": "yes",
-			"exclusive": false
+			"kind": "character",
+			"visible": true,
+			"exclusive": false,
+			"exclude": []
 		},
-		{"name": "cyris",
+		{
+			"name": "cyris",
 			"title": "Cyris",
 			"icon": "/media/Raicons/Cyris.png",
-			"sketchinclude": "yes",
-			"exclusive": false
+			"kind": "character",
+			"visible": true,
+			"exclusive": false,
+			"exclude": []
 		},
-		{"name": "mira",
+		{
+			"name": "mira",
 			"title": "Mira Levenor (MJ)",
 			"icon": "/media/Raicons/Mira.png",
-			"sketchinclude": "yes",
-			"exclusive": false
+			"kind": "character",
+			"visible": true,
+			"exclusive": false,
+			"exclude": []
 		},
-		{"name": "alcine",
+		{
+			"name": "alcine",
 			"title": "Alcine (MJ)",
 			"icon": "/media/Raicons/Alcine.png",
-			"exclusive": false
+			"kind": "character",
+			"visible": true,
+			"exclusive": false,
+			"exclude": []
 		},
-		{"name": "asteria",
+		{
+			"name": "asteria",
 			"title": "Asteria Versea (MJ)",
 			"icon": "/media/Raicons/Asteria.png",
-			"sketchinclude": "yes",
-			"exclusive": false
+			"kind": "character",
+			"visible": true,
+			"exclusive": false,
+			"exclude": []
 		},
-		{"name": "yaru",
+		{
+			"name": "yaru",
 			"title": "Yaru (MJ)",
 			"icon": "/media/Raicons/Yaru.png",
-			"sketchinclude": "yes",
-			"exclusive": false
+			"kind": "character",
+			"visible": true,
+			"exclusive": false,
+			"exclude": []
 		},
-		{"name": "daze",
+		{
+			"name": "daze",
 			"title": "Daze (MJ)",
 			"icon": "/media/Raicons/Daze.png",
-			"sketchinclude": "yes",
-			"exclusive": false
+			"kind": "character",
+			"visible": true,
+			"exclusive": false,
+			"exclude": []
 		},
-		{"name": "erinn",
+		{
+			"name": "erinn",
 			"title": "Erinn Levenor (MJ)",
 			"icon": "/media/Raicons/Erinn.png",
-			"sketchinclude": "yes",
-			"exclusive": false
+			"kind": "character",
+			"visible": true,
+			"exclusive": false,
+			"exclude": []
 		},
-		{"name": "kai",
+		{
+			"name": "kai",
 			"title": "Kai Reshanne (MJ)",
 			"icon": "/media/Raicons/Kai.png",
-			"sketchinclude": "yes",
-			"exclusive": false
+			"kind": "character",
+			"visible": true,
+			"exclusive": false,
+			"exclude": []
 		},
-		{"name": "nymphe",
+		{
+			"name": "nymphe",
 			"title": "Nymphe (Pokemon OC)",
 			"icon": "/media/Raicons/Nymphe.png",
-			"sketchinclude": "yes",
-			"exclusive": false
+			"kind": "character",
+			"visible": true,
+			"exclusive": false,
+			"exclude": []
 		},
-		{"name": "veil",
+		{
+			"name": "veil",
 			"title": "Veil (Pokemon OC)",
 			"icon": "/media/Raicons/Veil.png",
-			"sketchinclude": "yes",
-			"exclusive": false
+			"kind": "character",
+			"visible": true,
+			"exclusive": false,
+			"exclude": []
 		},
-		{"name": "pokemon",
-			"title": "Non Rai Pokemon",
+		{
+			"name": "pokemon",
+			"title": "Pokemon",
 			"icon": "/media/Raicons/pokemon.png",
-			"sketchinclude": "yes",
-			"exclusive": false
+			"kind": "universe",
+			"visible": true,
+			"exclusive": false,
+			"exclude": []
 		},
-		{"name": "ref",
-			"title": "Refrence Sheets",
+		{
+			"name": "ref",
+			"title": "Reference Sheets",
 			"icon": "/media/Raicons/ref.png",
-			"sketchinclude": "yes",
-			"exclusive": false
+			"kind": "category",
+			"visible": true,
+			"exclusive": false,
+			"exclude": []
 		},
-		{"name": "wide",
+		{
+			"name": "wide",
 			"title": "Wallpaper worthy",
 			"icon": "",
-			"sketchinclude": "yes",
-			"exclusive": false
+			"kind": "flag",
+			"visible": true,
+			"exclusive": false,
+			"exclude": []
+		},
+		{
+			"name": "bz",
+			"title": "Project BZ",
+			"icon": "",
+			"kind": "universe",
+			"visible": false,
+			"exclusive": false,
+			"exclude": []
+		},
+		{
+			"name": "comic",
+			"title": "Comics",
+			"icon": "",
+			"kind": "category",
+			"visible": false,
+			"exclusive": false,
+			"exclude": []
+		},
+		{
+			"name": "sticker",
+			"title": "Stickers",
+			"icon": "",
+			"kind": "category",
+			"visible": false,
+			"exclusive": false,
+			"exclude": []
+		},
+		{
+			"name": "diamond",
+			"title": "Diamond",
+			"icon": "",
+			"kind": "character",
+			"visible": false,
+			"exclusive": false,
+			"exclude": []
+		},
+		{
+			"name": "enowme",
+			"title": "Enowme",
+			"icon": "",
+			"kind": "character",
+			"visible": false,
+			"exclusive": false,
+			"exclude": []
+		},
+		{
+			"name": "feni",
+			"title": "Feni",
+			"icon": "/media/Raicons/Feni.png",
+			"kind": "character",
+			"visible": false,
+			"exclusive": false,
+			"exclude": []
+		},
+		{
+			"name": "nemeson",
+			"title": "Nemeson",
+			"icon": "",
+			"kind": "character",
+			"visible": false,
+			"exclusive": false,
+			"exclude": []
+		},
+		{
+			"name": "noreen",
+			"title": "Noreen",
+			"icon": "",
+			"kind": "character",
+			"visible": false,
+			"exclusive": false,
+			"exclude": []
+		},
+		{
+			"name": "vin",
+			"title": "Vin",
+			"icon": "",
+			"kind": "character",
+			"visible": false,
+			"exclusive": false,
+			"exclude": []
 		}
 	],
 	"artwork": [
-		{"filename": "2fursonas",
-			"title": "Cat and Mouse",
-			"date": "2024/Feb/23",
-			"tags": ["cyris", "rai"]
+		{
+			"filename": "mira strap",
+			"title": "mira strap",
+			"date": "2026-08-09",
+			"tags": [
+				"mira",
+				"sketch",
+				"mj"
+			],
+			"characters": [
+				"mira"
+			],
+			"width": 3099,
+			"height": 2048,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
 		},
-		{"filename": "miraplush",
-			"title": "Mira holding a plush of herself",
-			"date": "2024/Feb/6",
-			"tags": ["mira", "mj"]
+		{
+			"filename": "artfight abigail",
+			"title": "artfight abigail",
+			"date": "2026-07-29",
+			"tags": [
+				"fanart",
+				"pokemon"
+			],
+			"characters": [],
+			"width": 1848,
+			"height": 2048,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
 		},
-		{"filename": "toonlink",
-			"title": "Wind Waker Switch Daily",
-			"date": "2024/Feb/12",
-			"tags": ["comm", "fanart"]
+		{
+			"filename": "artfight foxglove",
+			"title": "artfight foxglove",
+			"date": "2026-07-11",
+			"tags": [
+				"fanart"
+			],
+			"characters": [],
+			"width": 1714,
+			"height": 1913,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
 		},
-		{"filename": "makoto",
-			"title": "Makoto",
-			"date": "2024/Feb/6",
-			"tags": ["fanart"]
+		{
+			"filename": "artfight miya",
+			"title": "artfight miya",
+			"date": "2026-07-08",
+			"tags": [
+				"fanart"
+			],
+			"characters": [],
+			"width": 1568,
+			"height": 2004,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
 		},
-		{"filename": "iris jacket",
-			"title": "Iris jacket",
-			"date": "2024/Jan/23",
-			"tags": ["cyris"]
+		{
+			"filename": "rairef6",
+			"title": "Reference sheet for Rai v6",
+			"date": "2026-07-01",
+			"tags": [
+				"rai",
+				"ref"
+			],
+			"characters": [
+				"rai"
+			],
+			"width": 2897,
+			"height": 3054,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
 		},
-		{"filename":"19birth",
-			"title": "19",
-			"date": "2024/Jan/10",
-			"tags": ["rai"]
+		{
+			"filename": "veil day",
+			"title": "Veil's Day",
+			"date": "2026-06-07",
+			"tags": [
+				"veil",
+				"pokemon"
+			],
+			"characters": [
+				"veil"
+			],
+			"width": 1132,
+			"height": 1062,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
 		},
-		{"filename":"alcineref",
-			"title": "Refrence sheet for Alcine (form 1)",
-			"date": "2024/Mar/28",
-			"tags": ["ref", "alcine", "mj"]
+		{
+			"filename": "link rai",
+			"title": "link rai",
+			"date": "2026-06-04",
+			"tags": [
+				"rai",
+				"sketch"
+			],
+			"characters": [
+				"rai"
+			],
+			"width": 2480,
+			"height": 3508,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
 		},
-		{"filename":"alcine sticker bg",
-			"title": "Alcine sticker design",
-			"date": "2024/Oct/22",
-			"tags": ["sticker","alcine"]
+		{
+			"filename": "mira upskirt",
+			"title": "Mira upskirt",
+			"date": "2026-06-03",
+			"tags": [
+				"mira",
+				"null",
+				"mj"
+			],
+			"characters": [
+				"mira"
+			],
+			"width": 1213,
+			"height": 1630,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
 		},
-		{"filename":"amy lee",
-			"title": "Amy Lee, Sade's favorite",
-			"date": "2024/Jul/09",
-			"tags": ["fanart"]
+		{
+			"filename": "golden_mira",
+			"title": "Golden Week Mira",
+			"date": "2026-05-06",
+			"tags": [
+				"mira",
+				"sketch",
+				"mj",
+				"null"
+			],
+			"characters": [
+				"mira"
+			],
+			"width": 442,
+			"height": 978,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
 		},
-		{"filename":"annas",
-			"title": "Annas birthday cat",
-			"date": "2024/Jan/13",
-			"tags": ["giftart"]
+		{
+			"filename": "golden_veil",
+			"title": "golden_veil",
+			"date": "2026-05-06",
+			"tags": [
+				"veil",
+				"sketch",
+				"pokemon"
+			],
+			"characters": [
+				"veil"
+			],
+			"width": 291,
+			"height": 334,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
 		},
-		{"filename":"artaia concept",
-			"title": "Artaria concept",
-			"date": "2024/Mar/12",
-			"tags": ["mj", "wide"]
+		{
+			"filename": "kolovaktiridio",
+			"title": "kolovaktiridio",
+			"date": "2026-05-02",
+			"tags": [
+				"sketch"
+			],
+			"characters": [],
+			"width": 1272,
+			"height": 1024,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
 		},
-		{"filename":"Asteria",
-			"title": "Asteria render",
-			"date": "2023/Sep/25",
-			"tags": ["mj", "asteria"]
+		{
+			"filename": "sheep rainbow",
+			"title": "sheep rainbow",
+			"date": "2026-05-02",
+			"tags": [],
+			"characters": [],
+			"width": 1450,
+			"height": 1422,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
 		},
-		{"filename":"banner2023",
-			"title": "Banner 2024",
-			"date": "2023/Dec/31",
-			"tags": ["rai", "wide"]
+		{
+			"filename": "space",
+			"title": "Space",
+			"date": "2026-05-02",
+			"tags": [
+				"giftart"
+			],
+			"characters": [],
+			"width": 1701,
+			"height": 1893,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
 		},
-		{"filename":"brown noise",
-			"title": "Brown",
-			"date": "2024/Jul/08",
-			"tags": ["mira", "mj"]
+		{
+			"filename": "giant cyris beach",
+			"title": "giant cyris beach",
+			"date": "2026-04-15",
+			"tags": [
+				"cyris",
+				"sketch"
+			],
+			"characters": [
+				"cyris"
+			],
+			"width": 1185,
+			"height": 1084,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
 		},
-		{"filename":"cat phone",
-			"title": "Some cat holding a phone",
-			"date": "2023/Sep/29",
-			"tags": []
+		{
+			"filename": "misteria hug",
+			"title": "misteria hug",
+			"date": "2026-04-15",
+			"tags": [
+				"mira",
+				"asteria",
+				"mj"
+			],
+			"characters": [
+				"mira",
+				"asteria"
+			],
+			"width": 831,
+			"height": 979,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
 		},
-		{"filename":"chibi mira bg",
-			"title": "Mira sticker design",
-			"date": "2023/Dec/05",
-			"tags": ["mj", "mira", "sticker"]
+		{
+			"filename": "rai mirror finger",
+			"title": "One finger Rai",
+			"date": "2026-04-15",
+			"tags": [
+				"rai",
+				"sketch",
+				"null"
+			],
+			"characters": [
+				"rai"
+			],
+			"width": 749,
+			"height": 932,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
 		},
-		{"filename":"christmasrai23",
-			"title": "Holyday Rai 2023",
-			"date": "2023/Dec/13",
-			"tags": ["rai"]
+		{
+			"filename": "cheek rubbing",
+			"title": "cheek rubbing",
+			"date": "2026-04-09",
+			"tags": [
+				"rai",
+				"sketch",
+				"giftart"
+			],
+			"characters": [
+				"rai"
+			],
+			"width": 2278,
+			"height": 1856,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
 		},
-		{"filename":"cyan",
-			"title": "Cyan",
-			"date": "2024/May/18",
-			"tags": ["cyris", "wide"]
+		{
+			"filename": "rai bow",
+			"title": "rai bow",
+			"date": "2026-03-28",
+			"tags": [
+				"rai",
+				"sketch"
+			],
+			"characters": [
+				"rai"
+			],
+			"width": 1046,
+			"height": 1084,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
 		},
-		{"filename":"eevee2023",
-			"title": "Annual Eevee 2023",
-			"date": "2023/Oct/2",
-			"tags": ["fanart", "pokemon"]
+		{
+			"filename": "parkay 2",
+			"title": "parkay 2",
+			"date": "2026-03-22",
+			"tags": [
+				"giftart",
+				"sketch"
+			],
+			"characters": [],
+			"width": 2048,
+			"height": 2048,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
 		},
-		{"filename":"erinn hat",
-			"title": "Green",
-			"date": "2024/Jan/21",
-			"tags": ["mj", "erinn"]
+		{
+			"filename": "erinn-swim",
+			"title": "Underwater",
+			"date": "2026-03-20",
+			"tags": [
+				"erinn",
+				"wide",
+				"mj"
+			],
+			"characters": [
+				"erinn"
+			],
+			"width": 2123,
+			"height": 1677,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
 		},
-		{"filename":"erinnref",
-			"title": "Refrence sheet for Erinn",
-			"date": "2023/Jan/27",
-			"tags": ["erinn", "mj", "ref"]
+		{
+			"filename": "teddycat",
+			"title": "teddycat",
+			"date": "2026-02-15",
+			"tags": [
+				"giftart",
+				"sketch"
+			],
+			"characters": [],
+			"width": 1610,
+			"height": 1985,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
 		},
-		{"filename":"erinn stretch",
-			"title": "Erinn sketch",
-			"date": "2023/Mar/29",
-			"tags": ["mj", "erinn"]
+		{
+			"filename": "cyris null",
+			"title": "cyris null",
+			"date": "2026-02-05",
+			"tags": [
+				"cyris",
+				"sketch",
+				"null"
+			],
+			"characters": [
+				"cyris"
+			],
+			"width": 2048,
+			"height": 2048,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
 		},
-		{"filename":"graduation",
-			"title": "Graduation",
-			"date": "2023/Jun/12",
-			"tags": ["rai"]
+		{
+			"filename": "rai null",
+			"title": "rai null",
+			"date": "2026-02-05",
+			"tags": [
+				"rai",
+				"sketch",
+				"null"
+			],
+			"characters": [
+				"rai"
+			],
+			"width": 2009,
+			"height": 1891,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
 		},
-		{"filename":"happy mira",
-			"title": "Happy Mira",
-			"date": "2023/Nov/11",
-			"tags": ["mj", "mira"]
+		{
+			"filename": "blacktail absol",
+			"title": "Ecliple - Raffle",
+			"date": "2026-01-22",
+			"tags": [
+				"giftart",
+				"pokemon"
+			],
+			"characters": [],
+			"width": 1848,
+			"height": 2004,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
 		},
-		{"filename":"iris2",
-			"title": "Mechanical",
-			"date": "2023/Jul/16",
-			"tags": ["cyris"]
+		{
+			"filename": "rai's ribbon",
+			"title": "The ribbon is very important",
+			"date": "2026-01-09",
+			"tags": [
+				"rai",
+				"sketch"
+			],
+			"characters": [
+				"rai"
+			],
+			"width": 2048,
+			"height": 1058,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
 		},
-		{"filename":"iris skirt",
-			"title": "Iris wearing a skirt",
-			"date": "2023/Nov/4",
-			"tags": ["cyris"]
+		{
+			"filename": "chroma comms",
+			"title": "Unpractical mobile devices for a future project",
+			"date": "2025-12-27",
+			"tags": [
+				"sketch"
+			],
+			"characters": [],
+			"width": 825,
+			"height": 962,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
 		},
-		{"filename":"kai(zo)",
-			"title": "Kai(zo)",
-			"date": "2023/Dec/16",
-			"tags": ["giftart"]
+		{
+			"filename": "cyrenian asteria",
+			"title": "Cyrenian Asteria",
+			"date": "2025-12-26",
+			"tags": [
+				"asteria",
+				"sketch",
+				"mj"
+			],
+			"characters": [
+				"asteria"
+			],
+			"width": 839,
+			"height": 817,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
 		},
-		{"filename":"kita",
-			"title": "Kita",
-			"date": "2024/Jan/18",
-			"tags": ["giftart"]
+		{
+			"filename": "ivy",
+			"title": "Ivy under the moon",
+			"date": "2025-12-25",
+			"tags": [
+				"giftart",
+				"pokemon"
+			],
+			"characters": [],
+			"width": 2048,
+			"height": 2048,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
 		},
-		{"filename":"kiwii",
-			"title": "Jania",
-			"date": "2024/Feb/4",
-			"tags": ["giftart"]
+		{
+			"filename": "eevee2025",
+			"title": "Annual Eevee 2025",
+			"date": "2025-11-30",
+			"tags": [
+				"fanart",
+				"pokemon"
+			],
+			"characters": [],
+			"width": 2048,
+			"height": 2048,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
 		},
-		{"filename":"leaf",
-			"title": "Leafeon with a hat",
-			"date": "2023/Oct/23",
-			"tags": ["giftart", "pokemon"]
+		{
+			"filename": "alcine2",
+			"title": "Concept sketches for a new form for Alcine",
+			"date": "2025-11-22",
+			"tags": [
+				"alcine",
+				"sketch",
+				"mj"
+			],
+			"characters": [
+				"alcine"
+			],
+			"width": 2000,
+			"height": 1440,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
 		},
-		{"filename":"marlet",
-			"title": "That birb from Undertale Yellow",
-			"date": "2023/Dec/29",
-			"tags": ["fanart"]
+		{
+			"filename": "veil fit",
+			"title": "Goth Vulpix",
+			"date": "2025-11-17",
+			"tags": [
+				"veil"
+			],
+			"characters": [
+				"veil"
+			],
+			"width": 1571,
+			"height": 1734,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
 		},
-		{"filename":"Mio why would you do this do me you said you'd be by my side",
-			"title": "Why Mio? Why would you do this do me you said you'd be by my side!",
-			"date": "2022/Dec/25",
-			"tags": ["fanart"]
+		{
+			"filename": "cyrisref",
+			"title": "Refrence Sheet for Cyris",
+			"date": "2025-11-15",
+			"tags": [
+				"cyris",
+				"ref"
+			],
+			"characters": [
+				"cyris"
+			],
+			"width": 5539,
+			"height": 3769,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
 		},
-		{"filename":"mira aura",
-			"title": "Mira's aura",
-			"date": "2023/Aug/27",
-			"tags": ["mj", "mira"]
+		{
+			"filename": "kiki two",
+			"title": "Krita's Kiki",
+			"date": "2025-11-06",
+			"tags": [
+				"fanart"
+			],
+			"characters": [],
+			"width": 1484,
+			"height": 1922,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
 		},
-		{"filename":"miracool",
-			"title": "Mira being cool",
-			"date": "2023/Oct/12",
-			"tags": ["mj", "mira"]
+		{
+			"filename": "vin",
+			"title": "A wood elf druid named Vin",
+			"date": "2025-11-04",
+			"tags": [
+				"vin"
+			],
+			"characters": [
+				"vin"
+			],
+			"width": 2000,
+			"height": 2000,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
 		},
-		{"filename":"miraref2u",
-			"title": "Refrence sheet for Mira",
-			"date": "2024/Sep/19",
-			"tags": ["mj", "mira", "ref"]
+		{
+			"filename": "cyris sit",
+			"title": "Some Cyris doodles",
+			"date": "2025-10-10",
+			"tags": [
+				"cyris"
+			],
+			"characters": [
+				"cyris"
+			],
+			"width": 1986,
+			"height": 1855,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
 		},
-		{"filename":"more human mira",
+		{
+			"filename": "mj keyart idea",
+			"title": "Mira's Journal Keyart",
+			"date": "2025-09-26",
+			"tags": [
+				"mira",
+				"alcine",
+				"daze",
+				"yaru",
+				"asteria",
+				"mj"
+			],
+			"characters": [
+				"mira",
+				"alcine",
+				"daze",
+				"yaru",
+				"asteria"
+			],
+			"width": 3586,
+			"height": 3951,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "rai low angle",
+			"title": "rai low angle",
+			"date": "2025-09-23",
+			"tags": [
+				"rai",
+				"sketch"
+			],
+			"characters": [
+				"rai"
+			],
+			"width": 2048,
+			"height": 2048,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "wet clothes",
+			"title": "wet clothes",
+			"date": "2025-09-04",
+			"tags": [
+				"mira",
+				"alcine",
+				"sketch",
+				"mj",
+				"null"
+			],
+			"characters": [
+				"mira",
+				"alcine"
+			],
+			"width": 4096,
+			"height": 3015,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "beach",
+			"title": "swimming",
+			"date": "2025-08-29",
+			"tags": [
+				"rai",
+				"nymphe",
+				"pokemon"
+			],
+			"characters": [
+				"rai",
+				"nymphe"
+			],
+			"width": 2000,
+			"height": 1912,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "artfight soda",
+			"title": "Soda! - Artfight",
+			"date": "2025-07-30",
+			"tags": [
+				"giftart"
+			],
+			"characters": [],
+			"width": 1500,
+			"height": 1454,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "artfight boris",
+			"title": "Boris! - Artfight",
+			"date": "2025-07-24",
+			"tags": [
+				"giftart"
+			],
+			"characters": [],
+			"width": 1551,
+			"height": 1820,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "aspa",
+			"title": "Dog - Commission",
+			"date": "2025-07-23",
+			"tags": [
+				"comm"
+			],
+			"characters": [],
+			"width": 1771,
+			"height": 1666,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "artfight yuna",
+			"title": "Yuna in summer-ish clothes - Artfight",
+			"date": "2025-07-14",
+			"tags": [
+				"giftart"
+			],
+			"characters": [],
+			"width": 2081,
+			"height": 1991,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "silky",
+			"title": "Silky :D - Artfight",
+			"date": "2025-07-05",
+			"tags": [
+				"giftart"
+			],
+			"characters": [],
+			"width": 1872,
+			"height": 1777,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "artfight abigale",
+			"title": "REVENGE Abigale - Artfight",
+			"date": "2025-07-04",
+			"tags": [
+				"giftart"
+			],
+			"characters": [],
+			"width": 2048,
+			"height": 2048,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "artfight wan",
+			"title": "Wan! - Artfight",
+			"date": "2025-07-02",
+			"tags": [
+				"giftart"
+			],
+			"characters": [],
+			"width": 909,
+			"height": 1312,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "rai back",
+			"title": "rai-back.kra",
+			"date": "2025-06-20",
+			"tags": [
+				"rai"
+			],
+			"characters": [
+				"rai"
+			],
+			"width": 1516,
+			"height": 2154,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "mira fluffy",
+			"title": "i like drawing naked wolf girls sometimes, ok?",
+			"date": "2025-06-15",
+			"tags": [
+				"mira",
+				"sketch",
+				"mj"
+			],
+			"characters": [
+				"mira"
+			],
+			"width": 859,
+			"height": 1575,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "mj capsule",
+			"title": "Mira's Journal Capsule",
+			"date": "2025-05-24",
+			"tags": [
+				"mira",
+				"wide",
+				"mj"
+			],
+			"characters": [
+				"mira"
+			],
+			"width": 2566,
+			"height": 1180,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "shamar",
+			"title": "shamar",
+			"date": "2025-05-17",
+			"tags": [
+				"sketch",
+				"giftart"
+			],
+			"characters": [],
+			"width": 953,
+			"height": 1124,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "vail",
+			"title": "a Mystery dungeon and Miitopia partner",
+			"date": "2025-05-09",
+			"tags": [
+				"veil",
+				"pokemon"
+			],
+			"characters": [
+				"veil"
+			],
+			"width": 1238,
+			"height": 1090,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "mira yawn",
+			"title": "mira yawn",
+			"date": "2025-04-29",
+			"tags": [
+				"mira",
+				"alcine",
+				"sketch",
+				"mj"
+			],
+			"characters": [
+				"mira",
+				"alcine"
+			],
+			"width": 2000,
+			"height": 2000,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "nightmarena",
+			"title": "nightmarena",
+			"date": "2025-04-21",
+			"tags": [
+				"sketch",
+				"giftart"
+			],
+			"characters": [],
+			"width": 3380,
+			"height": 2021,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "raii",
+			"title": "Raii",
+			"date": "2025-04-01",
+			"tags": [
+				"rai",
+				"fanart"
+			],
+			"characters": [
+				"rai"
+			],
+			"width": 1748,
+			"height": 1247,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "Lazulite heart",
+			"title": "Lazulite heart",
+			"date": "2025-03-28",
+			"tags": [
+				"sketch",
+				"mj"
+			],
+			"characters": [],
+			"width": 2048,
+			"height": 2048,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "rai pose",
+			"title": "I think this was a trend",
+			"date": "2025-03-22",
+			"tags": [
+				"rai"
+			],
+			"characters": [
+				"rai"
+			],
+			"width": 2004,
+			"height": 1657,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "copto practice",
+			"title": "copto practice",
+			"date": "2025-03-20",
+			"tags": [
+				"sketch",
+				"mj"
+			],
+			"characters": [],
+			"width": 4694,
+			"height": 2048,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "asteria daze swap",
+			"title": "Asteria & Daze outfit swap",
+			"date": "2025-03-19",
+			"tags": [
+				"daze",
+				"asteria",
+				"sketch",
+				"mj"
+			],
+			"characters": [
+				"daze",
+				"asteria"
+			],
+			"width": 2048,
+			"height": 2048,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "mira jojo",
+			"title": "[STAND MASTER] Mira Levenor",
+			"date": "2025-03-14",
+			"tags": [
+				"mira",
+				"mj"
+			],
+			"characters": [
+				"mira"
+			],
+			"width": 2660,
+			"height": 1733,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "mira asteria expressions",
+			"title": "mira asteria expressions",
+			"date": "2025-02-23",
+			"tags": [
+				"mira",
+				"asteria",
+				"sketch",
+				"mj"
+			],
+			"characters": [
+				"mira",
+				"asteria"
+			],
+			"width": 2000,
+			"height": 1356,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "banner2025",
+			"title": "Banner 2025",
+			"date": "2025-01-31",
+			"tags": [
+				"rai",
+				"cyris",
+				"wide"
+			],
+			"characters": [
+				"rai",
+				"cyris"
+			],
+			"width": 3000,
+			"height": 1000,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "heartbeat comic",
+			"title": "Heartbeat",
+			"date": "2025-01-30",
+			"tags": [
+				"mira",
+				"asteria",
+				"comic",
+				"mj"
+			],
+			"characters": [
+				"mira",
+				"asteria"
+			],
+			"width": 2200,
+			"height": 1822,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "lurantis",
+			"title": "Lurantis",
+			"date": "2025-01-29",
+			"tags": [
+				"fanart",
+				"pokemon"
+			],
+			"characters": [],
+			"width": 1768,
+			"height": 1963,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "void",
+			"title": "Spirals",
+			"date": "2025-01-29",
+			"tags": [
+				"enowme",
+				"wide",
+				"mj"
+			],
+			"characters": [
+				"enowme"
+			],
+			"width": 300,
+			"height": 300,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "spiral",
+			"title": "Spiral",
+			"date": "2025-01-28",
+			"tags": [
+				"enowme",
+				"wide"
+			],
+			"characters": [
+				"enowme"
+			],
+			"width": 1200,
+			"height": 1200,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "nimphe dress",
+			"title": "Pink",
+			"date": "2025-01-27",
+			"tags": [
+				"nymphe",
+				"pokemon"
+			],
+			"characters": [
+				"nymphe"
+			],
+			"width": 1846,
+			"height": 2048,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "fucked up 3d model",
+			"title": "fucked up 3d model",
+			"date": "2025-01-26",
+			"tags": [
+				"mira",
+				"sketch",
+				"mj"
+			],
+			"characters": [
+				"mira"
+			],
+			"width": 2048,
+			"height": 1463,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "mira64",
+			"title": "Mira 64",
+			"date": "2025-01-26",
+			"tags": [
+				"mira",
+				"mj"
+			],
+			"characters": [
+				"mira"
+			],
+			"width": 766,
+			"height": 761,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "asteria naked",
+			"title": "naked bunny",
+			"date": "2025-01-23",
+			"tags": [
+				"asteria",
+				"mj",
+				"null"
+			],
+			"characters": [
+				"asteria"
+			],
+			"width": 1657,
+			"height": 2048,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "iris rays",
+			"title": "Rays",
+			"date": "2025-01-21",
+			"tags": [
+				"cyris"
+			],
+			"characters": [
+				"cyris"
+			],
+			"width": 2041,
+			"height": 1934,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "uppie",
+			"title": "uppie",
+			"date": "2025-01-20",
+			"tags": [
+				"erinn",
+				"kai",
+				"asteria",
+				"daze",
+				"alcine",
+				"sketch",
+				"mj"
+			],
+			"characters": [
+				"erinn",
+				"kai",
+				"asteria",
+				"daze",
+				"alcine"
+			],
+			"width": 1975,
+			"height": 2048,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "stretch",
+			"title": "Stretch",
+			"date": "2025-01-19",
+			"tags": [
+				"kai",
+				"sketch",
+				"mj"
+			],
+			"characters": [
+				"kai"
+			],
+			"width": 819,
+			"height": 1481,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "carlo1",
+			"title": "Carlo 1",
+			"date": "2025-01-18",
+			"tags": [
+				"giftart",
+				"sketch"
+			],
+			"characters": [],
+			"width": 1511,
+			"height": 1549,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "carlo2",
+			"title": "Carlo 2",
+			"date": "2025-01-18",
+			"tags": [
+				"giftart",
+				"sketch"
+			],
+			"characters": [],
+			"width": 1719,
+			"height": 2000,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "reveal",
+			"title": "Reveal",
+			"date": "2025-01-16",
+			"tags": [
+				"rai",
+				"fanart"
+			],
+			"characters": [
+				"rai"
+			],
+			"width": 2000,
+			"height": 1248,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "noreen aura",
+			"title": "Reveal",
+			"date": "2025-01-15",
+			"tags": [
+				"noreen",
+				"mj"
+			],
+			"characters": [
+				"noreen"
+			],
+			"width": 2048,
+			"height": 2048,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "asteria oil green",
+			"title": "Olive",
+			"date": "2025-01-14",
+			"tags": [
+				"asteria",
+				"mj"
+			],
+			"characters": [
+				"asteria"
+			],
+			"width": 2048,
+			"height": 2048,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "rai normal",
+			"title": "Normal Alolan Raichu colors",
+			"date": "2025-01-12",
+			"tags": [
+				"rai",
+				"sketch"
+			],
+			"characters": [
+				"rai"
+			],
+			"width": 764,
+			"height": 792,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "birth date",
+			"title": "birth date",
+			"date": "2025-01-10",
+			"tags": [
+				"rai",
+				"sketch"
+			],
+			"characters": [
+				"rai"
+			],
+			"width": 1125,
+			"height": 1346,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "mira librarian",
+			"title": "Librarian",
+			"date": "2025-01-08",
+			"tags": [
+				"mira",
+				"wide",
+				"mj"
+			],
+			"characters": [
+				"mira"
+			],
+			"width": 1778,
+			"height": 1510,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "flipnote mew",
+			"title": "flipnote mew",
+			"date": "2025-01-07",
+			"tags": [
+				"fanart",
+				"sketch",
+				"pokemon"
+			],
+			"characters": [],
+			"width": 320,
+			"height": 240,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "nimphe eep",
+			"title": "eep",
+			"date": "2025-01-05",
+			"tags": [
+				"nymphe",
+				"pokemon"
+			],
+			"characters": [
+				"nymphe"
+			],
+			"width": 1913,
+			"height": 1961,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "vibri aaalt",
+			"title": "Vibri AAA",
+			"date": "2025-01-04",
+			"tags": [
+				"fanart"
+			],
+			"characters": [],
+			"width": 1319,
+			"height": 1508,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "yaru peek",
+			"title": "Peek",
+			"date": "2025-01-03",
+			"tags": [
+				"yaru",
+				"mj"
+			],
+			"characters": [
+				"yaru"
+			],
+			"width": 1975,
+			"height": 1495,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "erinn wizard",
+			"title": "Wizard",
+			"date": "2025-01-02",
+			"tags": [
+				"erinn",
+				"mj"
+			],
+			"characters": [
+				"erinn"
+			],
+			"width": 1604,
+			"height": 1887,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "new year",
+			"title": "New Year",
+			"date": "2025-01-01",
+			"tags": [
+				"rai"
+			],
+			"characters": [
+				"rai"
+			],
+			"width": 2002,
+			"height": 2048,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "nimphe",
+			"title": "nimphe",
+			"date": "2024-12-26",
+			"tags": [
+				"nymphe",
+				"pokemon"
+			],
+			"characters": [
+				"nymphe"
+			],
+			"width": 2284,
+			"height": 2048,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "wrapped rai",
+			"title": "wrapped rai",
+			"date": "2024-12-26",
+			"tags": [
+				"rai"
+			],
+			"characters": [
+				"rai"
+			],
+			"width": 1125,
+			"height": 1689,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "kiki",
+			"title": "kiki",
+			"date": "2024-12-17",
+			"tags": [
+				"sketch",
+				"fanart"
+			],
+			"characters": [],
+			"width": 1964,
+			"height": 1887,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "mira asteria hug",
+			"title": "mira asteria hug",
+			"date": "2024-11-15",
+			"tags": [
+				"mira",
+				"asteria",
+				"sketch",
+				"mj"
+			],
+			"characters": [
+				"mira",
+				"asteria"
+			],
+			"width": 1217,
+			"height": 1747,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "eevee2024",
+			"title": "Annual Eevee 2024",
+			"date": "2024-11-14",
+			"tags": [
+				"fanart",
+				"pokemon"
+			],
+			"characters": [],
+			"width": 2048,
+			"height": 2048,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "mira swimsuit",
+			"title": "mira swimsuit",
+			"date": "2024-11-12",
+			"tags": [
+				"mira",
+				"sketch",
+				"mj"
+			],
+			"characters": [
+				"mira"
+			],
+			"width": 1398,
+			"height": 1857,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "noreen design attempt",
+			"title": "noreen design attempt",
+			"date": "2024-11-11",
+			"tags": [
+				"noreen",
+				"sketch",
+				"mj"
+			],
+			"characters": [
+				"noreen"
+			],
+			"width": 2048,
+			"height": 1796,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "pomegrante",
+			"title": "Random pomegrante",
+			"date": "2024-11-07",
+			"tags": [
+				"comm"
+			],
+			"characters": [],
+			"width": 1767,
+			"height": 2000,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "fly mira",
+			"title": "fly mira",
+			"date": "2024-10-24",
+			"tags": [
+				"mira",
+				"sketch",
+				"mj"
+			],
+			"characters": [
+				"mira"
+			],
+			"width": 1024,
+			"height": 1024,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "human mira",
+			"title": "human mira",
+			"date": "2024-10-23",
+			"tags": [
+				"mira",
+				"mj"
+			],
+			"characters": [
+				"mira"
+			],
+			"width": 2090,
+			"height": 2323,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "more human mira",
 			"title": "More human Mira",
-			"date": "2024/Oct/23",
-			"tags": ["mj", "mira"]
+			"date": "2024-10-23",
+			"tags": [
+				"mira",
+				"mj"
+			],
+			"characters": [
+				"mira"
+			],
+			"width": 840,
+			"height": 751,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
 		},
-		{"filename":"ms rai",
-			"title": "Ms paint Rai",
-			"date": "2023/Oct/29",
-			"tags": ["rai"]
+		{
+			"filename": "alcine sticker bg",
+			"title": "Alcine sticker design",
+			"date": "2024-10-22",
+			"tags": [
+				"alcine",
+				"sticker"
+			],
+			"characters": [
+				"alcine"
+			],
+			"width": 2048,
+			"height": 2048,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
 		},
-		{"filename":"mush",
-			"title": "Mush",
-			"date": "2024/May/7",
-			"tags": ["giftart"]
-		},
-		{"filename":"nia xenoblade",
-			"title": "Nia Xenoblade",
-			"date": "2024/Aug/16",
-			"tags": ["fanart"]
-		},
-		{"filename":"pyrson",
-			"title": "Pyrson",
-			"date": "2022/Jul/12",
-			"tags": ["mj", "asteria", "wide"]
-		},
-		{"filename":"raidesign",
-			"title": "Raidesign",
-			"date": "2024/Sep/7",
-			"tags": ["rai"]
-		},
-		{"filename":"rai hair",
-			"title": "Hair",
-			"date": "2023/Dec/1",
-			"tags": ["rai"]
-		},
-		{"filename":"rai pillow",
-			"title": "Can't sleep",
-			"date": "2023/Oct/14",
-			"tags": ["rai"]
-		},
-		{"filename":"rai ponytail",
-			"title": "Ponytail",
-			"date": "2024/Apr/14",
-			"tags": ["rai"]
-		},
-		{"filename":"rairef4",
-			"title": "Refrence sheet for Rai",
-			"date": "2024/May/19",
-			"tags": ["rai", "ref"]
-		},
-		{"filename":"rai socc",
-			"title": "Rai socc",
-			"date": "2023/Apr/7",
-			"tags": ["rai"]
-		},
-		{"filename":"rai witch 2",
-			"title": "Witch Rai",
-			"date": "2023/Oct/13",
-			"tags": ["rai"]
-		},
-		{"filename":"spirit tracks",
+		{
+			"filename": "spirit tracks",
 			"title": "Spirit tracks - Commission",
-			"date": "2024/Oct/21",
-			"tags": ["fanart", "comm"]
+			"date": "2024-10-21",
+			"tags": [
+				"fanart",
+				"comm"
+			],
+			"characters": [],
+			"width": 2048,
+			"height": 2048,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
 		},
-		{"filename":"stoolrai",
+		{
+			"filename": "parkay",
+			"title": "Parkay!",
+			"date": "2024-10-13",
+			"tags": [
+				"giftart"
+			],
+			"characters": [],
+			"width": 1534,
+			"height": 1684,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "rai or something",
+			"title": "rai or something",
+			"date": "2024-10-13",
+			"tags": [
+				"rai",
+				"sketch"
+			],
+			"characters": [
+				"rai"
+			],
+			"width": 1813,
+			"height": 1972,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "rai or something alt",
+			"title": "rai or something alt",
+			"date": "2024-10-13",
+			"tags": [
+				"rai",
+				"sketch"
+			],
+			"characters": [
+				"rai"
+			],
+			"width": 1813,
+			"height": 1972,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "MJ cover idea",
+			"title": "MJ cover idea",
+			"date": "2024-09-19",
+			"tags": [
+				"mira",
+				"sketch",
+				"mj"
+			],
+			"characters": [
+				"mira"
+			],
+			"width": 1366,
+			"height": 2048,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "miraref2u",
+			"title": "Refrence sheet for Mira",
+			"date": "2024-09-19",
+			"tags": [
+				"mira",
+				"ref",
+				"mj"
+			],
+			"characters": [
+				"mira"
+			],
+			"width": 6212,
+			"height": 3425,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "raidesign",
+			"title": "Raidesign",
+			"date": "2024-09-07",
+			"tags": [
+				"rai"
+			],
+			"characters": [
+				"rai"
+			],
+			"width": 1855,
+			"height": 2048,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "mira dog cone",
+			"title": "mira dog cone",
+			"date": "2024-08-23",
+			"tags": [
+				"mira",
+				"sketch",
+				"mj"
+			],
+			"characters": [
+				"mira"
+			],
+			"width": 1470,
+			"height": 1340,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "nia xenoblade",
+			"title": "Nia Xenoblade",
+			"date": "2024-08-16",
+			"tags": [
+				"fanart"
+			],
+			"characters": [],
+			"width": 1299,
+			"height": 1784,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "daze partners",
+			"title": "Daze's partners (Design concept)",
+			"date": "2024-08-14",
+			"tags": [
+				"diamond",
+				"nemeson",
+				"sketch",
+				"mj"
+			],
+			"characters": [
+				"diamond",
+				"nemeson"
+			],
+			"width": 2166,
+			"height": 2048,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "iris fit",
+			"title": "iris fit",
+			"date": "2024-08-11",
+			"tags": [
+				"cyris",
+				"sketch"
+			],
+			"characters": [
+				"cyris"
+			],
+			"width": 1706,
+			"height": 2048,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "prettiest mf",
+			"title": "Prettiest mf",
+			"date": "2024-07-24",
+			"tags": [
+				"giftart",
+				"sketch"
+			],
+			"characters": [],
+			"width": 1881,
+			"height": 1882,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "mj party sketch",
+			"title": "mj party sketch",
+			"date": "2024-07-18",
+			"tags": [
+				"mira",
+				"daze",
+				"asteria",
+				"alcine",
+				"sketch",
+				"mj"
+			],
+			"characters": [
+				"mira",
+				"daze",
+				"asteria",
+				"alcine"
+			],
+			"width": 2969,
+			"height": 2048,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "amy lee",
+			"title": "Amy Lee, Sade's favorite",
+			"date": "2024-07-09",
+			"tags": [
+				"fanart"
+			],
+			"characters": [],
+			"width": 1313,
+			"height": 2048,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "brown noise",
+			"title": "Brown",
+			"date": "2024-07-08",
+			"tags": [
+				"mira",
+				"mj"
+			],
+			"characters": [
+				"mira"
+			],
+			"width": 1484,
+			"height": 1708,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "rai plush",
+			"title": "rai plush",
+			"date": "2024-06-29",
+			"tags": [
+				"rai",
+				"sketch"
+			],
+			"characters": [
+				"rai"
+			],
+			"width": 1748,
+			"height": 1701,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "YEAH",
+			"title": "Yeah!",
+			"date": "2024-06-15",
+			"tags": [
+				"rai",
+				"fanart"
+			],
+			"characters": [
+				"rai"
+			],
+			"width": 1980,
+			"height": 800,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "irl",
+			"title": "OC and Creator",
+			"date": "2024-06-13",
+			"tags": [
+				"rai",
+				"sketch"
+			],
+			"characters": [
+				"rai"
+			],
+			"width": 2119,
+			"height": 1286,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "outfit swap",
+			"title": "outfit swap",
+			"date": "2024-06-05",
+			"tags": [
+				"daze",
+				"mira",
+				"asteria",
+				"alcine",
+				"sketch",
+				"mj"
+			],
+			"characters": [
+				"daze",
+				"mira",
+				"asteria",
+				"alcine"
+			],
+			"width": 2635,
+			"height": 1662,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "kai full",
+			"title": "kai full",
+			"date": "2024-05-19",
+			"tags": [
+				"sketch",
+				"giftart"
+			],
+			"characters": [],
+			"width": 1241,
+			"height": 1549,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "rairef4",
+			"title": "Refrence sheet for Rai",
+			"date": "2024-05-19",
+			"tags": [
+				"rai",
+				"ref"
+			],
+			"characters": [
+				"rai"
+			],
+			"width": 6671,
+			"height": 8385,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "cyan",
+			"title": "Cyan",
+			"date": "2024-05-18",
+			"tags": [
+				"cyris",
+				"wide"
+			],
+			"characters": [
+				"cyris"
+			],
+			"width": 2048,
+			"height": 1853,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "head mpty",
+			"title": "head mplty",
+			"date": "2024-05-07",
+			"tags": [
+				"rai",
+				"sketch"
+			],
+			"characters": [
+				"rai"
+			],
+			"width": 2261,
+			"height": 2441,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "mush",
+			"title": "Mush",
+			"date": "2024-05-07",
+			"tags": [
+				"giftart"
+			],
+			"characters": [],
+			"width": 1889,
+			"height": 2281,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "gabeat",
+			"title": "Gabeat",
+			"date": "2024-05-05",
+			"tags": [
+				"giftart",
+				"fanart",
+				"sketch"
+			],
+			"characters": [],
+			"width": 1053,
+			"height": 1291,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "daze threat",
+			"title": "daze threat",
+			"date": "2024-04-25",
+			"tags": [
+				"daze",
+				"sketch",
+				"mj"
+			],
+			"characters": [
+				"daze"
+			],
+			"width": 1980,
+			"height": 2378,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "rai ponytail",
+			"title": "Ponytail",
+			"date": "2024-04-14",
+			"tags": [
+				"rai"
+			],
+			"characters": [
+				"rai"
+			],
+			"width": 1562,
+			"height": 2130,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "chibi asteria",
+			"title": "chibi asteria",
+			"date": "2024-04-02",
+			"tags": [
+				"asteria",
+				"mj"
+			],
+			"characters": [
+				"asteria"
+			],
+			"width": 2048,
+			"height": 2048,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "alcineref",
+			"title": "Refrence sheet for Alcine (form 1)",
+			"date": "2024-03-28",
+			"tags": [
+				"alcine",
+				"ref",
+				"mj"
+			],
+			"characters": [
+				"alcine"
+			],
+			"width": 2134,
+			"height": 1220,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "as2",
+			"title": "young asteria",
+			"date": "2024-03-21",
+			"tags": [
+				"asteria",
+				"sketch",
+				"mj"
+			],
+			"characters": [
+				"asteria"
+			],
+			"width": 1569,
+			"height": 1818,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "sweater",
+			"title": "sweater",
+			"date": "2024-03-21",
+			"tags": [
+				"rai",
+				"sketch"
+			],
+			"characters": [
+				"rai"
+			],
+			"width": 1598,
+			"height": 2062,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "artaia concept",
+			"title": "Artaria concept",
+			"date": "2024-03-12",
+			"tags": [
+				"wide",
+				"mj"
+			],
+			"characters": [],
+			"width": 3103,
+			"height": 2048,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "2fursonas",
+			"title": "Cat and Mouse",
+			"date": "2024-02-23",
+			"tags": [
+				"cyris",
+				"rai"
+			],
+			"characters": [
+				"cyris",
+				"rai"
+			],
+			"width": 1513,
+			"height": 1972,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "toonlink",
+			"title": "Wind Waker Switch Daily",
+			"date": "2024-02-12",
+			"tags": [
+				"comm",
+				"fanart"
+			],
+			"characters": [],
+			"width": 500,
+			"height": 500,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "Alcine",
+			"title": "Alcine render",
+			"date": "2024-02-11",
+			"tags": [
+				"alcine",
+				"mj"
+			],
+			"characters": [
+				"alcine"
+			],
+			"width": 3431,
+			"height": 3431,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "makoto",
+			"title": "Makoto",
+			"date": "2024-02-06",
+			"tags": [
+				"fanart"
+			],
+			"characters": [],
+			"width": 1515,
+			"height": 1954,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "miraplush",
+			"title": "Mira holding a plush of herself",
+			"date": "2024-02-06",
+			"tags": [
+				"mira",
+				"mj"
+			],
+			"characters": [
+				"mira"
+			],
+			"width": 1126,
+			"height": 1921,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "kiwii",
+			"title": "Jania",
+			"date": "2024-02-04",
+			"tags": [
+				"giftart"
+			],
+			"characters": [],
+			"width": 1414,
+			"height": 1699,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "iris jacket",
+			"title": "Iris jacket",
+			"date": "2024-01-23",
+			"tags": [
+				"cyris"
+			],
+			"characters": [
+				"cyris"
+			],
+			"width": 1078,
+			"height": 1906,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "erinn hat",
+			"title": "Green",
+			"date": "2024-01-21",
+			"tags": [
+				"erinn",
+				"mj"
+			],
+			"characters": [
+				"erinn"
+			],
+			"width": 1904,
+			"height": 2048,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "kita",
+			"title": "Kita",
+			"date": "2024-01-18",
+			"tags": [
+				"giftart"
+			],
+			"characters": [],
+			"width": 1528,
+			"height": 1888,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "annas",
+			"title": "Annas birthday cat",
+			"date": "2024-01-13",
+			"tags": [
+				"giftart"
+			],
+			"characters": [],
+			"width": 1156,
+			"height": 1333,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "mira reflect",
+			"title": "Reflect",
+			"date": "2024-01-11",
+			"tags": [
+				"mira",
+				"mj"
+			],
+			"characters": [
+				"mira"
+			],
+			"width": 1680,
+			"height": 1050,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "19birth",
+			"title": "19",
+			"date": "2024-01-10",
+			"tags": [
+				"rai"
+			],
+			"characters": [
+				"rai"
+			],
+			"width": 1050,
+			"height": 1050,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "banner2023",
+			"title": "Banner 2024",
+			"date": "2023-12-31",
+			"tags": [
+				"rai",
+				"wide"
+			],
+			"characters": [
+				"rai"
+			],
+			"width": 3000,
+			"height": 1000,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "marlet",
+			"title": "That birb from Undertale Yellow",
+			"date": "2023-12-29",
+			"tags": [
+				"fanart"
+			],
+			"characters": [],
+			"width": 1564,
+			"height": 2143,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "kai(zo)",
+			"title": "Kai(zo)",
+			"date": "2023-12-16",
+			"tags": [
+				"giftart"
+			],
+			"characters": [],
+			"width": 1596,
+			"height": 2091,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "christmasrai23",
+			"title": "Holyday Rai 2023",
+			"date": "2023-12-13",
+			"tags": [
+				"rai"
+			],
+			"characters": [
+				"rai"
+			],
+			"width": 2048,
+			"height": 2048,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "chibi mira bg",
+			"title": "Mira sticker design",
+			"date": "2023-12-05",
+			"tags": [
+				"mira",
+				"sticker",
+				"mj"
+			],
+			"characters": [
+				"mira"
+			],
+			"width": 1869,
+			"height": 2079,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "rai hair",
+			"title": "Hair",
+			"date": "2023-12-01",
+			"tags": [
+				"rai"
+			],
+			"characters": [
+				"rai"
+			],
+			"width": 1474,
+			"height": 1786,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "happy mira",
+			"title": "Happy Mira",
+			"date": "2023-11-11",
+			"tags": [
+				"mira",
+				"mj"
+			],
+			"characters": [
+				"mira"
+			],
+			"width": 1554,
+			"height": 2274,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "rai stretch",
+			"title": "Sleepy",
+			"date": "2023-11-11",
+			"tags": [
+				"rai"
+			],
+			"characters": [
+				"rai"
+			],
+			"width": 2202,
+			"height": 2826,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "iris skirt",
+			"title": "Iris wearing a skirt",
+			"date": "2023-11-04",
+			"tags": [
+				"cyris"
+			],
+			"characters": [
+				"cyris"
+			],
+			"width": 1188,
+			"height": 2048,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "bz party",
+			"title": "bz party",
+			"date": "2023-11-02",
+			"tags": [
+				"sketch",
+				"bz"
+			],
+			"characters": [],
+			"width": 3935,
+			"height": 2048,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "ms rai",
+			"title": "Ms paint Rai",
+			"date": "2023-10-29",
+			"tags": [
+				"rai"
+			],
+			"characters": [
+				"rai"
+			],
+			"width": 666,
+			"height": 825,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "plush rai",
+			"title": "plush rai",
+			"date": "2023-10-29",
+			"tags": [
+				"rai",
+				"sketch"
+			],
+			"characters": [
+				"rai"
+			],
+			"width": 1697,
+			"height": 1697,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "leaf",
+			"title": "Leafeon with a hat",
+			"date": "2023-10-23",
+			"tags": [
+				"giftart",
+				"pokemon"
+			],
+			"characters": [],
+			"width": 1675,
+			"height": 2048,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "feni",
+			"title": "feni",
+			"date": "2023-10-16",
+			"tags": [
+				"feni",
+				"sketch",
+				"mj"
+			],
+			"characters": [
+				"feni"
+			],
+			"width": 2048,
+			"height": 2048,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "rai pillow",
+			"title": "Can't sleep",
+			"date": "2023-10-14",
+			"tags": [
+				"rai"
+			],
+			"characters": [
+				"rai"
+			],
+			"width": 2048,
+			"height": 2048,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "rai witch 2",
+			"title": "Witch Rai",
+			"date": "2023-10-13",
+			"tags": [
+				"rai"
+			],
+			"characters": [
+				"rai"
+			],
+			"width": 2048,
+			"height": 2048,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "miracool",
+			"title": "Mira being cool",
+			"date": "2023-10-12",
+			"tags": [
+				"mira",
+				"mj"
+			],
+			"characters": [
+				"mira"
+			],
+			"width": 2087,
+			"height": 2936,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "stoolrai",
 			"title": "Doodle Rai",
-			"date": "2023/Oct/11",
-			"tags": ["rai"]
+			"date": "2023-10-11",
+			"tags": [
+				"rai"
+			],
+			"characters": [
+				"rai"
+			],
+			"width": 1101,
+			"height": 1874,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
 		},
-		{"filename":"tiny gaming wolf",
+		{
+			"filename": "eevee2023",
+			"title": "Annual Eevee 2023",
+			"date": "2023-10-02",
+			"tags": [
+				"fanart",
+				"pokemon"
+			],
+			"characters": [],
+			"width": 2048,
+			"height": 2048,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "cat phone",
+			"title": "Some cat holding a phone",
+			"date": "2023-09-29",
+			"tags": [],
+			"characters": [],
+			"width": 2627,
+			"height": 2102,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "Asteria",
+			"title": "Asteria render",
+			"date": "2023-09-25",
+			"tags": [
+				"asteria",
+				"mj"
+			],
+			"characters": [
+				"asteria"
+			],
+			"width": 4096,
+			"height": 1534,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "Erinn",
+			"title": "Erinn render",
+			"date": "2023-09-25",
+			"tags": [
+				"erinn",
+				"mj"
+			],
+			"characters": [
+				"erinn"
+			],
+			"width": 3431,
+			"height": 3431,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "asteria render revision2",
+			"title": "Asteria render",
+			"date": "2023-09-25",
+			"tags": [
+				"asteria",
+				"mj"
+			],
+			"characters": [
+				"asteria"
+			],
+			"width": 3431,
+			"height": 3431,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "mira aura",
+			"title": "Mira's aura",
+			"date": "2023-08-27",
+			"tags": [
+				"mira",
+				"mj"
+			],
+			"characters": [
+				"mira"
+			],
+			"width": 1826,
+			"height": 1459,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "Daze",
+			"title": "Daze render",
+			"date": "2023-08-17",
+			"tags": [
+				"daze",
+				"mj"
+			],
+			"characters": [
+				"daze"
+			],
+			"width": 3431,
+			"height": 3431,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "roxa",
+			"title": "Roxa",
+			"date": "2023-07-23",
+			"tags": [
+				"giftart"
+			],
+			"characters": [],
+			"width": 2048,
+			"height": 2300,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "iris2",
+			"title": "Mechanical",
+			"date": "2023-07-16",
+			"tags": [
+				"cyris"
+			],
+			"characters": [
+				"cyris"
+			],
+			"width": 1338,
+			"height": 1459,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "MiraDress",
+			"title": "Mira in a dress",
+			"date": "2023-07-04",
+			"tags": [
+				"mira",
+				"mj"
+			],
+			"characters": [
+				"mira"
+			],
+			"width": 999,
+			"height": 1701,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "graduation",
+			"title": "Graduation",
+			"date": "2023-06-12",
+			"tags": [
+				"rai"
+			],
+			"characters": [
+				"rai"
+			],
+			"width": 2242,
+			"height": 1664,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "rai pride",
+			"title": "rai pride",
+			"date": "2023-06-02",
+			"tags": [
+				"rai"
+			],
+			"characters": [
+				"rai"
+			],
+			"width": 2480,
+			"height": 2480,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "rai socc",
+			"title": "Rai socc",
+			"date": "2023-04-07",
+			"tags": [
+				"rai"
+			],
+			"characters": [
+				"rai"
+			],
+			"width": 1738,
+			"height": 1617,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "tiny gaming wolf",
 			"title": "Tiny gaming wolf - Commission",
-			"date": "2023/Apr/5",
-			"tags": ["comm"]
+			"date": "2023-04-05",
+			"tags": [
+				"comm"
+			],
+			"characters": [],
+			"width": 2702,
+			"height": 2000,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
 		},
-		{"filename":"vibri",
-			"title": "Vibri",
-			"date": "2023/Jan/23",
-			"tags": ["fanart", "comm"]
+		{
+			"filename": "erinn stretch",
+			"title": "Erinn sketch",
+			"date": "2023-03-29",
+			"tags": [
+				"erinn",
+				"mj"
+			],
+			"characters": [
+				"erinn"
+			],
+			"width": 2057,
+			"height": 1855,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
 		},
-		{"filename":"Yaru",
+		{
+			"filename": "Yaru",
 			"title": "Yaru render",
-			"date": "2023/Mar/23",
-			"tags": ["mj", "yaru"]
-		},
-		{"filename":"Yaruref",
-		"title": "Refrence sheet for Yaru",
-		"date": "2023/Feb/18",
-		"tags": ["mj", "yaru"]
-		},
-		{"filename": "as",
-		"title":"as",
-		"date":"2023/Feb/14",
-		"tags": ["mj", "asteria", "yaru"]
-		},
-		{"filename": "eevee2024",
-		"title":"Annual Eevee 2024",
-		"date":"2024/Nov/14",
-		"tags": ["fanart", "pokemon"]
-		},
-		{"filename":"pomegrante",
-		"title":"Random pomegrante",
-		"date":"2024/Nov/7",
-		"tags": ["comm"]
-		},
-		{"filename":"mira reflect",
-		"title":"Reflect",
-		"date":"2024/Jan/11",
-		"tags": ["mj", "mira"]
-		},
-		{"filename":"rai stretch",
-		"title":"Sleepy",
-		"date":"2023/Nov/11",
-		"tags": ["rai"]
-		},
-		{"filename":"MiraDress",
-		"title":"Mira in a dress",
-		"date":"2023/Jul/4",
-		"tags": ["mj", "mira"]
-		},
-		{"filename":"kite",
-		"title":"Kite",
-		"date":"2021/Mar/24",
-		"tags": []
-		},
-		{"filename":"naoto",
-		"title":"Naoto from Persona 4",
-		"date":"2021/Apr/16",
-		"tags": ["fanart"]
-		},
-		{"filename":"tsuyu",
-		"title":"That frog from MHA",
-		"date":"2021/May/15",
-		"tags": ["fanart"]
-		},
-		{"filename":"aigis",
-		"title":"Aigis from Persona 3",
-		"date":"2021/May/20",
-		"tags": ["fanart"]
-		},
-		{"filename":"furret",
-		"title":"Furret",
-		"date":"2021/Jun/2",
-		"tags": ["fanart", "pokemon"]
-		},
-		{"filename":"akechi",
-		"title":"Akechi from Persona 5",
-		"date":"2021/Jul/9",
-		"tags": ["fanart"]
-		},
-		{"filename":"espi",
-		"title":"Espi",
-		"date":"2021/Jul/17",
-		"tags": ["fanart", "pokemon"]
-		},
-		{"filename":"eevee2021",
-		"title":"Annual Eevee 2021",
-		"date":"2021/Jul/13",
-		"tags": ["fanart", "pokemon"]
-		},
-		{"filename":"banner2022",
-		"title":"Banner 2022",
-		"date":"2022/Mar/28",
-		"tags": ["rai"]
-		},
-		{"filename":"sylvee",
-		"title":"Sylvee",
-		"date":"2021/Jul/17",
-		"tags": ["fanart", "nymphe"]
-		},
-		{"filename":"Illustration45",
-		"title":"Illustration45",
-		"date":"2021/Aug/5",
-		"tags": []
-		},
-		{"filename":"hisuian growlithe",
-		"title":"Hisuian Growlithe",
-		"date":"2021/Aug/21",
-		"tags": ["fanart", "pokemon"]
-		},
-		{"filename":"failed sylv",
-		"title":"Failed sylv",
-		"date":"2022/Feb/22",
-		"tags": ["fanart", "nymphe", "pokemon"]
-		},
-		{"filename":"ghost",
-		"title":"Ghost",
-		"date":"2022/Mar/16",
-		"tags": ["yaru", "mj", "sketch"]
-		},
-		{"filename":"nahobino",
-		"title":"Nahobino",
-		"date":"2021/Nov/21",
-		"tags": ["fanart"]
-		},
-		{"filename":"kaizo",
-		"title":"Kaizo",
-		"date":"2022/Apr/7",
-		"tags": ["giftart"]
-		},
-		{"filename":"rai but niko",
-		"title":"Rai but Niko",
-		"date":"2022/Apr/7",
-		"tags": ["rai"]
-		},
-		{"filename":"Bun",
-		"title":"Bun",
-		"date":"2022/Apr/15",
-		"tags": ["mj", "asteria", "sketch"]
-		},
-		{"filename":"frustrated",
-		"title":"Frustrated",
-		"date":"2022/May/13",
-		"tags": ["rai"]
-		},
-		{"filename":"neortoria",
-		"title":"Neortoria",
-		"date":"2022/May/9",
-		"tags": ["mj", "mira", "wide"]
-		},
-		{"filename":"mira and daze",
-		"title":"mira and daze",
-		"date":"2022/Aug/24",
-		"tags": ["mj", "mira", "daze", "wide"]
-		},
-		{"filename":"mafowo",
-		"title":"Mafowo",
-		"date":"2022/Apr/29",
-		"tags": ["giftart"]
-		},
-		{"filename":"smolmira",
-		"title":"smol mira",
-		"date":"2022/May/28",
-		"tags": ["mj", "mira"]
-		},
-		{"filename":"rai wink",
-		"title":"rai wink",
-		"date":"2022/Jul/7",
-		"tags": ["rai"]
-		},
-		{"filename":"Daze",
-		"title":"Daze render",
-		"date":"2023/Aug/17",
-		"tags": ["daze", "mj"]
-		},
-		{"filename":"Alcine",
-		"title":"Alcine render",
-		"date":"2024/Feb/11",
-		"tags": ["mj","alcine"]
-		},
-		{"filename":"Erinn",
-		"title":"Erinn render",
-		"date":"2023/Sep/25",
-		"tags": ["mj","erinn"]
-		},
-		{"filename":"rai or something",
-		"title":"rai or something",
-		"date":"2024/Oct/13",
-		"tags": ["rai", "sketch"]
-		},
-		{"filename":"rai or something alt",
-		"title":"rai or something alt",
-		"date":"2024/Oct/13",
-		"tags": ["rai", "sketch"]
-		},
-		{"filename":"iris fit",
-		"title":"iris fit",
-		"date":"2024/Aug/11",
-		"tags": ["cyris", "sketch"]
-		},
-		{"filename":"daze partners",
-		"title":"Daze's partners (Design concept)",
-		"date":"2024/Aug/14",
-		"tags": ["mj", "sketch", "diamond", "nemeson"]
-		},
-		{"filename":"prettiest mf",
-		"title":"Prettiest mf",
-		"date":"2024/Jul/24",
-		"tags": ["giftart", "sketch"]
-		},
-		{"filename":"mira swimsuit",
-		"title":"mira swimsuit",
-		"date":"2024/Nov/12",
-		"tags": ["mj", "mira", "sketch"]
-		},
-		{"filename":"noreen design attempt",
-		"title":"noreen design attempt",
-		"date":"2024/Nov/11",
-		"tags": ["mj", "noreen", "sketch"]
-		},
-		{"filename":"plush rai",
-		"title":"plush rai",
-		"date":"2023/Oct/29",
-		"tags": ["rai", "sketch"]
-		},
-		{"filename":"chillin mj",
-		"title":"chillin mj",
-		"date":"2023/Mar/11",
-		"tags": ["mj", "mira", "daze", "erinn", "alcine", "asteria", "kai", "sketch"]
-		},
-		{"filename":"bz party",
-		"title":"bz party",
-		"date":"2023/Nov/2",
-		"tags": ["sketch", "bz"]
-		},
-		{"filename":"kai full",
-		"title":"kai full",
-		"date":"2024/May/19",
-		"tags": ["sketch", "giftart"]
-		},
-		{"filename":"MJ cover idea",
-		"title":"MJ cover idea",
-		"date":"2024/Sep/19",
-		"tags": ["sketch", "mj", "mira"]
-		},
-		{"filename":"mira asteria hug",
-		"title":"mira asteria hug",
-		"date":"2024/Nov/15",
-		"tags": ["sketch", "mj", "mira", "asteria"]
-		},
-		{"filename":"fly mira",
-		"title":"fly mira",
-		"date":"2024/Oct/24",
-		"tags": ["sketch", "mj", "mira"]
-		},
-		{"filename":"nimphe",
-		"title":"nimphe",
-		"date":"2024/Dec/26",
-		"tags": ["nymphe", "pokemon"]
-		},
-		{"filename":"wrapped rai",
-		"title":"wrapped rai",
-		"date":"2024/Dec/26",
-		"tags": ["rai"]
-		},
-		{"filename":"new year",
-		"title":"New Year",
-		"date":"2025/Jan/1",
-		"tags": ["rai"]
-		},
-		{"filename":"erinn wizard",
-		"title":"Wizard",
-		"date":"2025/Jan/2",
-		"tags": ["mj", "erinn"]
-		},
-		{"filename":"yaru peek",
-		"title":"Peek",
-		"date":"2025/Jan/3",
-		"tags": ["mj", "yaru"]
-		},
-		{"filename":"vibri aaalt",
-		"title":"Vibri AAA",
-		"date":"2025/Jan/4",
-		"tags": ["fanart"]
-		},
-		{"filename":"nimphe eep",
-		"title":"eep",
-		"date":"2025/Jan/5",
-		"tags": ["pokemon", "nymphe"]
-		},
-		{"filename":"mira librarian",
-		"title":"Librarian",
-		"date":"2025/Jan/8",
-		"tags": ["mj", "mira", "wide"]
-		},
-		{"filename":"birth date",
-		"title":"birth date",
-		"date":"2025/Jan/10",
-		"tags": ["rai", "sketch"]
-		},
-		{"filename":"asteria oil green",
-		"title":"Olive",
-		"date":"2025/Jan/14",
-		"tags": ["mj", "asteria"]
-		},
-		{"filename":"carlo1",
-		"title":"Carlo 1",
-		"date":"2025/Jan/18",
-		"tags": ["giftart", "sketch"]
-		},
-		{"filename":"carlo2",
-		"title":"Carlo 2",
-		"date":"2025/Jan/18",
-		"tags": ["giftart", "sketch"]
-		},
-		{"filename":"flipnote mew",
-		"title":"flipnote mew",
-		"date":"2025/Jan/7",
-		"tags": ["fanart", "pokemon", "sketch"]
-		},
-		{"filename":"rai normal",
-		"title":"Normal Alolan Raichu colors",
-		"date":"2025/Jan/12",
-		"tags": ["rai", "sketch"]
-		},
-		{"filename":"reveal",
-		"title":"Reveal",
-		"date":"2025/Jan/16",
-		"tags": ["fanart", "rai"]
-		},
-		{"filename":"noreen aura",
-		"title":"Reveal",
-		"date":"2025/Jan/15",
-		"tags": ["noreen", "mj"]
-		},
-		{"filename":"stretch",
-		"title":"Stretch",
-		"date":"2025/Jan/19",
-		"tags": ["kai", "mj", "sketch"]
-		},
-		{"filename":"iris rays",
-		"title":"Rays",
-		"date":"2025/Jan/21",
-		"tags": ["cyris"]
-		},
-		{"filename":"heartbeat comic",
-		"title":"Heartbeat",
-		"date":"2025/Jan/30",
-		"tags": ["mj", "mira", "asteria", "comic"]
-		},
-		{"filename":"nimphe dress",
-		"title":"Pink",
-		"date":"2025/Jan/27",
-		"tags": ["pokemon", "nymphe"]
-		},
-		{"filename":"lurantis",
-		"title":"Lurantis",
-		"date":"2025/Jan/29",
-		"tags": ["pokemon", "fanart"]
-		},
-		{"filename":"asteria naked",
-		"title":"naked bunny",
-		"date":"2025/Jan/23",
-		"tags": ["mj", "asteria"]
-		},
-		{"filename":"banner2025",
-		"title":"Banner 2025",
-		"date":"2025/Jan/31",
-		"tags": ["rai", "cyris", "wide"]
-		},
-		{"filename":"mira asteria expressions",
-		"title":"mira asteria expressions",
-		"date":"2025/Feb/23",
-		"tags": ["mj", "mira", "asteria", "sketch"]
-		},
-		{"filename":"mira jojo",
-		"title":"[STAND MASTER] Mira Levenor",
-		"date":"2025/Mar/14",
-		"tags": ["mj", "mira"]
-		},
-		{"filename":"copto practice",
-		"title":"copto practice",
-		"date":"2025/Mar/20",
-		"tags": ["mj", "sketch"]
-		},
-		{"filename":"rai pose",
-		"title":"I think this was a trend",
-		"date":"2025/Mar/22",
-		"tags": ["rai"]
-		},
-		{"filename":"raii",
-		"title":"Raii",
-		"date":"2025/Apr/1",
-		"tags": ["rai", "fanart"]
-		},
-		{"filename":"mira64",
-		"title":"Mira 64",
-		"date":"2025/Jan/26",
-		"tags": ["mira", "mj"]
-		},
-		{"filename":"human mira",
-		"title":"human mira",
-		"date":"2024/Oct/23",
-		"tags": ["mira", "mj"]
-		},
-		{"filename":"asteria daze swap",
-		"title":"Asteria & Daze outfit swap",
-		"date":"2025/Mar/19",
-		"tags": ["mj", "daze", "asteria", "sketch"]
-		},
-		{"filename":"parkay",
-		"title":"Parkay!",
-		"date":"2024/Oct/13",
-		"tags": ["giftart"]
-		},
-		{"filename":"chibi asteria",
-		"title":"chibi asteria",
-		"date":"2024/Apr/2",
-		"tags": ["mj", "asteria"]
-		},
-		{"filename":"gabeat",
-		"title":"Gabeat",
-		"date":"2024/May/5",
-		"tags": ["giftart", "fanart", "sketch"]
-		},
-		{"filename":"feni",
-		"title":"feni",
-		"date":"2023/Oct/16",
-		"tags": ["mj", "feni", "sketch"]
-		},
-		{"filename":"roxa",
-		"title":"Roxa",
-		"date":"2023/Jul/23",
-		"tags": ["giftart"]
-		},
-		{"filename":"Raiwitch",
-		"title":"Rai witch",
-		"date":"2022/Oct/11",
-		"tags": ["rai"]
-		},
-		{"filename":"zanimo",
-		"title":"zanimo - Art Trade",
-		"date":"2022/Nov/16",
-		"tags": ["giftart"]
-		},
-		{"filename":"rai pride",
-		"title":"rai pride",
-		"date":"2023/Jun/2",
-		"tags": ["rai"]
-		},
-		{"filename":"void",
-		"title":"Spirals",
-		"date":"2025/Jan/29",
-		"tags": ["mj", "enowme", "wide"]
-		},
-		{"filename":"fucked up 3d model",
-		"title":"fucked up 3d model",
-		"date":"2025/Jan/26",
-		"tags": ["mj", "mira", "sketch"]
-		},
-		{"filename":"mj party sketch",
-		"title":"mj party sketch",
-		"date":"2024/Jul/18",
-		"tags": ["mj", "mira", "sketch", "daze", "asteria", "alcine"]
-		},
-		{"filename":"rai plush",
-		"title":"rai plush",
-		"date":"2024/Jun/29",
-		"tags": ["rai", "sketch"]
-		},
-		{"filename":"YEAH",
-		"title":"Yeah!",
-		"date":"2024/Jun/15",
-		"tags": ["rai", "fanart"]
-		},
-		{"filename":"outfit swap",
-		"title":"outfit swap",
-		"date":"2024/Jun/5",
-		"tags": ["mj", "daze", "mira", "asteria", "alcine", "sketch"]
-		},
-		{"filename":"head mpty",
-		"title":"head mplty",
-		"date":"2024/May/7",
-		"tags": ["rai", "sketch"]
-		},
-		{"filename":"daze threat",
-		"title":"daze threat",
-		"date":"2024/Apr/25",
-		"tags": ["mj", "sketch", "daze"]
-		},
-		{"filename":"sweater",
-		"title":"sweater",
-		"date":"2024/Mar/21",
-		"tags": ["rai", "sketch"]
-		},
-		{"filename":"as2",
-		"title":"young asteria",
-		"date":"2024/Mar/21",
-		"tags": ["mj", "asteria", "sketch"]
-		},
-		{"filename":"irl",
-		"title":"OC and Creator",
-		"date":"2024/Jun/13",
-		"tags": ["rai", "sketch"]
-		},
-		{"filename":"Lazulite heart",
-		"title":"Lazulite heart",
-		"date":"2025/Mar/28",
-		"tags": ["mj", "sketch"]
-		},
-		{"filename":"mira yawn",
-		"title":"mira yawn",
-		"date":"2025/Apr/29",
-		"tags": ["mj", "sketch", "mira", "alcine"]
-		},
-		{"filename":"vail",
-		"title":"a Mystery dungeon and Miitopia partner",
-		"date":"2025/May/9",
-		"tags": ["pokemon", "veil"]
-		},
-		{"filename":"uppie",
-		"title":"uppie",
-		"date":"2025/Jan/20",
-		"tags": ["mj", "erinn", "kai", "asteria", "daze", "alcine", "sketch"]
-		},
-		{"filename":"mj capsule",
-		"title":"Mira's Journal Capsule",
-		"date":"2025/May/24",
-		"tags": ["mj", "mira", "wide"]
-		},
-		{"filename":"nightmarena",
-		"title":"nightmarena",
-		"date":"2025/Apr/21",
-		"tags": ["sketch", "giftart"]
-		},
-		{"filename":"shamar",
-		"title":"shamar",
-		"date":"2025/May/17",
-		"tags": ["sketch", "giftart"]
-		},
-		{"filename":"mira fluffy",
-		"title":"i like drawing naked wolf girls sometimes, ok?",
-		"date":"2025/Jun/15",
-		"tags": ["sketch", "mira", "mj"]
-		},
-		{"filename":"rai back",
-		"title":"rai-back.kra",
-		"date":"2025/Jun/20",
-		"tags": ["rai"]
-		},
-		{"filename":"artfight wan",
-		"title":"Wan! - Artfight",
-		"date":"2025/Jul/2",
-		"tags": ["giftart"]
-		},
-		{"filename":"artfight abigale",
-		"title":"REVENGE Abigale - Artfight",
-		"date":"2025/Jul/4",
-		"tags": ["giftart"]
-		},
-		{"filename":"silky",
-		"title":"Silky :D - Artfight",
-		"date":"2025/Jul/5",
-		"tags": ["giftart"]
-		},
-		{"filename":"artfight yuna",
-		"title":"Yuna in summer-ish clothes - Artfight",
-		"date":"2025/Jul/14",
-		"tags": ["giftart"]
-		},
-		{"filename":"aspa",
-		"title":"Dog - Commission",
-		"date":"2025/Jul/23",
-		"tags": ["comm"]
-		},
-		{"filename":"artfight boris",
-		"title":"Boris! - Artfight",
-		"date":"2025/Jul/24",
-		"tags": ["giftart"]
-		},
-		{"filename":"artfight soda",
-		"title":"Soda! - Artfight",
-		"date":"2025/Jul/30",
-		"tags": ["giftart"]
-		},
-		{"filename":"beach",
-		"title":"swimming",
-		"date":"2025/Aug/29",
-		"tags": ["rai", "nymphe", "pokemon"]
-		},
-		{"filename":"wet clothes",
-		"title":"wet clothes",
-		"date":"2025/Sep/4",
-		"tags": ["mira", "alcine", "mj", "sketch"]
-		},
-		{"filename":"mj keyart idea",
-		"title":"Mira's Journal Keyart",
-		"date":"2025/Sep/26",
-		"tags": ["mira", "alcine", "daze", "yaru", "asteria", "mj"]
-		},
-		{"filename":"cyris sit",
-		"title":"Some Cyris doodles",
-		"date":"2025/Oct/10",
-		"tags": ["cyris"]
-		},
-		{"filename":"kiki two",
-		"title":"Krita's Kiki",
-		"date":"2025/Nov/6",
-		"tags": ["fanart"]
-		},
-		{"filename":"cyrisref",
-		"title":"Refrence Sheet for Cyris",
-		"date":"2025/Nov/15",
-		"tags": ["cyris", "ref"]
-		},
-		{"filename":"veil fit",
-		"title":"Goth Vulpix",
-		"date":"2025/Nov/17",
-		"tags": ["veil"]
-		},
-		{"filename":"eevee2025",
-		"title":"Annual Eevee 2025",
-		"date":"2025/Nov/30",
-		"tags": ["pokemon", "fanart"]
-		},
-		{"filename":"vin",
-		"title":"A wood elf druid named Vin",
-		"date":"2025/Nov/4",
-		"tags": ["vin"]
-		},
-		{"filename":"alcine2",
-		"title":"Concept sketches for a new form for Alcine",
-		"date":"2025/Nov/22",
-		"tags": ["mj", "sketch", "alcine"]
-		},
-		{"filename":"ivy",
-		"title":"Ivy under the moon",
-		"date":"2025/Dec/25",
-		"tags": ["giftart", "pokemon"]
-		},
-		{"filename":"rai's ribbon",
-		"title":"The ribbon is very important",
-		"date":"2026/Jan/9",
-		"tags": ["rai", "sketch"]
-		},
-		{"filename":"mira dog cone",
-		"title":"mira dog cone",
-		"date":"2024/Aug/23",
-		"tags": ["mira","mj", "sketch"]
-		},
-		{"filename":"chroma comms",
-		"title":"Unpractical mobile devices for a future project",
-		"date":"2025/Dec/27",
-		"tags": ["sketch"]
-		},
-		{"filename":"rai low angle",
-		"title":"rai low angle",
-		"date":"2025/Sep/23",
-		"tags": ["sketch", "rai"]
-		},
-		{"filename":"blacktail absol",
-		"title":"Ecliple - Raffle",
-		"date":"2026/Jan/22",
-		"tags": ["pokemon", "giftart"]
-		},
-		{"title":"Underwater",
-		"filename":"erinn-swim",
-		"date":"2026-Mar-20",
-		"tags": ["erinn", "mj", "wide"]
-		},
-		{"filename":"golden_mira",
-		"title":"Golden Week Mira",
-		"date":"2026-May-06",
-		"tags": ["mira", "mj", "sketch"]
-		},
-		{"filename":"golden_veil",
-		"title":"golden_veil",
-		"date":"2026-May-06",
-		"tags": ["veil", "pokemon", "sketch"]
-		},
-		{"filename":"link rai",
-		"title":"link rai",
-		"date":"2026-Jun-04",
-		"tags": ["rai", "sketch"]
-		},
-		{"filename":"space",
-		"title":"Space",
-		"date":"2026-May-02",
-		"tags": ["giftart"]
-		},
-		{"filename":"cheek rubbing",
-		"title":"cheek rubbing",
-		"date":"2026-Apr-09",
-		"tags": ["rai", "sketch", "giftart"]
-		},
-		{"filename":"cyris null",
-		"title":"cyris null",
-		"date":"2026-Feb-05",
-		"tags": ["sketch", "cyris"]
-		},
-		{"filename":"rai null",
-		"title":"rai null",
-		"date":"2026-Feb-05",
-		"tags": ["sketch", "rai"]
-		},
-		{"filename":"rai bow",
-		"title":"rai bow",
-		"date":"2026-Mar-28",
-		"tags": ["rai", "sketch"]
-		},
-		{"filename":"giant cyris beach",
-		"title":"giant cyris beach",
-		"date":"2026-Apr-15",
-		"tags": ["cyris", "sketch"]
-		},
-		{"filename":"rai mirror finger",
-		"title":"One finger Rai",
-		"date":"2026-Apr-15",
-		"tags": ["rai", "sketch"]
-		},
-		{"filename":"misteria hug",
-		"title":"misteria hug",
-		"date":"2026-Apr-15",
-		"tags": ["mira", "asteria", "mj"]
-		},
-		{"filename":"sheep rainbow",
-		"title":"sheep rainbow",
-		"date":"2026-May-02",
-		"tags": []
-		},
-		{"filename":"kolovaktiridio",
-		"title":"kolovaktiridio",
-		"date":"2026-May-02",
-		"tags": ["sketch"]
-		},
-		{"filename":"teddycat",
-		"title":"teddycat",
-		"date":"2026-Feb-15",
-		"tags": ["giftart", "sketch"]
-		},
-		{"filename":"kiki",
-		"title":"kiki",
-		"date":"2024-Dec-17",
-		"tags": ["sketch", "fanart"]
-		},
-		{"filename":"parkay 2",
-		"title":"parkay 2",
-		"date":"2026-Mar-22",
-		"tags": ["giftart", "sketch"]
-		},
-		{"filename":"veil day",
-		"title":"Veil's Day",
-		"date":"2026-Jun-07",
-		"tags": ["veil", "pokemon"]
-		},
-		{"filename":"rairef6",
-		"title":"Reference sheet for Rai v6",
-		"date":"2026-Jul-01",
-		"tags": ["rai", "ref"]
-		},
-		{"filename":"artfight miya",
-		"title":"artfight miya",
-		"date":"2026-Jul-08",
-		"tags": ["fanart"]
-		},
-		{"filename":"artfight abigail",
-		"title":"artfight abigail",
-		"date":"2026-Jul-29",
-		"tags": ["fanart", "pokemon"]
-		},
-		{"filename":"artfight foxglove",
-		"title":"artfight foxglove",
-		"date":"2026-Jul-11",
-		"tags": ["fanart"]
-		},
-		{"filename":"mira strap",
-		"title":"mira strap",
-		"date":"2026-Aug-9",
-		"tags": ["sketch", "mira", "mj"]
+			"date": "2023-03-23",
+			"tags": [
+				"yaru",
+				"mj"
+			],
+			"characters": [
+				"yaru"
+			],
+			"width": 3245,
+			"height": 2886,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "chillin mj",
+			"title": "chillin mj",
+			"date": "2023-03-11",
+			"tags": [
+				"mira",
+				"daze",
+				"erinn",
+				"alcine",
+				"asteria",
+				"kai",
+				"sketch",
+				"mj"
+			],
+			"characters": [
+				"mira",
+				"daze",
+				"erinn",
+				"alcine",
+				"asteria",
+				"kai"
+			],
+			"width": 5000,
+			"height": 3000,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "Yaruref",
+			"title": "Refrence sheet for Yaru",
+			"date": "2023-02-18",
+			"tags": [
+				"yaru",
+				"mj"
+			],
+			"characters": [
+				"yaru"
+			],
+			"width": 4904,
+			"height": 3000,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "as",
+			"title": "as",
+			"date": "2023-02-14",
+			"tags": [
+				"asteria",
+				"yaru",
+				"mj"
+			],
+			"characters": [
+				"asteria",
+				"yaru"
+			],
+			"width": 2925,
+			"height": 1818,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "erinnref",
+			"title": "Refrence sheet for Erinn",
+			"date": "2023-01-27",
+			"tags": [
+				"erinn",
+				"ref",
+				"mj"
+			],
+			"characters": [
+				"erinn"
+			],
+			"width": 5000,
+			"height": 3000,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "vibri",
+			"title": "Vibri",
+			"date": "2023-01-23",
+			"tags": [
+				"fanart",
+				"comm"
+			],
+			"characters": [],
+			"width": 3308,
+			"height": 3546,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "Mio why would you do this do me you said you'd be by my side",
+			"title": "Why Mio? Why would you do this do me you said you'd be by my side!",
+			"date": "2022-12-25",
+			"tags": [
+				"fanart"
+			],
+			"characters": [],
+			"width": 1240,
+			"height": 1602,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "zanimo",
+			"title": "zanimo - Art Trade",
+			"date": "2022-11-16",
+			"tags": [
+				"giftart"
+			],
+			"characters": [],
+			"width": 3000,
+			"height": 3000,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "Raiwitch",
+			"title": "Rai witch",
+			"date": "2022-10-11",
+			"tags": [
+				"rai"
+			],
+			"characters": [
+				"rai"
+			],
+			"width": 2847,
+			"height": 2046,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "bridget and labrys",
+			"title": "Bridget & Labrys",
+			"date": "2022-09-04",
+			"tags": [
+				"fanart"
+			],
+			"characters": [],
+			"width": 3413,
+			"height": 2198,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "mira and daze",
+			"title": "mira and daze",
+			"date": "2022-08-24",
+			"tags": [
+				"mira",
+				"daze",
+				"wide",
+				"mj"
+			],
+			"characters": [
+				"mira",
+				"daze"
+			],
+			"width": 3766,
+			"height": 2148,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "pyrson",
+			"title": "Pyrson",
+			"date": "2022-07-12",
+			"tags": [
+				"asteria",
+				"wide",
+				"mj"
+			],
+			"characters": [
+				"asteria"
+			],
+			"width": 2563,
+			"height": 1668,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "rai wink",
+			"title": "rai wink",
+			"date": "2022-07-07",
+			"tags": [
+				"rai"
+			],
+			"characters": [
+				"rai"
+			],
+			"width": 2000,
+			"height": 2000,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "smolmira",
+			"title": "smol mira",
+			"date": "2022-05-28",
+			"tags": [
+				"mira",
+				"mj"
+			],
+			"characters": [
+				"mira"
+			],
+			"width": 2000,
+			"height": 2000,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "frustrated",
+			"title": "Frustrated",
+			"date": "2022-05-13",
+			"tags": [
+				"rai"
+			],
+			"characters": [
+				"rai"
+			],
+			"width": 1000,
+			"height": 1000,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "neortoria",
+			"title": "Neortoria",
+			"date": "2022-05-09",
+			"tags": [
+				"mira",
+				"wide",
+				"mj"
+			],
+			"characters": [
+				"mira"
+			],
+			"width": 3840,
+			"height": 2160,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "mafowo",
+			"title": "Mafowo",
+			"date": "2022-04-29",
+			"tags": [
+				"giftart"
+			],
+			"characters": [],
+			"width": 2000,
+			"height": 2000,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "Bun",
+			"title": "Bun",
+			"date": "2022-04-15",
+			"tags": [
+				"asteria",
+				"sketch",
+				"mj"
+			],
+			"characters": [
+				"asteria"
+			],
+			"width": 1540,
+			"height": 2000,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "kaizo",
+			"title": "Kaizo",
+			"date": "2022-04-07",
+			"tags": [
+				"giftart"
+			],
+			"characters": [],
+			"width": 2000,
+			"height": 2000,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "rai but niko",
+			"title": "Rai but Niko",
+			"date": "2022-04-07",
+			"tags": [
+				"rai"
+			],
+			"characters": [
+				"rai"
+			],
+			"width": 2000,
+			"height": 2000,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "banner2022",
+			"title": "Banner 2022",
+			"date": "2022-03-28",
+			"tags": [
+				"rai"
+			],
+			"characters": [
+				"rai"
+			],
+			"width": 3000,
+			"height": 1000,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "ghost",
+			"title": "Ghost",
+			"date": "2022-03-16",
+			"tags": [
+				"yaru",
+				"sketch",
+				"mj"
+			],
+			"characters": [
+				"yaru"
+			],
+			"width": 2374,
+			"height": 1449,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "failed sylv",
+			"title": "Failed sylv",
+			"date": "2022-02-22",
+			"tags": [
+				"nymphe",
+				"fanart",
+				"pokemon"
+			],
+			"characters": [
+				"nymphe"
+			],
+			"width": 1369,
+			"height": 1105,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "nahobino",
+			"title": "Nahobino",
+			"date": "2021-11-21",
+			"tags": [
+				"fanart"
+			],
+			"characters": [],
+			"width": 1152,
+			"height": 1162,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "hisuian growlithe",
+			"title": "Hisuian Growlithe",
+			"date": "2021-08-21",
+			"tags": [
+				"fanart",
+				"pokemon"
+			],
+			"characters": [],
+			"width": 1000,
+			"height": 1000,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "Illustration45",
+			"title": "Illustration45",
+			"date": "2021-08-05",
+			"tags": [],
+			"characters": [],
+			"width": 1500,
+			"height": 2000,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "espi",
+			"title": "Espi",
+			"date": "2021-07-17",
+			"tags": [
+				"fanart",
+				"pokemon"
+			],
+			"characters": [],
+			"width": 1095,
+			"height": 999,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "sylvee",
+			"title": "Sylvee",
+			"date": "2021-07-17",
+			"tags": [
+				"nymphe",
+				"fanart"
+			],
+			"characters": [
+				"nymphe"
+			],
+			"width": 1936,
+			"height": 2000,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "eevee2021",
+			"title": "Annual Eevee 2021",
+			"date": "2021-07-13",
+			"tags": [
+				"fanart",
+				"pokemon"
+			],
+			"characters": [],
+			"width": 2000,
+			"height": 2000,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "akechi",
+			"title": "Akechi from Persona 5",
+			"date": "2021-07-09",
+			"tags": [
+				"fanart"
+			],
+			"characters": [],
+			"width": 2000,
+			"height": 2000,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "furret",
+			"title": "Furret",
+			"date": "2021-06-02",
+			"tags": [
+				"fanart",
+				"pokemon"
+			],
+			"characters": [],
+			"width": 1700,
+			"height": 1133,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "aigis",
+			"title": "Aigis from Persona 3",
+			"date": "2021-05-20",
+			"tags": [
+				"fanart"
+			],
+			"characters": [],
+			"width": 2000,
+			"height": 2000,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "tsuyu",
+			"title": "That frog from MHA",
+			"date": "2021-05-15",
+			"tags": [
+				"fanart"
+			],
+			"characters": [],
+			"width": 2000,
+			"height": 2000,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "naoto",
+			"title": "Naoto from Persona 4",
+			"date": "2021-04-16",
+			"tags": [
+				"fanart"
+			],
+			"characters": [],
+			"width": 3000,
+			"height": 3000,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
+		},
+		{
+			"filename": "kite",
+			"title": "Kite",
+			"date": "2021-03-24",
+			"tags": [],
+			"characters": [],
+			"width": 3000,
+			"height": 2000,
+			"credit": "raidev.eu",
+			"source": "https://raidev.eu"
 		}
 	]
 }

@@ -2,133 +2,136 @@
 <html lang="en" style="height: 100%;">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iris' Comics</title>
-    <link rel="stylesheet" href="comic.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Iris' Comics</title>
+	<link rel="stylesheet" href="comic.css">
 	<link rel="stylesheet" href="/common.css">
-    <link href="/lib/fontawesome/css/all.min.css" rel="stylesheet">
-    <script onclick="show_image(this);" src="/lib/jquery-3.7.1.min.js"></script>
-    <script onclick="show_image(this);" src="/lib/include-html.js"></script>
-    <script onclick="show_image(this);" src="/lib/imagesloaded.pkgd.min.js"></script>
-    <meta id="vp" name="viewport">
-    <link rel="icon" type="image/x-icon" href="/media/Rai/favicon.png">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+	<link href="/lib/fontawesome/css/all.min.css" rel="stylesheet">
+	<script onclick="show_image(this);" src="/lib/include-html.js"></script>
+	<script onclick="show_image(this);" src="/lib/imagesloaded.pkgd.min.js"></script>
+	<meta id="vp" name="viewport">
+	<link rel="icon" type="image/x-icon" href="/media/Rai/favicon.png">
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 </head>
 
 <body style="
 height: 100vh;
 background-color: black; background-attachment: fixed; filter: brightness(-30%);">
 
-    <img id="comic-page">
-    
-    <div id="comic-nav">
-        <span class="comic-nav-text" id="comic-nav-text-top">Comic name goes here<br></span>
-        <a href="https://raidev.eu" onclick="homeButton(); return false"><img src="https://raidev.eu/media/Stamps/stamp.png" style="image-rendering:pixelated;" class="comic-nav-stamp" alt="Iris' fancy website stamp"></a>
-        <span class="comic-nav-text" id="comic-nav-text-center">Comic name goes here</span>
-        <button id="comic-left" onclick="comic_next(false)" class="comic-nav-arrow disabled-btn"><a class="fa-solid fa-angle-left"></a></button>
-        <button id="comic-nav-list">List</button>
-        <button  id="comic-right" onclick="comic_next(true)" class="comic-nav-arrow disabled-btn"><a class="fa-solid fa-angle-right"></a></button>
-    </div>
-    <div id="image-popup" class="modal">
-        <span id="close-popup">&times;</span>
-        <div id="caption"></div>
-        <img class="modal-content" id="img01">
-    </div>
+	<img id="comic-page">
+
+	<div id="comic-nav">
+		<span class="comic-nav-text" id="comic-nav-text-top">Comic name goes here<br></span>
+		<a href="https://raidev.eu" onclick="homeButton(); return false"><img
+				src="https://raidev.eu/media/Stamps/stamp.png" style="image-rendering:pixelated;"
+				class="comic-nav-stamp" alt="Iris' fancy website stamp"></a>
+		<span class="comic-nav-text" id="comic-nav-text-center">Comic name goes here</span>
+		<button id="comic-left" onclick="comic_next(false)" class="comic-nav-arrow disabled-btn"><a
+				class="fa-solid fa-angle-left"></a></button>
+		<button id="comic-nav-list">List</button>
+		<button id="comic-right" onclick="comic_next(true)" class="comic-nav-arrow disabled-btn"><a
+				class="fa-solid fa-angle-right"></a></button>
+	</div>
+	<div id="image-popup" class="modal">
+		<span id="close-popup">&times;</span>
+		<div id="caption"></div>
+		<img class="modal-content" id="img01">
+	</div>
 </body>
 
 </html>
 <script src="/lib/handle-slinks.js"></script>
 <script src="/lib/image-popup.js"></script>
 <script>
-    let data
-    let series
-    let page
-    let page_index = 0
+	let data
+	let series
+	let page
+	let page_index = 0
 
-    function setWidth() {
-        let mvp = document.getElementById('vp');
-        if (screen.width < 472) {
-            mvp.setAttribute('content', 'width=472px');
-            console.log("mobile mode");
-        } else {
-            mvp.setAttribute('content', 'width=device-width');
-            console.log("swakrop mode");
-        }
-    };
+	function setWidth() {
+		let mvp = document.getElementById('vp');
+		if (screen.width < 472) {
+			mvp.setAttribute('content', 'width=472px');
+			console.log("mobile mode");
+		} else {
+			mvp.setAttribute('content', 'width=device-width');
+			console.log("swakrop mode");
+		}
+	};
 
-    window.addEventListener("load", async function() {
-        setWidth();
-        let response = await fetch('/comic/comic-database.json');
-        data = await response.json();
-        show_comic(window.location.hash.substring(1));
-    });
+	window.addEventListener("load", async function () {
+		setWidth();
+		let response = await fetch('/comic/comic-database.json');
+		data = await response.json();
+		show_comic(window.location.hash.substring(1));
+	});
 
-    function show_comic(str) {
-        window.location.hash = str;
-        let dash_pos = str.lastIndexOf('/');
-        series = str.substring(0, dash_pos);
-        page = str.substring(dash_pos+1);
-        let url = "/media/Comics/"+series+"/"+page+".png";
-        if (checkImage(url)) {
-            document.getElementById("comic-page").setAttribute("src", url);
-        }
-        let series_data = data[series];
-        let page_data = series_data.pages.find(p => p.filename == page);
-        let title = page_data.title;
-        page_index = series_data.pages.indexOf(page_data);
-        console.log(series_data.title);
-        console.log(title);
-        console.log(page_index);
-        document.title = page_data.title + " - "+series_data.title;
-        document.querySelectorAll(".comic-nav-text").forEach(element => {
-            element.innerHTML = title;
-        });
+	function show_comic(str) {
+		window.location.hash = str;
+		let dash_pos = str.lastIndexOf('/');
+		series = str.substring(0, dash_pos);
+		page = str.substring(dash_pos + 1);
+		let url = "/media/Comics/" + series + "/" + page + ".png";
+		if (checkImage(url)) {
+			document.getElementById("comic-page").setAttribute("src", url);
+		}
+		let series_data = data[series];
+		let page_data = series_data.pages.find(p => p.filename == page);
+		let title = page_data.title;
+		page_index = series_data.pages.indexOf(page_data);
+		console.log(series_data.title);
+		console.log(title);
+		console.log(page_index);
+		document.title = page_data.title + " - " + series_data.title;
+		document.querySelectorAll(".comic-nav-text").forEach(element => {
+			element.innerHTML = title;
+		});
 
-        let left = document.getElementById("comic-left");
-        let right = document.getElementById("comic-right");
-        left.classList.remove("disabled-btn");
-        right.classList.remove("disabled-btn");
+		let left = document.getElementById("comic-left");
+		let right = document.getElementById("comic-right");
+		left.classList.remove("disabled-btn");
+		right.classList.remove("disabled-btn");
 
-        if (page_index == 0) {
-            left.classList.add("disabled-btn");
-        }
-        if (page_index >= series_data.pages.length-1) {
-            right.classList.add("disabled-btn");
-        }
-    }
+		if (page_index == 0) {
+			left.classList.add("disabled-btn");
+		}
+		if (page_index >= series_data.pages.length - 1) {
+			right.classList.add("disabled-btn");
+		}
+	}
 
-    function comic_next(bool) {
-        let pages = data[series].pages;
-        let new_index = 0
-        if (bool) {
-            new_index = page_index +1
-        } else {
-            new_index = page_index -1
-        }
-        console.log(new_index);
-        window.location.hash = "#"+series+"/"+pages[new_index].filename;
-    }
+	function comic_next(bool) {
+		let pages = data[series].pages;
+		let new_index = 0
+		if (bool) {
+			new_index = page_index + 1
+		} else {
+			new_index = page_index - 1
+		}
+		console.log(new_index);
+		window.location.hash = "#" + series + "/" + pages[new_index].filename;
+	}
 
-    function checkImage(url) {
-    return new Promise((resolve) => {
-        const img = new Image();
-        img.onload = () => resolve(true);  // Image exists
-        img.onerror = () => resolve(false); // Image doesn't exist
-        img.src = url;
-    });
-}
+	function checkImage(url) {
+		return new Promise((resolve) => {
+			const img = new Image();
+			img.onload = () => resolve(true);  // Image exists
+			img.onerror = () => resolve(false); // Image doesn't exist
+			img.src = url;
+		});
+	}
 
-    window.addEventListener('hashchange',() => {
-        setTimeout (function() {
-            show_comic(window.location.hash.substring(1));
-        }, 300);
-    });
+	window.addEventListener('hashchange', () => {
+		setTimeout(function () {
+			show_comic(window.location.hash.substring(1));
+		}, 300);
+	});
 </script>
 <script>
-    function homeButton(to="/") {
-        setTimeout (function() {
-            window.location.href=to;
-        }, 200);
-    }
+	function homeButton(to = "/") {
+		setTimeout(function () {
+			window.location.href = to;
+		}, 200);
+	}
 </script>

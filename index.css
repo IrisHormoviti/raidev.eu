@@ -68,7 +68,7 @@ nav {
 }
 
 .container {
-	--card-width: 500px;
+	--card-width: 450px;
 
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--card-width)), 1fr));
