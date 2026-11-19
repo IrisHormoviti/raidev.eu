@@ -17,7 +17,8 @@ nav {
 }
 
 .container.cards-entering .card {
-	animation: homepage-card-enter 0.5s cubic-bezier(0.175, 0.485, 0.32, 1.2) calc(var(--card-animation-order, 0) * 100ms) backwards;
+	animation: homepage-card-enter 0.5s cubic-bezier(0.175, 0.485, 0.32, 1.2)
+		calc(var(--card-animation-order, 0) * 100ms) backwards;
 }
 
 #loader {
@@ -26,16 +27,15 @@ nav {
 
 @keyframes homepage-card-enter {
 	from {
+		margin-top: 200px;
 		opacity: 0;
-		transform: translateY(200px);
 	}
 
 	to {
+		margin-top: 0;
 		opacity: 1;
-		transform: translateY(0);
 	}
 }
-
 
 #home-background {
 	background-image: url(/media/Rai/banner2025.avif);
@@ -51,6 +51,7 @@ nav {
 	top: 0;
 	overflow: hidden;
 	transition: all 0.5s;
+	z-index: -1;
 
 	@media (min-width: 1420px) {
 		background-position-x: left;
@@ -68,10 +69,13 @@ nav {
 }
 
 .container {
-	--card-width: 450px;
+	--card-width: 400px;
 
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--card-width)), 1fr));
+	grid-template-columns: repeat(
+		auto-fit,
+		minmax(min(100%, var(--card-width)), 1fr)
+	);
 	justify-content: center;
 	gap: 16px;
 	grid-auto-rows: 10px;
@@ -80,17 +84,15 @@ nav {
 	box-sizing: border-box;
 	background: transparent;
 	margin: 150px auto auto;
-	padding: 5vw;
-	max-width: 100%;
+	padding: 1vw;
 	transition: all 0.3s;
 
-	@media (max-width: 1200px) {
-		--card-width: 400px;
-		padding: 1vw;
+	@media (min-width: 1200px) {
+		padding: 5vw;
 	}
 
 	@media (max-width: 850px) {
-		width: 700px;
+		margin-top: 300px;
 	}
 }
 
@@ -106,7 +108,10 @@ nav {
 	object-fit: contain;
 	opacity: 1;
 	transition: all 0.3s;
-	view-transition-name: card;
+
+	@media (max-width: 800px) {
+		max-width: 600px;
+	}
 }
 
 .card-hover:hover {
@@ -128,7 +133,12 @@ nav {
 	bottom: -28px;
 	width: 100%;
 	text-align: center;
-	background: linear-gradient(180deg, rgba(42, 123, 155, 0) 0%, rgba(87, 199, 133, 0) 29%, rgba(75, 70, 97, 1) 100%);
+	background: linear-gradient(
+		180deg,
+		rgba(42, 123, 155, 0) 0%,
+		rgba(87, 199, 133, 0) 29%,
+		rgba(75, 70, 97, 1) 100%
+	);
 	padding-bottom: 32px;
 	padding-left: 10%;
 	margin-left: -10%;
@@ -157,11 +167,24 @@ nav {
 
 .sitting-rai {
 	position: absolute;
-	top: -471px;
-	right: -74px;
-	float: left;
-	scale: 50%;
-	z-index: 2;
+	transform: translate(-40%, -70%);
+	width: 500px;
+}
+
+.sitting-rai-tail {
+	position: absolute;
+	transform: translate(-40%, -85%);
+	top: anchor(top);
+	left: anchor(left);
+	width: 450px;
+	clip-path: polygon(
+		0% 0%,
+		100% 0%,
+		93.38% 81.67%,
+		44.6% 81.66%,
+		42.8% 100.24%,
+		0% 100%
+	);
 }
 
 #oneko-button {
@@ -222,7 +245,7 @@ nav {
 .webring-arrow {
 	color: white;
 	text-decoration: none;
-	background-color: #373FFF;
+	background-color: #373fff;
 	cursor: pointer;
 }
 
@@ -240,7 +263,7 @@ nav {
 }
 
 .webring-arrow-right {
-	background-color: #373FFF;
+	background-color: #373fff;
 	border-top-left-radius: 8px;
 	border-bottom-left-radius: 8px;
 	margin-left: 12px;
@@ -275,7 +298,7 @@ nav {
 }
 
 #post-expanded {
-	background-color: #C2BDC7;
+	background-color: #c2bdc7;
 	position: fixed;
 	top: 3vh;
 	left: 50%;

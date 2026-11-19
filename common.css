@@ -1,6 +1,6 @@
 @font-face {
-	font-family: 'Cyrenia';
-	src: url('lib/cyrenia-regular.ttf');
+	font-family: "Cyrenia";
+	src: url("lib/cyrenia-regular.ttf");
 }
 
 :root {
@@ -52,8 +52,8 @@ html {
 
 body {
 	margin: 0;
-	background: #252327;
-	font-family: "Cyrenia", "Comic Sans MS", "Comic Sans", "Comic Neue", sans-serif;
+	font-family:
+		"Cyrenia", "Comic Sans MS", "Comic Sans", "Comic Neue", sans-serif;
 	overflow-x: hidden;
 	scroll-behavior: smooth;
 }
@@ -126,7 +126,6 @@ button:active,
 		transform: translateY(-50px);
 		opacity: 0;
 	}
-
 }
 
 @keyframes fix-width {
@@ -161,7 +160,6 @@ button:active,
 	transition: all 0.3s !important;
 	opacity: 0 !important;
 	transform: translateY(100px) !important;
-
 }
 
 .faded {
@@ -206,7 +204,7 @@ button:active,
 	left: 0;
 	top: 0;
 
-	animation-timing-function: cubic-bezier(.31, .38, .51, 1);
+	animation-timing-function: cubic-bezier(0.31, 0.38, 0.51, 1);
 	animation-duration: 0.5s;
 	animation-fill-mode: forwards;
 	max-height: 20vh;
@@ -253,7 +251,6 @@ button:active,
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-
 
 	h1 {
 		transition: none;
@@ -304,12 +301,22 @@ button:active,
 
 #header::before {
 	left: -24px;
-	background: radial-gradient(circle at 64px 64px, transparent 39px, var(--header-corner-color) 40px 63px, transparent 64px);
+	background: radial-gradient(
+		circle at 64px 64px,
+		transparent 39px,
+		var(--header-corner-color) 40px 63px,
+		transparent 64px
+	);
 }
 
 #header::after {
 	right: -24px;
-	background: radial-gradient(circle at 0 64px, transparent 39px, var(--header-corner-color) 40px 63px, transparent 64px);
+	background: radial-gradient(
+		circle at 0 64px,
+		transparent 39px,
+		var(--header-corner-color) 40px 63px,
+		transparent 64px
+	);
 }
 
 .section-button {
@@ -566,7 +573,6 @@ button:active,
 		visibility: hidden;
 	}
 }
-
 
 .dropdown-panel {
 	@media (max-width: 525px) {

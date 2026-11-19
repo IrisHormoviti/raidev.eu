@@ -22,7 +22,7 @@
 		},
 		{
 			"name": "null",
-			"title": "Suggestive",
+			"title": "null.raidev.eu",
 			"icon": "",
 			"kind": "category",
 			"visible": false,
@@ -1712,7 +1712,8 @@
 			"tags": [
 				"mira",
 				"sketch",
-				"mj"
+				"mj",
+				"null"
 			],
 			"characters": [
 				"mira"
